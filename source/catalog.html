@@ -7,8 +7,8 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -55,7 +55,6 @@
     </header>
 
     <main class="page-main">
-
       <h1 class="page-main__title">Попутчики</h1>
 
       <section class="filter">
@@ -78,95 +77,33 @@
               <a class="country-filter__link" href="islands.html">Острова</a>
             </li>
           </ul>
-          <table class="country-filter__table alphabeth-table">
-            <tbody class="alphabeth-table__tbody">
-              <tr class="alphabeth-table__row">
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link alphabeth-table__link--active" href="">А</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Б</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">В</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Г</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Д</a>
-                </td>
-              </tr>
-              <tr class="alphabeth-table__row">
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Е</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">З</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">И</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">К</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Л</a>
-                </td>
-              </tr>
-              <tr class="alphabeth-table__row">
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">М</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Н</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">О</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">П</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Р</a>
-                </td>
-              </tr>
-              <tr class="alphabeth-table__row">
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">С</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Т</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">У</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Ф</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Х</a>
-                </td>
-              </tr>
-              <tr class="alphabeth-table__row">
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Ч</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Ш</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">З</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Ю</a>
-                </td>
-                <td class="alphabeth-table__cell">
-                  <a class="alphabeth-table__link" href="">Я</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="country-filter__alphabeth alphabeth-btns">
+            <button class="alphabeth-btns__btn alphabeth-btns__btn--active">А</button>
+            <button class="alphabeth-btns__btn">Б</button>
+            <button class="alphabeth-btns__btn">В</button>
+            <button class="alphabeth-btns__btn">Г</button>
+            <button class="alphabeth-btns__btn">Д</button>
+            <button class="alphabeth-btns__btn">Е</button>
+            <button class="alphabeth-btns__btn">З</button>
+            <button class="alphabeth-btns__btn">И</button>
+            <button class="alphabeth-btns__btn">К</button>
+            <button class="alphabeth-btns__btn">Л</button>
+            <button class="alphabeth-btns__btn">М</button>
+            <button class="alphabeth-btns__btn">Н</button>
+            <button class="alphabeth-btns__btn">О</button>
+            <button class="alphabeth-btns__btn">П</button>
+            <button class="alphabeth-btns__btn">Р</button>
+            <button class="alphabeth-btns__btn">С</button>
+            <button class="alphabeth-btns__btn">Т</button>
+            <button class="alphabeth-btns__btn">У</button>
+            <button class="alphabeth-btns__btn">Ф</button>
+            <button class="alphabeth-btns__btn">Х</button>
+            <button class="alphabeth-btns__btn">Ч</button>
+            <button class="alphabeth-btns__btn">Ш</button>
+            <button class="alphabeth-btns__btn">Э</button>
+            <button class="alphabeth-btns__btn">Ю</button>
+            <button class="alphabeth-btns__btn">Я</button>
+          </div>
           <ul class="country-filter__list country-list">
             <li class="country-list__item country-list__item--shown">
               <ul class="country-list__list-by-letter">
@@ -205,303 +142,303 @@
         </div>
       </section>
 
+      <section class="companions-filter-form">
+        <h2 class="companions-filter-form__title">Подберите идеального попутчика</h2>
+        <form class="companions-filter-form__form companions-form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="companions-form__field">
+            <legend class="companions-form__title">
+              Хобби
+              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
+            </legend>
+            <!--Будет добавлено позже-->
+          </fieldset>
+          <fieldset class="companions-form__field">
+            <legend class="companions-form__title">
+              Музыка
+              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
+            </legend>
+            <ul class="companions-form__list">
+              <li class="companions-form__item">
+                <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-rock" value="rock" checked>
+                <label class="companions-form__label" for="filter-rock">Тяжелый рок</label>
+              </li>
+              <li class="companions-form__item">
+                <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-rap" value="rap">
+                <label class="companions-form__label" for="filter-rap">Русский рэп</label>
+              </li>
+              <li class="companions-form__item">
+                <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-dance" value="dance">
+                <label class="companions-form__label" for="filter-dance">Евроденс</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="companions-form__field">
+            <legend class="companions-form__title">
+              Еда
+              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
+            </legend>
+            <!--Будет добавлено позже-->
+          </fieldset>
+          <fieldset class="companions-form__field">
+            <legend class="companions-form__title">
+              Транспорт
+              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
+            </legend>
+            <ul class="companions-form__list tooltip">
+              <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-plane" value="plane" checked>
+                <label class="tooltip__label" for="filter-plane" aria-label="Самолёт"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-car" value="car" checked>
+                <label class="tooltip__label" for="filter-car" aria-label="Автомобиль"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--bike tooltip__item--small">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-bike" value="bike">
+                <label class="tooltip__label" for="filter-bike" aria-label="Велосипед"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-foot" value="foot" checked>
+                <label class="tooltip__label" for="filter-foot" aria-label="Пешком"></label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="companions-form__field">
+            <legend class="companions-form__title">
+              Левел
+              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
+            </legend>
+            <!--Будет добавлено позже-->
+          </fieldset>
+          <button class="companions-form__submit" type="submit">Показать</button>
+        </form>
+      </section>
+
       <section class="companions-filter">
-        <div class="companions-filter__wrapper-top">
-          <h2 class="companions-filter__title">Подберите идеального попутчика</h2>
-          <form class="companions-filter__form companions-form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="companions-form__field">
-              <legend class="companions-form__title">Хобби</legend>
-              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
-              <div class="companions-form__content">
-                <!--Будет добавлено позже-->
+        <h2 class="visually-hidden">Список попутчиков с учетом фильтров</h2>
+        <ul class="companions-filter__companions companions-list">
+          <li class="companions-list__item companion">
+            <img class="companion__image" src="https://via.placeholder.com/70x70" alt="Фото Тани Фирсовой">
+            <div class="companion__info-wrapper">
+              <h3 class="companion__title companion__title--offline">
+                <a class="companion__link" href="">Таня Фирсова</a>
+              </h3>
+              <p class="companion__hash">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <div class="companion__btns-wrapper">
+                <a class="companion__btn" href="">Позвать!</a>
+                <button class="companion__lik-btn companion__lik-btn--liked" aria-label="В избранном"></button>
+                <span class="companion__like-number">1,5 m</span>
               </div>
-            </fieldset>
-            <fieldset class="companions-form__field">
-              <legend class="companions-form__title">Музыка</legend>
-              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
-              <div class="companions-form__content">
-                <ul class="companions-form__list">
-                  <li class="companions-form__item">
-                    <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-rock" value="rock" checked>
-                    <label class="companions-form__label" for="filter-rock">Тяжелый рок</label>
+            </div>
+            <div class="companion__countries-wrapper">
+              <span class="companion__text">хочет посетить:</span>
+              <ul class="companion__countries-list">
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--sri-lanka">Шри-ланка</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--thailand">Таиланд</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--seychelles">Сейшелы</span>
+                </li>
+              </ul>
+            </div>
+            <div class="companion__transport-level-wrapper">
+              <div class="companion__transport-wrapper">
+                <span class="companion__text">транспорт:</span>
+                <ul class="companion__transport tooltip">
+                  <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Авиаперелет</span>
                   </li>
-                  <li class="companions-form__item">
-                    <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-rap" value="rap">
-                    <label class="companions-form__label" for="filter-rap">Русский рэп</label>
+                  <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Автотранспорт</span>
                   </li>
-                  <li class="companions-form__item">
-                    <input class="companions-form__checkbox visually-hidden" type="checkbox" name="filler" id="filter-dance" value="dance">
-                    <label class="companions-form__label" for="filter-dance">Евроденс</label>
+                  <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Велосипед</span>
                   </li>
-                </ul>
-              </div>
-            </fieldset>
-            <fieldset class="companions-form__field">
-              <legend class="companions-form__title">Еда</legend>
-              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
-              <div class="companions-form__content">
-                <!--Будет добавлено позже-->
-              </div>
-            </fieldset>
-            <fieldset class="companions-form__field">
-              <legend class="companions-form__title">Транспорт</legend>
-              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
-              <div class="companions-form__content">
-                <ul class="companions-form__list transport-list">
-                  <li class="transport-list__item">
-                    <input class="transport-list__checkbox visually-hidden" type="checkbox" name="filler" id="filter-plane" value="plane" checked>
-                    <label class="transport-list__label" for="filter-plane" aria-label="Самолёт"></label>
-                  </li>
-                  <li class="transport-list__item">
-                    <input class="transport-list__checkbox visually-hidden" type="checkbox" name="filler" id="filter-car" value="car" checked>
-                    <label class="transport-list__label" for="filter-car" aria-label="Автомобиль"></label>
-                  </li>
-                  <li class="transport-list__item">
-                    <input class="transport-list__checkbox visually-hidden" type="checkbox" name="filler" id="filter-bike" value="bike">
-                    <label class="transport-list__label" for="filter-bike" aria-label="Велосипед"></label>
-                  </li>
-                  <li class="transport-list__item">
-                      <input class="transport-list__checkbox visually-hidden" type="checkbox" name="filler" id="filter-foot" value="foot" checked>
-                      <label class="transport-list__label" for="filter-foot" aria-label="Пешком"></label>
+                  <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
               </div>
-            </fieldset>
-            <fieldset class="companions-form__field">
-              <legend class="companions-form__title">Левел</legend>
-              <button class="companions-form__btn" aria-label="Открыть/закрыть меню"></button>
-              <div class="companions-form__content">
-                <!--Будет добавлено позже-->
-              </div>
-            </fieldset>
-            <button class="companions-form__submit" type="submit">Показать</button>
-          </form>
-        </div>
-        <div class="companions-filter__wrapper-bottom">
-          <h3 class="visually-hidden">Список попутчиков с учетом фильтров</h3>
-          <ul class="companions-filter__companions companions">
-            <li class="companions__item">
-              <img class="companions__image" src="https://via.placeholder.com/70x70" alt="Фото Тани Фирсовой">
-              <div class="companions__info-wrapper">
-                <a class="companions__link" href="">
-                  <h3 class="companions__title companions__title--offline">Таня Фирсова</h3>
-                </a>
-                <p class="companions__hash">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                <div class="companions__btns-wrapper">
-                  <a class="companions__btn" href="">Позвать!</a>
-                  <button class="companions__lik-btn companions__lik-btn--liked" aria-label="В избранном"></button>
-                  <span class="companions__like-number">1,5 m</span>
+              <div class="companion__level-wrapper">
+                <span class="companion__text">левел:</span>
+                <div class="companion__level level">
+                  <!--svg-->
+                  <span class="level__count level__count--blue">99</span>
                 </div>
               </div>
-              <div class="companions__countries-wrapper">
-                <span class="companions__text">хочет посетить:</span>
-                <ul class="companions__countries-list">
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--sri-lanka">Шри-ланка</span>
-                  </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--thailand">Таиланд</span>
-                  </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--seychelles">Сейшелы</span>
-                  </li>
-                </ul>
+            </div>
+          </li>
+          <li class="companion__item">
+            <img class="companion__image" src="https://via.placeholder.com/70x70" alt="Фото Пети Демина">
+            <div class="companion__info-wrapper">
+              <h3 class="companion__title companion__title--offline">
+                <a class="companion__link" href="">Петя Демин</a>
+              </h3>
+              <p class="companion__hash">#бургер #бар #футбол #концерт #крафт</p>
+              <div class="companion__btns-wrapper">
+                <a class="companion__btn" href="">Позвать!</a>
+                <button class="companion__lik-btn" aria-label="Не в избранном"></button>
+                <span class="companion__like-number">150</span>
               </div>
-              <div class="companions__transport-level-wrapper">
-                <div class="companions__transport-wrapper">
-                  <span class="companions__text">транспорт:</span>
-                  <ul class="companions__transport tooltip">
-                    <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Авиаперелет</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Автотранспорт</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="companions__level-wrapper">
-                  <span class="companions__text">левел:</span>
-                  <div class="companions__level">
-                    <!--svg-->
-                    <span class="companions__level-count">99</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="companions__item">
-              <img class="companions__image" src="https://via.placeholder.com/70x70" alt="Фото Пети Демина">
-              <div class="companions__info-wrapper">
-                <a class="companions__link" href="">
-                  <h3 class="companions__title companions__title--offline">Петя Демин</h3>
-                </a>
-                <p class="companions__hash">#бургер #бар #футбол #концерт #крафт</p>
-                <div class="companions__btns-wrapper">
-                  <a class="companions__btn" href="">Позвать!</a>
-                  <button class="companions__lik-btn" aria-label="Не в избранном"></button>
-                  <span class="companions__like-number">150</span>
-                </div>
-              </div>
-              <div class="companions__countries-wrapper">
-                <span class="companions__text">хочет посетить:</span>
-                <ul class="companions__countries-list">
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--belgium">Бельгия</span>
+            </div>
+            <div class="companion__countries-wrapper">
+              <span class="companion__text">хочет посетить:</span>
+              <ul class="companion__countries-list">
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--belgium">Бельгия</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--czech">Чехия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="companion__transport-level-wrapper">
+              <div class="companion__transport-wrapper">
+                <span class="companion__text">транспорт:</span>
+                <ul class="companion__transport tooltip">
+                  <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Авиаперелет</span>
                   </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--czech">Чехия</span>
+                  <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Автотранспорт</span>
+                  </li>
+                  <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Велосипед</span>
+                  </li>
+                  <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="companions__transport-level-wrapper">
-                <div class="companions__transport-wrapper">
-                  <span class="companions__text">транспорт:</span>
-                  <ul class="companions__transport tooltip">
-                    <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Авиаперелет</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Автотранспорт</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="companions__level-wrapper">
-                  <span class="companions__text">левел:</span>
-                  <div class="companions__level">
-                    <!--svg-->
-                    <span class="companions__level-count">80</span>
-                  </div>
+              <div class="companion__level-wrapper">
+                <span class="companion__text">левел:</span>
+                <div class="companion__level level">
+                  <!--svg-->
+                  <span class="level__count level__count--blue">80</span>
                 </div>
               </div>
-            </li>
-            <li class="companions__item">
-              <img class="companions__image" src="https://via.placeholder.com/70x70" alt="Фото Марка Смолова">
-              <div class="companions__info-wrapper">
-                <a class="companions__link" href="">
-                  <h3 class="companions__title companions__title--offline">Марк Смолов</h3>
-                </a>
-                <p class="companions__hash">#рэп #тату #хайпбист #кроссовки #суприм</p>
-                <div class="companions__btns-wrapper">
-                  <a class="companions__btn" href="">Позвать!</a>
-                  <button class="companions__lik-btn" aria-label="Не в избранном"></button>
-                  <span class="companions__like-number">1700</span>
-                </div>
+            </div>
+          </li>
+          <li class="companion__item">
+            <img class="companion__image" src="https://via.placeholder.com/70x70" alt="Фото Марка Смолова">
+            <div class="companion__info-wrapper">
+              <h3 class="companion__title companion__title--offline">
+                  <a class="companion__link" href="">Марк Смолов</a>
+              </h3>
+              <p class="companion__hash">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <div class="companion__btns-wrapper">
+                <a class="companion__btn" href="">Позвать!</a>
+                <button class="companion__lik-btn" aria-label="Не в избранном"></button>
+                <span class="companion__like-number">1700</span>
               </div>
-              <div class="companions__countries-wrapper">
-                <span class="companions__text">хочет посетить:</span>
-                <ul class="companions__countries-list">
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--usa">США</span>
+            </div>
+            <div class="companion__countries-wrapper">
+              <span class="companion__text">хочет посетить:</span>
+              <ul class="companion__countries-list">
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--usa">США</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--australia">Австралия</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--dominicana">Доминикана</span>
+                </li>
+              </ul>
+            </div>
+            <div class="companion__transport-level-wrapper">
+              <div class="companion__transport-wrapper">
+                <span class="companion__text">транспорт:</span>
+                <ul class="companion__transport tooltip">
+                  <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Авиаперелет</span>
                   </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--australia">Австралия</span>
+                  <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Автотранспорт</span>
                   </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--dominicana">Доминикана</span>
+                  <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Велосипед</span>
                   </li>
-                </ul>
-              </div>
-              <div class="companions__transport-level-wrapper">
-                <div class="companions__transport-wrapper">
-                  <span class="companions__text">транспорт:</span>
-                  <ul class="companions__transport tooltip">
-                    <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Авиаперелет</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Автотранспорт</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="companions__level-wrapper">
-                  <span class="companions__text">левел:</span>
-                  <div class="companions__level">
-                    <!--svg-->
-                    <span class="companions__level-count">25</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="companions__item">
-              <img class="companions__image" src="https://via.placeholder.com/70x70" alt="Фото Ларисы Роговой">
-              <div class="companions__info-wrapper">
-                <a class="companions__link" href="">
-                  <h3 class="companions__title companions__title--online">Лариса Роговая</h3>
-                </a>
-                <p class="companions__hash">#образование #карьера #учеба #линкедин</p>
-                <div class="companions__btns-wrapper">
-                  <a class="companions__btn" href="">Позвать!</a>
-                  <button class="companions__lik-btn" aria-label="Не в избранном"></button>
-                  <span class="companions__like-number">23</span>
-                </div>
-              </div>
-              <div class="companions__countries-wrapper">
-                <span class="companions__text">хочет посетить:</span>
-                <ul class="companions__countries-list">
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--britain">Великобратиния</span>
-                  </li>
-                  <li class="companions__countries-item">
-                    <span class="companions__countries-title companions__countries-title--germany">Германия</span>
+                  <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="companions__transport-level-wrapper">
-                <div class="companions__transport-wrapper">
-                  <span class="companions__text">транспорт:</span>
-                  <ul class="companions__transport tooltip">
-                    <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Авиаперелет</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
-                      <span class="visually-hidden">Автотранспорт</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
-                      <span class="visually-hidden">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="companions__level-wrapper">
-                  <span class="companions__text">левел:</span>
-                  <div class="companions__level">
-                    <!--svg-->
-                    <span class="companions__level-count">50</span>
-                  </div>
+              <div class="companion__level-wrapper">
+                <span class="companion__text">левел:</span>
+                <div class="companion__level level">
+                  <!--svg-->
+                  <span class="level__count level__count--blue">25</span>
                 </div>
               </div>
-            </li>
-          </ul>
-          <a class="companions-filter__more-btn">Показать еще</a>
+            </div>
+          </li>
+          <li class="companion__item">
+            <img class="companion__image" src="https://via.placeholder.com/70x70" alt="Фото Ларисы Роговой">
+            <div class="companion__info-wrapper">
+              <h3 class="companion__title companion__title--online">
+                <a class="companion__link" href="">Лариса Роговая</a>
+              </h3>
+              <p class="companion__hash">#образование #карьера #учеба #линкедин</p>
+              <div class="companion__btns-wrapper">
+                <a class="companion__btn" href="">Позвать!</a>
+                <button class="companion__lik-btn" aria-label="Не в избранном"></button>
+                <span class="companion__like-number">23</span>
+              </div>
+            </div>
+            <div class="companion__countries-wrapper">
+              <span class="companion__text">хочет посетить:</span>
+              <ul class="companion__countries-list">
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--britain">Великобратиния</span>
+                </li>
+                <li class="companion__countries-item">
+                  <span class="companion__countries-title companion__countries-title--germany">Германия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="companion__transport-level-wrapper">
+              <div class="companion__transport-wrapper">
+                <span class="companion__text">транспорт:</span>
+                <ul class="companion__transport tooltip">
+                  <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Авиаперелет</span>
+                  </li>
+                  <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--bg-gray tooltip__item--active">
+                    <span class="visually-hidden">Автотранспорт</span>
+                  </li>
+                  <li class="tooltip__item tooltip__item--bike tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Велосипед</span>
+                  </li>
+                  <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--bg-gray">
+                    <span class="visually-hidden">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="companion__level-wrapper">
+                <span class="companion__text">левел:</span>
+                <div class="companion__level level">
+                  <!--svg-->
+                  <span class="level__count level__count--blue">50</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="companions-filter__more-btn">Показать еще</a>
+        <div class="companions-filter__btns-wrapper">
           <button class="companions-filter__prev-btn" type="button" aria-label="Предыдущая страница"></button>
           <button class="companions-filter__next-btn" type="button" aria-label="Следующая страница"></button>
         </div>
       </section>
-
     </main>
 
     <footer class="page-footer">
-        <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
+        <a class="page-footer__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item">
@@ -521,6 +458,5 @@
         </a>
       </div>
     </footer>
-
   </body>
 </html>
