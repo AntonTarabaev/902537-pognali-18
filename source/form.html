@@ -6,80 +6,436 @@
   </head>
   <body>
 
-  <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-      <div class="main-nav__wrapper">
-        <div class="main-nav__lists-wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__phone" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list social-list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+    <header class="page-header">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <div class="main-nav__wrapper">
+          <div class="main-nav__lists-wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link">Попутчики</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list contacts-list">
+              <li class="contacts-list__item">
+                <a class="contacts-list__phone" href="tel:88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contacts-list__item">
+                <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+              </li>
+            </ul>
+          </div>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login" href="login.html">Авторизация</a>
             </li>
           </ul>
         </div>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__login" href="login.html">Авторизация</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Направления</h1>
+
+      <section class="profile">
+        <h2 class="visually-hidden">Ваш профиль</h2>
+
+        <div class="profile__level level">
+          <!--svg-->
+          <span class="level__count level__count--blue">99</span>
+        </div>
+        <img class="profile__image" src="https://via.placeholder.com/100x100" alt="Ваше фото">
+        <button class="profile__change-photo" type="button">Сменить фото</button>
+        <form class="profile__form" action="https://echo.htmlacademy.ru">
+          <fieldset class="profile__field">
+            <legend class="profile__title">Тэги</legend>
+            <label class="visually-hidden" for="hash-textarea">Ваши хэштеги</label>
+            <textarea class="profile__hash" name="hash" id="hash-textarea">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="profile__field">
+            <legend class="profile__title">Транспорт</legend>
+            <ul class="profile__transport tooltip">
+              <li class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-plane" value="plane" checked>
+                <label class="tooltip__label" for="filter-plane" aria-label="Самолёт"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--car tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-car" value="car" checked>
+                <label class="tooltip__label" for="filter-car" aria-label="Автомобиль"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--bike tooltip__item--small">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-bike" value="bike">
+                <label class="tooltip__label" for="filter-bike" aria-label="Велосипед"></label>
+              </li>
+              <li class="tooltip__item tooltip__item--foot tooltip__item--small tooltip__item--active">
+                <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-foot" value="foot" checked>
+                <label class="tooltip__label" for="filter-foot" aria-label="Пешком"></label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="plans">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ol class="plans__lesi">
+          <li class="plans__item">
+            <h3 class="plans__country">Франция, Италия</h3>
+            <p class="plans__companions">3 попутчика</p>
+            <p class="plans__dates">26 мар — 29 мар</p>
+            <a class="plans__change-link" href="plans.html">Изменить</a>
           </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+          <li class="plans__item">
+            <h3 class="plans__country">Таиланд, Индонезия</h3>
+            <p class="plans__companions">1 попутчик</p>
+            <p class="plans__dates">1 июл — 15 июл</p>
+            <a class="plans__change-link" href="plans.html">Изменить</a>
+          </li>
+        </ol>
+      </section>
 
-  <main class="page-main">
-    <!--Красная зона макета, будет размечено позже-->
-  </main>
+      <section class="add-plan">
+        <h2 class="add-plan__title">Добавить план</h2>
+        <form class="add-plan__form steps" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="steps__fieldset" id="step-1">
+            <legend class="steps__legend">Шаг 1. Даты пребывания</legend>
+            <p class="steps__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="steps__wrapper">
+              <span class="steps__title">Ищу попутчиков:</span>
+              <span class="steps__mark">Чел.</span>
+              <div class="steps__number-controls number-controls">
+                <button class="number-controls__less-btn" type="button" aria-label="Уменьшить количество попутчиков"></button>
+                <input class="number-controls__count" name="adults" type="number" id="companions-count" min="1" max="19" value="2">
+                <button class="number-controls__more-btn" type="button" aria-label="Увеличить количество попутчиков"></button>
+              </div>
+            </div>
+            <div class="steps__wrapper">
+              <span class="steps__title">Длительность:</span>
+              <span class="steps__mark">Дн.</span>
+              <div class="steps__number-controls number-controls">
+                <button class="number-controls__less-btn" type="button" aria-label="Уменьшить количество дней"></button>
+                <input class="number-controls__count" name="adults" type="number" id="companions-count" min="1" max="30" value="2">
+                <button class="number-controls__more-btn" type="button" aria-label="Увеличить количество дней"></button>
+              </div>
+            </div>
+            <div class="steps__checkboxes">
+              <input class="steps__checkbox visually-hidden" type="checkbox" name="children" id="children-check" value="children-ok" checked>
+              <label class="steps__label" for="children-check">Можно с детьми</label>
+            </div>
+            <div class="steps__calendar calendar">
+              <p class="visually-hidden">Укажите даты поездки</legend>
+              <div class="calendar__select">
+                <button class="calendar__prev-btn " type="button" aria-label="Предыдущий месяц"></button>
+                <span class="calendar__month-year">Март 2019</span>
+                <button class="calendar__next-btn " type="button" aria-label="Следующий месяц"></button>
+              </div>
+              <table class="calendar__table calendar-table">
+                <thead class="calendar-table__thead">
+                  <tr class="calandar-table__row">
+                    <th class="calendar-table__day-of-the-week">П</th>
+                    <th class="calendar-table__day-of-the-week">В</th>
+                    <th class="calendar-table__day-of-the-week">С</th>
+                    <th class="calendar-table__day-of-the-week">Ч</th>
+                    <th class="calendar-table__day-of-the-week">П</th>
+                    <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">С</th>
+                    <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">В</th>
+                  </tr>
+                </thead>
+                <tbody class="calendar-table__tbody">
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>23</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>24</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>25</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>26</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>27</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>28</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>1</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>2</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>3</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>4</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>5</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>6</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>7</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>8</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>9</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>10</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>11</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>12</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>13</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>14</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>15</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>16</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>17</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>18</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>19</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>20</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>21</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>22</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>23</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>24</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>25</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn calendar-table__btn--selected calendar-table__btn--start-date" type="button">26</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn calendar-table__btn--selected" type="button">27</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn calendar-table__btn--selected" type="button">28</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">29</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">30</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">31</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">1</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">2</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">3</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">4</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button">5</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="steps__next-btn" href="#step-2">Следующий шаг</a>
+          </fieldset>
+          <fieldset class="steps__fieldset" id="step-2">
+            <legend class="steps__legend">Шаг 2. Маршрут</legend>
+            <p class="steps__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+            <ul class="steps__routes-list routes">
+              <li class="routes__item">
+                <button class="routes__select routes__select--selected routes__select--bosnia" type="button">Босния и герцегов</button>
+                <button class="routes__remove" aria-label="Удалить страну"></button>
+              </li>
+              <li class="routes__item">
+                <button class="routes__select routes__select--selected routes__select--czech" type="button">Босния и герцегов</button>
+                <button class="routes__remove" aria-label="Удалить страну"></button>
+              </li>
+              <li class="routes__item">
+                <button class="routes__select" type="button">Выберите страну</button>
+                <div class="routes__alphabeth-wrapper">
+                  <div class="routes__alphabeth alphabeth-btns">
+                    <button class="alphabeth-btns__btn alphabeth-btns__btn--active">А</button>
+                    <button class="alphabeth-btns__btn">Б</button>
+                    <button class="alphabeth-btns__btn">В</button>
+                    <button class="alphabeth-btns__btn">Г</button>
+                    <button class="alphabeth-btns__btn">Д</button>
+                    <button class="alphabeth-btns__btn">Е</button>
+                    <button class="alphabeth-btns__btn">З</button>
+                    <button class="alphabeth-btns__btn">И</button>
+                    <button class="alphabeth-btns__btn">К</button>
+                    <button class="alphabeth-btns__btn">Л</button>
+                    <button class="alphabeth-btns__btn">М</button>
+                    <button class="alphabeth-btns__btn">Н</button>
+                    <button class="alphabeth-btns__btn">О</button>
+                    <button class="alphabeth-btns__btn">П</button>
+                    <button class="alphabeth-btns__btn">Р</button>
+                    <button class="alphabeth-btns__btn">С</button>
+                    <button class="alphabeth-btns__btn">Т</button>
+                    <button class="alphabeth-btns__btn">У</button>
+                    <button class="alphabeth-btns__btn">Ф</button>
+                    <button class="alphabeth-btns__btn">Х</button>
+                    <button class="alphabeth-btns__btn">Ч</button>
+                    <button class="alphabeth-btns__btn">Ш</button>
+                    <button class="alphabeth-btns__btn">Э</button>
+                    <button class="alphabeth-btns__btn">Ю</button>
+                    <button class="alphabeth-btns__btn">Я</button>
+                  </div>
+                  <ul class="routes__contry-list country-list">
+                    <li class="country-list__item country-list__item--shown">
+                      <ul class="country-list__list-by-letter">
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Афганистан</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Албания</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Алжир</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Андорра</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Аргентина</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Армения</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Австралия</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Австрия</a>
+                        </li>
+                        <li class="country-list__letter-item">
+                          <a class="country-list__link" href="">Азербайджан</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--Добавить остальные буквы-->
+                  </ul>
+                </div>
+                <button class="routes__remove" aria-label="Удалить страну"></button>
+              </li>
+              <li class="routes__item">
+                <button class="routes__select routes__select--add" type="button">Добавить страну</button>
+              </li>
+            </ul>
+            <div class="steps__btns-wrapper">
+              <a class="steps__next-btn" href="#step-3">Следующий шаг</a>
+              <a class="steps__prev-btn" href="#step-1">Предыдущий шаг</a>
+            </div>
+          </fieldset>
+          <fieldset class="steps__fieldset" id="step-3">
+            <legend class="steps__legend">Шаг 3. Развлечения</legend>
+            <p class="steps__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <ul class="steps__entertainment-list entertainment-list">
+              <li class="entertainment-list__item">
+                <span class="entertainment-list__country entertainment-list__country--bosnia">Босния и герцеговина</span>
+                <textarea class="entertainment-list__plan" placeholder="План действий" aria-label="План действий"></textarea>
+              </li>
+              <li class="entertainment-list__item">
+                <span class="entertainment-list__country entertainment-list__country--czech">Чехия</span>
+                <textarea class="entertainment-list__plan" placeholder="План действий" aria-label="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              </li>
+            </ul>
+            <div class="steps__btns-wrapper">
+              <button class="steps__submit-btn" type="submit">Отправить</button>
+              <a class="steps__prev-btn" href="#step-1">Предыдущий шаг</a>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
 
-  <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
-    </a>
-    <ul class="page-footer__list social-list">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__img" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+    <footer class="page-footer">
+        <a class="page-footer__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
       </a>
-    </div>
-  </footer>
-
+      <ul class="page-footer__list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__img" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
