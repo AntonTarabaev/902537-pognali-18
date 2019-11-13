@@ -116,7 +116,7 @@
 
       <section class="add-plan">
         <h2 class="add-plan__title">Добавить план</h2>
-        <form class="add-plan__form steps" action="https://echo.htmlacademy.ru">
+        <form class="add-plan__form steps" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="steps__fieldset" id="step-1">
             <legend class="steps__legend">Шаг 1. Даты пребывания</legend>
             <p class="steps__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
@@ -151,116 +151,118 @@
               </div>
               <table class="calendar__table calendar-table">
                 <thead class="calendar-table__thead">
-                  <th class="calendar-table__day-of-the-week">П</th>
-                  <th class="calendar-table__day-of-the-week">В</th>
-                  <th class="calendar-table__day-of-the-week">С</th>
-                  <th class="calendar-table__day-of-the-week">Ч</th>
-                  <th class="calendar-table__day-of-the-week">П</th>
-                  <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">С</th>
-                  <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">В</th>
+                  <tr class="calandar-table__row">
+                    <th class="calendar-table__day-of-the-week">П</th>
+                    <th class="calendar-table__day-of-the-week">В</th>
+                    <th class="calendar-table__day-of-the-week">С</th>
+                    <th class="calendar-table__day-of-the-week">Ч</th>
+                    <th class="calendar-table__day-of-the-week">П</th>
+                    <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">С</th>
+                    <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">В</th>
+                  </tr>
                 </thead>
                 <tbody class="calendar-table__tbody">
                   <tr class="calendar-table__row">
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">23</button>
+                      <button class="calendar-table__btn" type="button" disabled>23</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">24</button>
+                      <button class="calendar-table__btn" type="button" disabled>24</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">25</button>
+                      <button class="calendar-table__btn" type="button" disabled>25</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">26</button>
+                      <button class="calendar-table__btn" type="button" disabled>26</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">27</button>
+                      <button class="calendar-table__btn" type="button" disabled>27</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">28</button>
+                      <button class="calendar-table__btn" type="button" disabled>28</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">1</button>
-                    </td>
-                  </tr>
-                  <tr class="calendar-table__row">
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">2</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">3</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">4</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">5</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">6</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">7</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">8</button>
+                      <button class="calendar-table__btn" type="button" disabled>1</button>
                     </td>
                   </tr>
                   <tr class="calendar-table__row">
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">9</button>
+                      <button class="calendar-table__btn" type="button" disabled>2</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">10</button>
+                      <button class="calendar-table__btn" type="button" disabled>3</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">11</button>
+                      <button class="calendar-table__btn" type="button" disabled>4</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">12</button>
+                      <button class="calendar-table__btn" type="button" disabled>5</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">13</button>
+                      <button class="calendar-table__btn" type="button" disabled>6</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">14</button>
+                      <button class="calendar-table__btn" type="button" disabled>7</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">15</button>
-                    </td>
-                  </tr>
-                  <tr class="calendar-table__row">
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">16</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">17</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">18</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">19</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">20</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">21</button>
-                    </td>
-                    <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">22</button>
+                      <button class="calendar-table__btn" type="button" disabled>8</button>
                     </td>
                   </tr>
                   <tr class="calendar-table__row">
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">23</button>
+                      <button class="calendar-table__btn" type="button" disabled>9</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">24</button>
+                      <button class="calendar-table__btn" type="button" disabled>10</button>
                     </td>
                     <td class="calendar-table__cell">
-                      <button class="calendar-table__btn calendar-table__btn--disabled" type="button">25</button>
+                      <button class="calendar-table__btn" type="button" disabled>11</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>12</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>13</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>14</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>15</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>16</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>17</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>18</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>19</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>20</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>21</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>22</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar-table__row">
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>23</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>24</button>
+                    </td>
+                    <td class="calendar-table__cell">
+                      <button class="calendar-table__btn" type="button" disabled>25</button>
                     </td>
                     <td class="calendar-table__cell">
                       <button class="calendar-table__btn calendar-table__btn--selected calendar-table__btn--start-date" type="button">26</button>
