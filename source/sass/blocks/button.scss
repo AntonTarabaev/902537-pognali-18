@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 20px 5px 15px;
+  width: 100%;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $dark-blue;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: $yellow;
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+}

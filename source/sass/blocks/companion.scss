@@ -1,0 +1,36 @@
+.companion {
+  margin-top: 30px;
+
+  color: $grey-text;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.companion__image {
+  width: 270px;
+  height: 270px;
+}
+
+.companion__title {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+
+  color: $light-blue;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.companion__hash {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+
+  font-weight: normal;
+
+  text-align: center;
+}

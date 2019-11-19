@@ -1,0 +1,12 @@
+.map {
+  position: relative;
+  margin-top: -30px;
+
+  background-color: $light-grey;
+
+  z-index: 0;
+}
+
+.map__image {
+  width: 100%;
+}

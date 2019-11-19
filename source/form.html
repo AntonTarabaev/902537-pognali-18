@@ -8,11 +8,13 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo logo">
+            <img class="logo__image" src="img/logo-mobile-blue@1x.png" alt="Логотип сервиса «Погнали»">
+          </a>
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        </div>
         <div class="main-nav__wrapper">
           <div class="main-nav__lists-wrapper">
             <ul class="main-nav__list site-list">
@@ -28,10 +30,10 @@
             </ul>
             <ul class="main-nav__list contacts-list">
               <li class="contacts-list__item">
-                <a class="contacts-list__phone" href="tel:88005558628">8 800 555-86-28</a>
+                <a class="contacts-link contacts-link--phone" href="tel:88005558628">8 800 555-86-28</a>
               </li>
               <li class="contacts-list__item">
-                <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <a class="contacts-link contacts-link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
             <ul class="main-nav__list social-list">
