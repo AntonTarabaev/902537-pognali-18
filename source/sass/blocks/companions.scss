@@ -19,15 +19,23 @@
 
 .companions__title {
   margin: 0;
+  padding-left: 25px;
 
   color: $orange;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .companions__text {
+  padding-left: 25px;
   width: 220px;
 }
 
 .companions__info {
+  display: block;
+  padding-left: 25px;
+
   font-weight: 700;
 }
 
