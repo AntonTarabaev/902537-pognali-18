@@ -1,0 +1,14 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__link {
+  font-style: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: $blue;
+  text-decoration: none;
+}

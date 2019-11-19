@@ -1,0 +1,20 @@
+.main-nav {
+  width: 320px;
+  min-height: 73px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 72px;
+  height: 72px;
+
+  cursor: pointer;
+  border: none;
+}

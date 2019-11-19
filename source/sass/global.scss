@@ -9,16 +9,17 @@ html {
 }
 
 body {
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
   font-family: "Blogger Sans", serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 400;
-  color: #000000;
+  color: $grey-text;
 
-  background-color: #f2f2f2;
+  background-color: $light-grey;
 }
 
 a {
