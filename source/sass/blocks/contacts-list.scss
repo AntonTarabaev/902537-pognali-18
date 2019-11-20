@@ -1,15 +1,12 @@
 .contacts-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include list-reset;
 }
 
-.contacts-link {
+.contacts-list__link {
   font-weight: 700;
   color: $blue;
-}
 
-.contacts-link--yellow {
-  color: $yellow;
+  &--yellow {
+    color: $yellow;
+  }
 }

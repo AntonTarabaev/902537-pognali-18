@@ -5,15 +5,30 @@
   overflow: hidden;
 }
 
+.country-card__image {
+  vertical-align: middle;
+}
+
 .country-card__about {
   position: relative;
-  padding: 20px;
-  margin-top: -15px;
+  padding: 0 20px 20px 20px;
 
   background-color: #ffffff;
-  border-radius: 10px 10px 0 0;
 
-  z-index: 2;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 10px;
+
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+
+    z-index: 1;
+  }
 }
 
 .country-card__title {

@@ -5,33 +5,30 @@
   color: #ffffff;
 
   border-radius: 0 0 30px 30px;
-
-  z-index: 6;
 }
 
 .about__wrapper {
+  @include mobile-container;
   position: relative;
-  width: 320px;
-  margin: 0 auto;
   padding: 300px 60px 80px 50px;
 
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom;
-}
 
-.about__wrapper::after {
-  position: absolute;
-  left: 0;
-  bottom: 220px;
-  content: "";
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 220px;
+    content: "";
 
-  width: 113px;
-  height: 132px;
+    width: 113px;
+    height: 132px;
 
-  background-color: #141b3b;
+    background-color: #141b3b;
 
-  z-index: -1;
+    z-index: -1;
+  }
 }
 
 .about__title {

@@ -1,23 +1,32 @@
 .tariffs {
   position: relative;
-  margin-top: -30px;
-  padding-top: 30px;
 
   background-color: $light-grey;
-  border-radius: 0 0 30px 30px;
 
-  z-index: 3;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -30px;
+
+    width: 100%;
+    height: 30px;
+
+    background-color: $light-grey;
+    border-radius: 0 0 30px 30px;
+
+    z-index: 1;
+  }
 }
 
 .tariffs__wrapper {
-  width: 320px;
-  padding: 25px 25px 25px 50px;
-  margin: 0 auto;
+  @include mobile-container;
+  padding: 50px 25px 0 50px;
 
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-size: 99px 99px;
-  background-position: 195px 15px;
+  background-position: 195px 40px;
 }
 
 .tariffs__title {
