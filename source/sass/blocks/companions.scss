@@ -1,0 +1,53 @@
+.companions {
+  position: relative;
+
+  color: #ffffff;
+
+  background-color: $blue;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -30px;
+
+    width: 100%;
+    height: 30px;
+
+    background-color: $blue;
+    border-radius: 0 0 30px 30px;
+
+    z-index: 1;
+  }
+}
+
+.companions__wrapper {
+  @include mobile-container;
+  padding: 50px 25px 0 25px;
+}
+
+.companions__title {
+  margin: 0;
+  padding-left: 25px;
+
+  color: $orange;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.companions__text {
+  padding-left: 25px;
+  width: 220px;
+}
+
+.companions__info {
+  display: block;
+  padding-left: 25px;
+
+  font-weight: 700;
+}
+
+.companions__link {
+  margin-top: 20px;
+}

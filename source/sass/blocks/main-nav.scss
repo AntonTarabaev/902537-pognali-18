@@ -1,0 +1,26 @@
+.main-nav {
+  width: 320px;
+  min-height: 73px;
+  margin: 0 auto;
+  padding: 25px;
+
+  background-color: #ffffff;
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  background-color: #ffffff;
+  background-image: url("../img/menu.svg");
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.contacts-list {
+  @include list-reset;
+}
+
+.contacts-list__link {
+  font-weight: 700;
+  color: $blue;
+
+  &--yellow {
+    color: $yellow;
+  }
+}

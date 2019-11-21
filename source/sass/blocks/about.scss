@@ -1,0 +1,44 @@
+.about {
+  position: relative;
+  background-color: $blue;
+
+  color: #ffffff;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.about__wrapper {
+  @include mobile-container;
+  position: relative;
+  padding: 300px 60px 80px 50px;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 220px;
+    content: "";
+
+    width: 113px;
+    height: 132px;
+
+    background-color: #141b3b;
+
+    z-index: -1;
+  }
+}
+
+.about__title {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: $orange;
+}
+
+.about__info {
+  font-weight: 700;
+}

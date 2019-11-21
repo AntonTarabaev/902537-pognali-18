@@ -1,0 +1,39 @@
+.directions {
+  position: relative;
+
+  background-color: $light-grey;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -30px;
+
+    width: 100%;
+    height: 30px;
+
+    background-color: $light-grey;
+    border-radius: 0 0 30px 30px;
+
+    z-index: 1;
+  }
+}
+
+.directions__wrapper {
+  @include mobile-container;
+  padding: 25px 25px 0 25px;
+}
+
+.directions__title {
+  margin: 0;
+  padding-left: 25px;
+
+  color: $orange;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.directions__text {
+  padding-left: 25px;
+  width: 200px;
+}
