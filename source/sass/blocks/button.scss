@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   vertical-align: top;
-  padding: 10px 20px 5px 15px;
+  padding: 5px 20px 5px 15px;
   width: 100%;
 
   font-size: 17px;
@@ -16,4 +16,159 @@
   border-radius: 30px;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-orange;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
+  &--square {
+    position: relative;
+    padding: 24px 34px 24px 24px;
+
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    color: $light-blue;
+    text-transform: unset;
+
+    border-radius: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../img/triangle-arrow-right.svg");
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--bordered {
+    padding-top: 24px - 3px;
+    padding-bottom: 24px - 3px;
+
+    border: 3px solid $blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 0;
+      height: 0;
+
+      background-image: none;
+      border-style: solid;
+      border-width: 7px 0 7px 10px;
+      border-color: transparent transparent transparent $blue;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $blue;
+
+      color: #ffffff;
+    }
+
+    &:hover::after {
+      border-left-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active::after {
+      border-left-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--collapse {
+    position: relative;
+    background-color: #d6daed;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 73px;
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../img/menu-close.svg");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #c8cee8;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--more {
+    position: relative;
+    background-color: transparent;
+
+    color: $light-blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 50px;
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../img/show-more-plus.svg");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: rgba(29, 46, 91, 0.6);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.6;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--white {
+    background-color: #ffffff;
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+
+      background-color: #f3c72b;
+    }
+  }
 }

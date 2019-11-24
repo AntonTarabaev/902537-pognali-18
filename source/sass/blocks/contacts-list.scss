@@ -1,12 +1,115 @@
 .contacts-list {
   @include list-reset;
+
+  z-index: 1;
+
+  &--small {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .contacts-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   font-weight: 700;
   color: $blue;
+  text-transform: uppercase;
 
   &--yellow {
     color: $yellow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellow-orange;
+  }
+
+  &:hover .contacts-list__svg,
+  &:focus .contacts-list__svg {
+    fill: $yellow-orange;
+  }
+
+  &:active {
+    color: rgba(255, 189, 48, 0.3);
+  }
+
+  &:active .contacts-list__svg {
+    opacity: 0.3;
+  }
+
+  &--small {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50px;
+  }
+
+  &--phone {
+    background-color: $orange;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-orange;
+    }
+
+    &:active .contacts-list__svg-bg {
+      opacity: 0.3;
+    }
+  }
+
+  &--email {
+    background-color: $yellow-orange;
+
+    &:hover,
+    &:focus {
+      background-color: $orange;
+    }
+
+    &:active .contacts-list__svg-bg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts-list__svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  background-color: $darkest-blue;
+  border-radius: 50px;
+}
+
+.contacts-list__svg {
+  width: 18px;
+  height: auto;
+
+  fill: $yellow;
+}
+
+.contacts-list__svg-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px auto;
+
+  &--phone {
+    background-image: url("../img/topmenu-phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/topmenu-mail.svg");
   }
 }

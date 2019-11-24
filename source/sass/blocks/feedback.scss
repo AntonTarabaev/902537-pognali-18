@@ -48,6 +48,18 @@
 
 .feedback__login {
   color: $yellow;
+
+  box-shadow: 0 -1px rgba(255, 215, 75, 0.3) inset;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+    box-shadow: 0 -1px rgba(255, 141, 48, 0.3) inset;
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
 }
 
 .feedback__info {
@@ -56,4 +68,62 @@
   margin: 20px auto;
 
   text-align: center;
+}
+
+.feedback__form {
+  position: relative;
+}
+
+.feedback__input {
+  width: 100%;
+  padding: 20px 84px 20px 24px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+
+  border-radius: 10px;
+  border: none;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.feedback__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  padding: 0;
+
+  border: none;
+  border-radius: 10px;
+  background-color: $yellow;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-orange;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }

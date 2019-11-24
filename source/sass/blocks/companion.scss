@@ -1,28 +1,135 @@
 .companion {
-  margin-top: 30px;
+  position: relative;
 
   color: $grey-text;
 
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+
+  &--catalog {
+    padding: 15px 15px 62px 15px;
+  }
 }
 
 .companion__image {
   width: 270px;
   height: 270px;
+
+  border-radius: 10px 10px 0 0;
+
+  &--catalog {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+  }
+}
+
+.companion__countries-wrapper {
+  margin-top: 20px;
+}
+
+.companion__countries {
+  position: absolute;
+  top: 258px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--catalog {
+    margin-top: 19px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+
+    position: static;
+    transform: none;
+  }
+}
+
+.companion__info-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .companion__title {
-  width: 200px;
   display: block;
-  margin: 10px auto;
+  margin: 25px auto 15px auto;
+  padding: 0 17px;
 
-  color: $light-blue;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+
+  &--catalog {
+    width: 190px;
+    min-height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-left: 89px;
+
+    font-size: 20px;
+    line-height: 20px;
+    order: 1;
+    text-align: left;
+  }
+}
+
+.companion__link {
+  position: relative;
+  padding: 0 16px;
+
+  color: $light-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+
+    border-radius: 2.5px;
+    background-color: #f97676;
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
+
+  &--catalog {
+    position: static;
+    padding: 0;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+      top: 22px;
+      left: 242px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .companion__hash {
@@ -31,6 +138,164 @@
   margin: 0 auto;
 
   font-weight: 400;
-
   text-align: center;
+
+  &--catalog {
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+
+    order: 3;
+  }
+}
+
+.companion__btns-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 52px;
+
+  order: 2;
+  z-index: 1;
+}
+
+.companion__like-btn {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  margin-right: 7px;
+
+  background-color: $light-grey;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e2e5f2;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+  &--liked {
+    background-color: #f9eaea;
+
+    &::before {
+      background-image: url("../img/heart-active.svg");
+
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #f9d8d8;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.companion__like-number {
+  color: $dark-blue;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.companion__btn {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+}
+
+.companion__text {
+  position: relative;
+  padding: 0 5px;
+  font-size: 15px;
+  font-weight: 400;
+
+  background-color: #ffffff;
+
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    height: 1px;
+    width: 270px;
+
+    background-color: #edeff6;
+
+    z-index: -1;
+  }
+}
+
+.companion__transport-level-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.companion__transport {
+  margin-top: 27px;
+  padding-bottom: 29px;
+
+  &--catalog {
+    margin-top: 19px;
+    padding: 0;
+  }
+}
+
+.companion__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  &--catalog {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 12px;
+    margin-right: 5px;
+  }
 }

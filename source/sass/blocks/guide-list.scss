@@ -1,6 +1,8 @@
 .guide-list {
   @include list-reset;
   width: 270px;
+
+  counter-reset: section;
 }
 
 .guide-list__item {
@@ -35,6 +37,19 @@
     background-color: inherit;
 
     z-index: 1;
+  }
+
+  &::after {
+    counter-increment: section;
+    content: counter(section);
+
+    position: absolute;
+    top: 13px;
+    right: 21px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
   }
 }
 

@@ -1,0 +1,110 @@
+.level {
+  position: relative;
+  width: 60px;
+  height: 60px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border-radius: 50%;
+
+  &--small {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+  }
+
+  &--big {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+  }
+}
+
+.level__svg {
+  &--small {
+    width: 45px;
+    height: 45px;
+  }
+
+  &--big {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.level__progress {
+  transform: rotate(-90deg) translateX(-60px);
+
+  //Потом думаю избавиться от этих классов и добавлять stroke-dashoffset
+  //через JS исходя из значений level__count, правильно?
+  &--99 {
+    stroke-dashoffset: 188px -  99 * 1.76px;
+  }
+
+  &--80 {
+    stroke-dashoffset: 188px -  80 * 1.76px;
+  }
+
+  &--50 {
+    stroke-dashoffset: 188px -  50 * 1.76px;
+  }
+
+  &--25 {
+    stroke-dashoffset: 188px -  25 * 1.76px;
+  }
+}
+
+.level__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.level__count {
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  &--small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    line-height: 18px;
+
+    border: none;
+  }
+
+  &--big {
+    padding: 0 5px 0 5px;
+
+    font-size: 38px;
+    line-height: 38px;
+
+    border-bottom: 2px solid #cbced9;
+  }
+
+  &--blue {
+    color: $light-blue;
+  }
+}
+
+.level__text {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  &--big {
+    font-size: 18px;
+
+    color: $grey-text;
+  }
+}

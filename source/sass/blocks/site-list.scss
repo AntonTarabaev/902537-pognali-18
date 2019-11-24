@@ -1,15 +1,51 @@
 .site-list {
-  margin: 0;
-  padding: 0;
+  @include list-reset;
 
-  list-style: none;
+  text-align: center;
 }
 
 .site-list__link {
+  display: block;
+  overflow: hidden;
+
   font-weight: 500;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   color: $blue;
   text-decoration: none;
+
+  &:hover .site-list__text,
+  &:focus .site-list__text {
+    transform: translateY(-100%);
+  }
+
+  &:hover .site-list__text--current,
+  &:focus .site-list__text--current {
+    transform: none;
+  }
+
+  &:active .site-list__text {
+    opacity: 0.3;
+  }
+
+  &:active .site-list__text--current {
+    opacity: 1;
+  }
+}
+
+.site-list__text {
+  display: block;
+  position: relative;
+
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+
+    color: $yellow;
+    font-weight: 700;
+  }
 }

@@ -1,0 +1,32 @@
+.alphabeth-btns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 225px;
+}
+
+.alphabeth-btns__btn {
+  display: block;
+  padding: 0;
+  width: 45px;
+  height: 42px;
+
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  color: $light-blue;
+
+  border: 1px solid #cbced9;
+  border-right: none;
+  border-bottom: none;
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  &:nth-child(5n) {
+    border-right: 1px solid #cbced9;
+  }
+
+  &:nth-last-child(-n+5) {
+    border-bottom: 1px solid #cbced9;
+  }
+}
