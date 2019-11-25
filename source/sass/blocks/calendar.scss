@@ -1,0 +1,52 @@
+.calendar__select {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+}
+
+.calendar__month-year {
+  display: block;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.calendar__btn {
+  width: 9px;
+  height: 17px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.3;
+
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../img/month-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/month-arrow-right.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.calendar__table {
+  margin-top: 20px;
+}

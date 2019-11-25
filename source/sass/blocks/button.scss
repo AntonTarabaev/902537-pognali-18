@@ -171,4 +171,19 @@
       background-color: #f3c72b;
     }
   }
+
+  &--prev-step {
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+
+      background-color: transparent;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

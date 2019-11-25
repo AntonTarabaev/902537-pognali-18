@@ -1,0 +1,155 @@
+.steps__list {
+  @include list-reset;
+
+  counter-reset: steps;
+}
+
+.steps__item {
+  margin: 0;
+  margin-top: 10px;
+  padding: 24px 20px 22px 20px;
+
+  border: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.steps__title {
+  position: relative;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 20px;
+
+  &::before {
+    counter-increment: steps;
+    content: "Шаг " counter(steps) ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.steps__text {
+  width: 215px;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 18px;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey-text;
+  font-weight: 400;
+}
+
+.steps__wrapper {
+  margin-top: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.steps__info {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.steps__mark {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 500;
+  color: rgba(29, 46, 91, 0.3);
+}
+
+.steps__checkboxes {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.steps__label {
+  position: relative;
+  display: block;
+  min-height: 26px;
+  padding-left: 39px;
+
+  font-weight: 400;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+
+    border-radius: 4px;
+    border: solid 1px #cbced9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+
+    border-radius: 4px;
+    background-size: 9px 9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/tick.svg");
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: #959bb2;
+  }
+
+  &:active::before {
+    background-color: #e2e5f1;
+    border: none;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.steps__checkbox:checked + .steps__label::after {
+  display: block;
+}
+
+.steps__calendar {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 22px;
+}
+
+.steps__routes-list {
+  margin-top: 24px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.steps__btns-wrapper {
+  margin-top: 25px;
+}
+
+.steps__prev-btn {
+  margin-top: 10px;
+}
+
+.steps__entertainment-list {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 27px;
+}
