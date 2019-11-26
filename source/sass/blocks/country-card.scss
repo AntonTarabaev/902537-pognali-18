@@ -33,33 +33,19 @@
 
     z-index: 1;
   }
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: -22px;
-    left: 25px;
+.country-card__flag {
+  position: absolute;
+  top: -22px;
+  left: 25px;
 
-    width: 35px;
-    height: 24px;
+  width: 35px;
+  height: 24px;
 
-    background-color: #000000;
+  background-color: #000000;
 
-    z-index: 1;
-  }
-
-  //Заготовка под флаги, которых пока нет
-  //&--thailand::after {
-  //  background-image: url("../img/");
-  //}
-
-  //&--france::after {
-  //  background-image: url("../img/");
-  //}
-
-  //&--czech::after {
-  //  background-image: url("../img/");
-  //}
+  z-index: 1;
 }
 
 .country-card__title {

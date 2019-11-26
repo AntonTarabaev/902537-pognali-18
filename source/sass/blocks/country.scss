@@ -16,6 +16,11 @@
   height: 24px;
   margin-right: 19px;
 
+  &--catalog {
+    width: auto;
+    margin: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -24,77 +29,6 @@
   &:focus .country__text {
     display: block;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 24px;
-  }
-
-  &--belgium::before {
-    background-color: #000000;
-  }
-
-  &--czech::before {
-    background-color: #333333;
-  }
-
-  &--sri-lanka::before {
-    background-color: #000000;
-  }
-
-  &--thailand::before {
-    background-color: #000000;
-  }
-
-  &--seychelles::before {
-    background-color: #000000;
-  }
-
-  &--dominican::before {
-    background-color: #000000;
-  }
-
-  &--usa::before {
-    background-color: #000000;
-  }
-
-  &--australia::before {
-    background-color: #000000;
-  }
-
-  &--germany::before {
-    background-color: #000000;
-  }
-
-  &--britain::before {
-    background-color: #000000;
-  }
-
-  &--catalog {
-    width: auto;
-    margin: 0;
-  }
-
-  &--catalog::before {
-    width: 26px;
-    height: 18px;
-    top: 1px;
-    left: 0;
-  }
-}
-
-.country__title {
-  padding-left: 41px;
-
-  color: $light-blue;
-  text-transform: uppercase;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 500;
 }
 
 .country__text {
@@ -107,6 +41,7 @@
   width: auto;
 
   color: #ffffff;
+  white-space: nowrap;
 
   background-color: #101d41;
   border-radius: 5px;

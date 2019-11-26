@@ -3,10 +3,11 @@
 }
 
 .routes__item {
+  display: flex;
   position: relative;
   padding-bottom: 22px;
   width: 100%;
-
+  /*
   &--selected::after {
     content: "";
     position: absolute;
@@ -21,7 +22,7 @@
 
     z-index: 1;
   }
-
+  */
   &::before {
     content: "";
     position: absolute;
@@ -126,6 +127,18 @@
     background-color: $light-blue;
     border: none;
   }
+}
+
+.routes__flag {
+  position: relative;
+  top: 0;
+  right: 1px;
+  width: 26%;
+  justify-content: center;
+
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  background-color: #ffffff;
 }
 
 .routes__text {
