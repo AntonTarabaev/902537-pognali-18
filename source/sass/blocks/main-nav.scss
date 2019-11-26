@@ -2,7 +2,7 @@
   width: 320px;
   min-height: 73px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 25px 25px 40px 25px;
 
   background-color: #ffffff;
 }
@@ -16,6 +16,7 @@
   display: block;
   width: 25px;
   height: 25px;
+  padding: 0;
 
   border: none;
   background-color: #ffffff;
@@ -23,4 +24,14 @@
   background-repeat: no-repeat;
 
   cursor: pointer;
+}
+
+.main-nav__contacts-list {
+  margin-top: 51px;
+  margin-bottom: 40px;
+}
+
+.main-nav__site-list {
+  margin-top: 50px;
+  margin-bottom: 58px;
 }

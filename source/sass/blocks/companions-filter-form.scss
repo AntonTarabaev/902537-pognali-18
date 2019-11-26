@@ -1,0 +1,21 @@
+.companions-filter-form {
+  background-color: $light-grey;
+}
+
+.companions-filter-form__wrapper {
+  @include mobile-container;
+  padding: 50px 25px 18px 25px;
+}
+
+.companions-filter-form__title {
+  display: block;
+  padding: 22px 100px 10px 25px;
+  margin: 0;
+
+  font-size: 22.5px;
+  line-height: 22.5px;
+  color: $light-blue;
+
+  background-color: $yellow;
+  border-radius: 20px 20px 0 0;
+}

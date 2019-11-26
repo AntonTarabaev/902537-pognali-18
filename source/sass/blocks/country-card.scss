@@ -10,8 +10,11 @@
 }
 
 .country-card__about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   position: relative;
-  padding: 0 20px 20px 20px;
+  padding: 15px 20px 23px 20px;
 
   background-color: #ffffff;
   border-radius: 0 0 10px 10px;
@@ -30,6 +33,33 @@
 
     z-index: 1;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -22px;
+    left: 25px;
+
+    width: 35px;
+    height: 24px;
+
+    background-color: #000000;
+
+    z-index: 1;
+  }
+
+  //Заготовка под флаги, которых пока нет
+  //&--thailand::after {
+  //  background-image: url("../img/");
+  //}
+
+  //&--france::after {
+  //  background-image: url("../img/");
+  //}
+
+  //&--czech::after {
+  //  background-image: url("../img/");
+  //}
 }
 
 .country-card__title {
@@ -44,7 +74,29 @@
 .country-card__slogan {
   margin: 0;
 
-  line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
   font-weight: 500;
+}
+
+.country-card__tourists {
+  position: relative;
+  padding-left: 20px;
+
+  color: rgba(68, 68, 68, 0.3);
+  font-weight: 500;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 0;
+
+    width: 11px;
+    height: 11px;
+
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+  }
 }

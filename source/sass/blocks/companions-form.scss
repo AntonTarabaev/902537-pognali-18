@@ -1,0 +1,135 @@
+.companions-form {
+  padding: 16px 25px 22px 25px;
+
+  background-color: $yellow;
+  border-radius: 0 0 20px 20px;
+}
+
+.companions-form__field {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+
+  border: none;
+  border-top: 1px solid #f3c72b;
+}
+
+.companions-form__title {
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+
+.companions-form__btn {
+  position: relative;
+  width: 100%;
+  padding: 2px 0;
+
+  text-align: left;
+  color: $light-blue;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    transform: rotate(180deg);
+
+    width: 8px;
+    height: 4px;
+
+    background-image: url("../img/dropdown.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--closed {
+    &::after {
+      transform: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companions-form__list {
+  @include list-reset;
+  margin-top: 40px;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.companions-form__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.companions-form__label {
+  position: relative;
+  display: block;
+  padding-left: 27px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    height: 9px;
+    width: 9px;
+
+    background-image: url("../img/tick.svg");
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(68, 68, 68, 0.6);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companions-form__checkbox:checked + .companions-form__label::after {
+  display: block;
+}
+
+.companions-form__level-controls {
+  margin-top: 40px;
+}
