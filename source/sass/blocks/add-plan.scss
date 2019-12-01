@@ -20,9 +20,22 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .add-plan {
+    padding-bottom: 55px;
+  }
+}
+
 .add-plan__wrapper {
   @include mobile-container;
   padding: 0 25px 44px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .add-plan__wrapper {
+    @include tablet-container;
+    padding: 27px 75px 63px 75px;
+  }
 }
 
 .add-plan__title {
@@ -31,4 +44,13 @@
 
   font-size: 24px;
   line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .add-plan__title {
+    padding-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }

@@ -1,5 +1,21 @@
 .routes {
   @include list-reset;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .routes {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 136px;
+      width: 1px;
+      height: 100%;
+
+      background-color: #d6d9e6;
+    }
+  }
 }
 
 .routes__item {
@@ -7,22 +23,7 @@
   position: relative;
   padding-bottom: 22px;
   width: 100%;
-  /*
-  &--selected::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 1px;
-    width: 26%;
-    height: 42px;
 
-    border-radius: 4px;
-    border: solid 1px #cbced9;
-    background-color: #ffffff;
-
-    z-index: 1;
-  }
-  */
   &::before {
     content: "";
     position: absolute;
@@ -43,6 +44,30 @@
 
   &:last-child::before {
     display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .routes__item {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child::before {
+      display: block;
+      bottom: -70px;
+      transform: none;
+      right: 136px;
+      width: 1px;
+      height: 70px;
+
+      background: linear-gradient(to bottom, #d6d9e6 0%, rgba(214, 217, 230, 0.4) 60%, transparent 100%);
+    }
   }
 }
 
@@ -116,6 +141,7 @@
 
     border: solid 1px #cbced9;
     border-radius: 50%;
+    background-color: #ffffff;
 
     z-index: 2;
   }
@@ -129,6 +155,42 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .routes__select {
+    width: 69.3%;
+    height: 70px;
+    padding: 15px 44px 15px 27px;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    &::after {
+      right: 27px;
+      width: 17px;
+      height: 9px;
+    }
+
+    &--add::after {
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/qty-plus.svg");
+    }
+
+    &::before {
+      right: -34px;
+      width: 15px;
+      height: 15px;
+      transform: translateY(-50%);
+    }
+
+    &--add::before {
+      background-color: #edeff6;
+    }
+  }
+}
+
 .routes__flag {
   position: relative;
   top: 0;
@@ -139,6 +201,15 @@
   border-radius: 4px;
   border: solid 1px #cbced9;
   background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .routes__flag {
+    width: 117px;
+    height: 47px;
+    border: none;
+    padding-right: 37px;
+  }
 }
 
 .routes__text {
@@ -159,6 +230,14 @@
 
   &--add::before {
     display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .routes__text {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -198,6 +277,24 @@
 
   &:active::after {
     opacity: 0.05;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .routes__remove {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4px;
+    width: 17px;
+    height: 17px;
+
+    border-radius: 0;
+    background-color: transparent;
+
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 

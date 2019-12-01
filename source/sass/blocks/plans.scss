@@ -25,6 +25,13 @@
   padding: 0 25px 30px 25px;
 }
 
+@media (min-width: $tablet-width) {
+  .plans__wrapper {
+    @include tablet-container;
+    padding: 28px 75px 74px 75px;
+  }
+}
+
 .plans__title {
   margin: 0;
   margin-bottom: 24px;
@@ -32,6 +39,15 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__title {
+    margin-bottom: 56px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .plans__list {
@@ -46,6 +62,16 @@
 
   background-color: #ffffff;
   border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px 36px 19px 33px;
+  }
 }
 
 .plans__country {
@@ -66,6 +92,24 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .plans__country {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 55px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      left: 100%;
+      transform: translateX(-100%);
+
+      font-weight: 500;
+    }
+  }
+}
+
 .plans__text {
   display: block;
   margin: 0;
@@ -78,6 +122,22 @@
   letter-spacing: 1.4px;
 }
 
+@media (min-width: $tablet-width) {
+  .plans__text {
+    width: 30%;
+    margin-top: 0;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    &--date {
+      width: 45%;
+      text-align: center;
+    }
+  }
+}
+
 .plans__change-link {
   display: block;
   margin-top: 27px;
@@ -86,6 +146,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 
   &:hover,
@@ -95,5 +156,16 @@
 
   &:active {
     color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .plans__change-link {
+    width: 25%;
+    margin-top: 0;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: right;
   }
 }

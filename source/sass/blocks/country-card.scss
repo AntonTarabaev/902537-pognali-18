@@ -5,9 +5,29 @@
   overflow: hidden;
 }
 
+@media (min-width: $tablet-width) {
+  .country-card {
+    display: flex;
+    min-height: 140px;
+
+    border-radius: 20px;
+
+    &:last-child {
+      margin-bottom: 47px;
+    }
+  }
+}
+
 .country-card__image {
   vertical-align: middle;
 }
+
+@media (min-width: $tablet-width) {
+  .country-card__image {
+    order: 2;
+  }
+}
+
 
 .country-card__about {
   display: flex;
@@ -35,6 +55,18 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .country-card__about {
+    padding: 30px 30px 25px 30px;
+    flex-grow: 1;
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .country-card__flag {
   position: absolute;
   top: -22px;
@@ -48,6 +80,16 @@
   z-index: 1;
 }
 
+@media (min-width: $tablet-width) {
+  .country-card__flag {
+    top: 16px;
+    left: 398px;
+
+    width: 70px;
+    height: 47px;
+  }
+}
+
 .country-card__title {
   margin: 0;
 
@@ -57,11 +99,27 @@
   color: $dark-blue;
 }
 
+@media (min-width: $tablet-width) {
+  .country-card__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
 .country-card__slogan {
   margin: 0;
 
   color: rgba(68, 68, 68, 0.3);
   font-weight: 500;
+}
+
+@media (min-width: $tablet-width) {
+  .country-card__slogan {
+    margin-top: 5px;
+
+    font-size: 20px;
+    line-height: 17.7px;
+  }
 }
 
 .country-card__tourists {
@@ -86,3 +144,21 @@
     opacity: 0.1;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .country-card__tourists {
+    padding-left: 31px;
+    margin-top: 18px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: 0;
+
+      width: 21px;
+      height: 20px;
+    }
+  }
+}
+

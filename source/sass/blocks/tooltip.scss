@@ -12,6 +12,16 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .tooltip__list-item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .tooltip__item {
   position: relative;
   display: block;
@@ -101,6 +111,19 @@
 
   &--active::before {
     opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tooltip__item {
+    &--small {
+      width: 43px;
+      height: 43px;
+
+      &::before {
+        background-size: auto 21px;
+      }
+    }
   }
 }
 

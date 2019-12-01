@@ -5,6 +5,16 @@
 }
 
 @mixin mobile-container {
-  width: 320px;
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+@mixin tablet-container {
+  width: $tablet-width;
+  margin: 0 auto;
+}
+
+@mixin desktop-container {
+  width: $desktop-width;
   margin: 0 auto;
 }

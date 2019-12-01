@@ -26,28 +26,13 @@
   }
 }
 
-.entertainment-list__decoration {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    top: 9px;
-    left: -12px;
+@media (min-width: $tablet-width) {
+  .entertainment-list__item {
+    margin-bottom: 46px;
 
-    background-color: #000000;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    top: 7px;
-    left: 0;
-
-    background-color: #000000;
-    border-radius: 50%;
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -67,5 +52,16 @@
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .entertainment-list__plan {
+    height: 142px;
+    margin-top: 26px;
+    padding: 21px 19px;
+
+    font-size: 20px;
+    line-height: 24px;
   }
 }

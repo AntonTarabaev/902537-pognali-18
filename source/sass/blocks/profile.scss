@@ -18,12 +18,29 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .profile {
+    &::before {
+      top: -55px;
+
+      height: 55px;
+    }
+  }
+}
+
 .profile__wrapper {
   @include mobile-container;
   padding: 22px 25px 33px 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .profile__wrapper {
+    @include tablet-container;
+    padding: 65px 75px 60px 75px;
+  }
 }
 
 .profile__image {
@@ -33,9 +50,42 @@
   border-radius: 50%;
 }
 
+@media (min-width: $tablet-width) {
+  .profile__image {
+    width: 94px;
+    height: 94px;
+
+    border-radius: 5px;
+  }
+}
+
 .profile__change-photo {
   margin-top: 20px;
   margin-bottom: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .profile__change-photo {
+    margin-top: 52px;
+    margin-bottom: 51px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    background-color: #dfe3f0;
+
+    font-weight: 500;
+    color: $light-blue;
+    letter-spacing: 2px;
+
+    &:hover,
+    &:focus {
+      background-color: #d1d7e9;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
 }
 
 .profile__form {
@@ -52,6 +102,21 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .profile__field {
+    margin-top: 0;
+
+    &--transport {
+      position: absolute;
+      width: 308px;
+      height: 94px;
+      top: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .profile__title {
   position: absolute;
   top: -11px;
@@ -61,6 +126,8 @@
   margin: 0 auto;
   padding: 0 15px;
 
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 700;
   color: $light-blue;
   text-transform: uppercase;
@@ -68,16 +135,30 @@
   background-color: #edeff6;
 }
 
+@media (min-width: $tablet-width) {
+  .profile__title {
+    top: 85px;
+    padding: 0 18px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+}
+
 .profile__hash {
   width: 100%;
   padding: 14px 25px 25px 20px;
 
+  font-size: 16px;
   line-height: 22px;
   color: $grey-text;
 
   border-radius: 10px;
   border: 1px solid #cbced9;
   background-color: transparent;
+
+  resize: none;
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.6);
@@ -95,7 +176,23 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .profile__hash {
+    padding: 22px 25px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .profile__transport {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .profile__transport {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }

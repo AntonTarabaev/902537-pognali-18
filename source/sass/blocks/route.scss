@@ -21,9 +21,28 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .route {
+    &::after {
+      bottom: -55px;
+
+      height: 55px;
+
+      border-radius: 0 0 55px 55px;
+    }
+  }
+}
+
 .route__wrapper {
   @include mobile-container;
   padding: 50px 25px 0 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .route__wrapper {
+    @include tablet-container;
+    padding: 102px 75px 30px 75px;
+  }
 }
 
 .route__text {
@@ -55,5 +74,22 @@
     background-size: 14px 22px;
     background-position: center;
     border-radius: 50%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .route__text {
+    width: 525px;
+    padding: 21px 0 18px 93px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+
+      background-size: 21px 31px;
+    }
   }
 }

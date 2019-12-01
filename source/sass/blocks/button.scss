@@ -41,7 +41,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 24px;
+      top: 50%;
+      transform: translateY(-50%);
       right: 24px;
       width: 10px;
       height: 14px;
@@ -63,7 +64,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 24px;
+      top: 50%;
+      transform: translateY(-50%);
       right: 24px;
       width: 0;
       height: 0;
@@ -184,6 +186,105 @@
 
     &:active {
       opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 10px 31px 10px 29px;
+    font-size: 20px;
+
+    &--square {
+      padding: 27px 46px 30px 34px;
+
+      font-size: 24px;
+      line-height: 24px;
+
+      border-radius: 20px;
+
+      &::after {
+        right: 36px;
+      }
+    }
+
+    &--bordered {
+      padding-top: 27px - 3px;
+      padding-bottom: 30px - 3px;
+
+      &::after {
+        right: 36px;
+      }
+    }
+
+    &--next-step {
+      position: relative;
+      padding: 24px 46px 27px 34px;
+      width: 285px;
+
+      text-align: left;
+      color: $light-blue;
+      text-transform: unset;
+      font-size: 24px;
+      line-height: 24px;
+
+      border-radius: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 36px;
+        width: 0;
+        height: 0;
+
+        background-image: none;
+        border-style: solid;
+        border-width: 7px 0 7px 10px;
+        border-color: transparent transparent transparent $blue;
+      }
+
+      &:active::after {
+        opacity: 0.3;
+      }
+    }
+
+    &--prev-step {
+      position: relative;
+      padding: 24px 0 27px 34px;
+
+      width: 190px;
+
+      text-align: left;
+      color: $light-blue;
+      text-transform: unset;
+      font-size: 24px;
+      line-height: 24px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 0;
+        height: 0;
+
+        background-image: none;
+        border-style: solid;
+        border-width: 7px 10px 7px 0;
+        border-color: transparent $blue transparent transparent;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        opacity: 0.7;
+      }
+
+      &:active::after {
+        opacity: 0.3;
+      }
     }
   }
 }

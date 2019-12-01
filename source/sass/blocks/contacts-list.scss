@@ -75,6 +75,13 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .contacts-list__link {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
 .contacts-list__svg-container {
   display: flex;
   justify-content: center;
@@ -87,11 +94,24 @@
   border-radius: 50px;
 }
 
+@media (min-width: $tablet-width) {
+  .contacts-list__svg-container {
+    width: 67px;
+    height: 67px;
+  }
+}
+
 .contacts-list__svg {
   width: 18px;
   height: auto;
 
   fill: $yellow;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-list__svg {
+    width: 27px;
+  }
 }
 
 .contacts-list__svg-bg {

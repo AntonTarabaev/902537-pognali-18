@@ -20,6 +20,15 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .level {
+    &--big {
+      width: 94px;
+      height: 94px;
+    }
+  }
+}
+
 .level__svg {
   &--small {
     width: 45px;
@@ -29,6 +38,15 @@
   &--big {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level__svg {
+    &--big {
+      width: 94px;
+      height: 94px;
+    }
   }
 }
 
@@ -100,6 +118,7 @@
   display: block;
 
   font-size: 14px;
+  line-height: 14px;
   font-weight: 400;
 
   &--big {
