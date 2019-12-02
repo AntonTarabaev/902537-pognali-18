@@ -32,14 +32,19 @@
 }
 
 .tariffs__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 82px 25px 0 50px;
 }
 
 @media (min-width: $tablet-width) {
   .tariffs__wrapper {
-    @include tablet-container;
     padding: 130px 40px 25px 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs__wrapper {
+    padding: 163px 245px 110px 131px;
   }
 }
 
@@ -114,6 +119,24 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .tariffs__list {
+    &::before {
+      top: 0;
+      right: -112px;
+      width: 198px;
+      height: 198px;
+
+      background-size: 198px 198px;
+    }
+
+    &::after {
+      width: 444px;
+      height: 300px;
+    }
+  }
+}
+
 .tariffs__item {
   position: relative;
   width: 200px;
@@ -176,6 +199,12 @@
       font-size: 28px;
       line-height: 28px;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs__item {
+    width: 813px;
   }
 }
 

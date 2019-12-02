@@ -36,14 +36,19 @@
 }
 
 .directions__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 25px 25px 0 25px;
 }
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
-    @include tablet-container;
     padding: 75px 75px 25px 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions__wrapper {
+    padding: 167px 239px 84px 861px;
   }
 }
 
@@ -83,6 +88,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .directions__text {
+    width: 100%;
+    margin-bottom: 105px;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .directions__list {
     position: relative;
 
@@ -104,3 +116,17 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .directions__list {
+    position: absolute;
+    top: 161px;
+    left: 131px;
+
+    &::before {
+      top: -72px;
+      left: -71px;
+    }
+  }
+}
+

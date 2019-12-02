@@ -34,14 +34,23 @@
 }
 
 .route__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 50px 25px 0 25px;
 }
 
 @media (min-width: $tablet-width) {
   .route__wrapper {
-    @include tablet-container;
     padding: 102px 75px 30px 75px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .route__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 109px 133px 0 284px;
   }
 }
 
@@ -90,6 +99,20 @@
       height: 67px;
 
       background-size: 21px 31px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .route__text {
+    margin: 0;
+    width: 650px;
+    padding: 31px 0 31px 122px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
     }
   }
 }

@@ -13,6 +13,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .guide-list {
+    width: 1320px;
+  }
+}
+
 .guide-list__item {
   position: relative;
   padding: 10px 25px 30px 25px;
@@ -100,6 +106,51 @@
       right: 295px;
 
       font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide-list__item {
+    width: 25%;
+    padding: 29px 38px 30px 35px;
+
+    z-index: 1;
+
+    &:nth-child(n) {
+      width: 345px;
+      border-radius: 20px 0 0 20px;
+    }
+
+    &:nth-child(even)::before {
+      display: block;
+      width: 20px;
+      height: 100%;
+      right: -20px;
+      top: 0;
+
+      border-radius: 0;
+      background-color: inherit;
+
+      z-index: -1;
+    }
+
+    &:nth-child(4n)::before {
+      display: none;
+    }
+
+    &:nth-child(4n),
+    &:nth-child(4n-3) {
+      width: 315px;
+    }
+
+    &:nth-child(4n) {
+      border-radius: 20px;
+    }
+
+    &::after {
+      top: 29px;
+      right: 33px;
     }
   }
 }

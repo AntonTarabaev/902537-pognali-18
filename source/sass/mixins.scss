@@ -18,3 +18,16 @@
   width: $desktop-width;
   margin: 0 auto;
 }
+
+@mixin container {
+  margin: 0 auto;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}

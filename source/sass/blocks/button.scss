@@ -192,7 +192,7 @@
 
 @media (min-width: $tablet-width) {
   .button {
-    padding: 10px 31px 10px 29px;
+    padding: 10px 30px 10px 29px;
     font-size: 20px;
 
     &--square {
@@ -285,6 +285,18 @@
       &:active::after {
         opacity: 0.3;
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--square {
+      width: 274px;
+    }
+
+    &--bordered {
+      width: 324px;
     }
   }
 }

@@ -38,8 +38,18 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .promo {
+    background-color: #161c34;
+    background-image: url("../img/globe-back-desktop@1x.jpg");
+    background-size: auto 750px;
+
+    border-radius: 0 0 55px 55px;
+  }
+}
+
 .promo__wrapper {
-  @include mobile-container;
+  @include container;
   position: relative;
   padding-right: 25px;
   padding-left: 25px;
@@ -51,7 +61,6 @@
 
 @media (min-width: $tablet-width) {
   .promo__wrapper {
-    @include tablet-container;
     min-height: 864px;
     padding: 0 40px;
 
@@ -60,20 +69,16 @@
   }
 }
 
-.promo__wrapper-top {
-  position: relative;
-  min-height: 405px;
-}
+@media (min-width: $desktop-width) {
+  .promo__wrapper {
+    min-height: 651px;
+    padding-right: 87px;
+    padding-left: 130px;
+    display: flex;
+    justify-content: space-between;
 
-.promo__wrapper-bottom {
-  position: relative;
-  padding: 50px 25px 0 25px;
-}
-
-@media (min-width: $tablet-width) {
-  .promo__wrapper-bottom {
-    position: static;
-    padding: 0;
+    background-image: url("../img/traveller-illustration-desktop@1x.png");
+    background-position: bottom 0 right 404px;
   }
 }
 
@@ -97,6 +102,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .promo__title {
+    text-align: left;
+    margin: 0;
+    padding-top: 118px;
+  }
+}
+
 .promo__contacts-wrapper {
   position: absolute;
   display: flex;
@@ -111,14 +124,12 @@
   }
 }
 
-.promo__user-list {
-  flex-grow: 1;
-}
-
-@media (min-width: $tablet-width) {
-  .promo__wrapper--bottom {
-    position: static;
-    padding: 0;
+@media (min-width: $desktop-width) {
+  .promo__contacts-wrapper {
+    width: 290px;
+    display: flex;
+    top: -52px;
+    right: 59px;
   }
 }
 
@@ -132,6 +143,13 @@
   .promo__guide {
     right: 40px;
     bottom: -140px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__guide {
+    right: 59px;
+    bottom: 123px;
   }
 }
 
@@ -149,6 +167,14 @@
     left: 75px;
     bottom: 320px;
     width: 285px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__review {
+    position: static;
+    margin: 0;
+    padding-top: 125px;
   }
 }
 
