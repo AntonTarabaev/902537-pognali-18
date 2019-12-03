@@ -5,6 +5,12 @@
   border-radius: 0 0 20px 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .companions-form {
+    padding: 35px 35px 38px 35px;
+  }
+}
+
 .companions-form__field {
   display: block;
   margin: 0;
@@ -14,10 +20,31 @@
   border-top: 1px solid #f3c72b;
 }
 
+@media (min-width: $tablet-width) {
+  .companions-form__field {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border: none;
+
+    &:last-of-type {
+      border-bottom: 1px solid #f3c72b;
+    }
+  }
+}
+
 .companions-form__title {
   width: 100%;
   float: left;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-form__title {
+    display: flex;
+    width: 110px;
+    float: none;
+  }
 }
 
 .companions-form__btn {
@@ -62,6 +89,16 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-form__btn {
+    cursor: none;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

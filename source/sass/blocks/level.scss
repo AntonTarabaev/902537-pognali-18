@@ -22,6 +22,11 @@
 
 @media (min-width: $tablet-width) {
   .level {
+    &--small {
+      width: 60px;
+      height: 60px;
+    }
+
     &--big {
       width: 94px;
       height: 94px;
@@ -43,6 +48,11 @@
 
 @media (min-width: $tablet-width) {
   .level__svg {
+    &--small {
+      width: 60px;
+      height: 60px;
+    }
+
     &--big {
       width: 94px;
       height: 94px;

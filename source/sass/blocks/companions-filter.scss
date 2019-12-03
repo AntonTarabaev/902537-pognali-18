@@ -2,9 +2,21 @@
   padding-bottom: 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .companions-filter {
+    padding-bottom: 55px;
+  }
+}
+
 .companions-filter__wrapper {
-  @include mobile-container;
-  padding: 0 25px;
+  @include container;
+  padding: 0 25px 46px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter__wrapper {
+    padding: 0 40px 62px 40px;
+  }
 }
 
 .companions-filter__more-btn {
@@ -14,7 +26,6 @@
 
 .companions-filter__btns-wrapper {
   display: flex;
-  margin-bottom: 46px;
 }
 
 .companions-filter__btn {

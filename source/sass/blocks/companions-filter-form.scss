@@ -3,8 +3,14 @@
 }
 
 .companions-filter-form__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 50px 25px 18px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter-form__wrapper {
+    padding: 90px 40px 40px 40px;
+  }
 }
 
 .companions-filter-form__title {
@@ -18,4 +24,13 @@
 
   background-color: $yellow;
   border-radius: 20px 20px 0 0;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter-form__title {
+    padding: 37px 37px 37px 35px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

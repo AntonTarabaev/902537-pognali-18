@@ -98,13 +98,16 @@
 
   &--collapse {
     position: relative;
+    padding-left: 39px;
+
     background-color: #d6daed;
 
     &::after {
       content: "";
       position: absolute;
-      top: 14px;
-      left: 73px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 85px;
       width: 12px;
       height: 12px;
 
@@ -284,6 +287,19 @@
 
       &:active::after {
         opacity: 0.3;
+      }
+    }
+
+    &--collapse {
+      padding: 35px;
+      padding-left: 35px + 39px;
+
+      border-radius: 20px;
+
+      &::after {
+        width: 19px;
+        height: 19px;
+        left: 243px;
       }
     }
   }

@@ -6,6 +6,10 @@
   .companions-list {
     display: flex;
     justify-content: space-between;
+
+    &--catalog {
+      display: block;
+    }
   }
 }
 

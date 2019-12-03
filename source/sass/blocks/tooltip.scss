@@ -4,11 +4,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   z-index: 1;
 
   &--filter {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tooltip {
+    &--catalog {
+      flex-direction: column;
+    }
   }
 }
 
@@ -123,6 +132,10 @@
       &::before {
         background-size: auto 21px;
       }
+    }
+
+    &--bg-gray {
+      background-color: transparent;
     }
   }
 }
