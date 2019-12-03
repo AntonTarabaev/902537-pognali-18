@@ -28,6 +28,18 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .steps__item {
+    padding: 100px 160px 105px 160px;
+
+    border-radius: 60px;
+
+    &--dates {
+      position: relative;
+    }
+  }
+}
+
 .steps__title {
   position: relative;
   margin: 0;
@@ -53,6 +65,14 @@
     line-height: 36px;
 
     order: -4;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .steps__title {
+    width: 650px;
+    padding-top: 0;
+    padding-left: 110px;
   }
 }
 
@@ -89,6 +109,26 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .steps__text {
+    position: relative;
+    width: 580px;
+    margin-bottom: 0;
+    padding-bottom: 57px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1000px;
+      height: 1px;
+
+      background-color: #d6d9e6;
+    }
+  }
+}
+
 .steps__wrapper {
   margin-top: 21px;
   margin-left: 5px;
@@ -112,6 +152,20 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .steps__wrapper {
+    padding: 0;
+    justify-content: flex-start;
+
+    border: none;
+
+    &--companions {
+      margin-top: 30px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
 .steps__info {
   text-transform: uppercase;
   font-weight: 500;
@@ -125,6 +179,13 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__info {
+    width: 200px;
+    margin-right: 19px;
   }
 }
 
@@ -144,6 +205,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .steps__mark {
+    order: 1;
+  }
+}
+
 .steps__number-controls {
   margin-top: 9px;
 }
@@ -151,6 +218,13 @@
 @media (min-width: $tablet-width) {
   .steps__number-controls {
     margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__number-controls {
+    margin-top: 0;
+    margin-right: 36px;
   }
 }
 
@@ -168,6 +242,15 @@
     margin-bottom: 26px;
 
     order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__checkboxes {
+    position: absolute;
+    top: 328px;
+    right: 163px;
+    margin: 0;
   }
 }
 
@@ -250,6 +333,13 @@
     margin: 0;
     margin-top: 59px;
     margin-bottom: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__calendar {
+    margin-top: 32px;
+    margin-bottom: 56px;
   }
 }
 

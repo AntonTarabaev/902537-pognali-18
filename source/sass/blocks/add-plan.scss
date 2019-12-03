@@ -26,15 +26,32 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .add-plan {
+    &::before {
+      top: -60px;
+
+      height: 60px;
+
+      border-radius: 60px 60px 0 0;
+    }
+  }
+}
+
 .add-plan__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 0 25px 44px 25px;
 }
 
 @media (min-width: $tablet-width) {
   .add-plan__wrapper {
-    @include tablet-container;
     padding: 27px 75px 63px 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan__wrapper {
+    padding: 2px 60px 72px 60px;
   }
 }
 

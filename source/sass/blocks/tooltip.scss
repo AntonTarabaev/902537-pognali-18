@@ -17,6 +17,7 @@
   .tooltip {
     &--catalog {
       flex-direction: column;
+      justify-content: space-between;
     }
   }
 }
@@ -126,12 +127,17 @@
 @media (min-width: $tablet-width) {
   .tooltip__item {
     &--small {
-      width: 43px;
-      height: 43px;
+      width: 24px;
+      height: 21px;
 
       &::before {
         background-size: auto 21px;
       }
+    }
+
+    &--button {
+      width: 43px;
+      height: 43px;
     }
 
     &--bg-gray {

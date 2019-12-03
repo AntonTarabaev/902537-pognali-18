@@ -27,6 +27,12 @@
   }
 }
 
+@media (max-width: $tablet-width - 1px) {
+  .calendar-table__day-hidden-letter {
+    display: none;
+  }
+}
+
 .calendar-table__cell {
   padding: 0;
   height: 32px;
@@ -45,6 +51,13 @@
 
     font-size: 18px;
     letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__cell {
+    width: 142px;
+    height: 72px;
   }
 }
 
@@ -106,6 +119,27 @@
       left: -4px;
 
       border-width: 4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__btn {
+    padding: 15px 16px 36px 16px;
+    text-align: left;
+
+    &--start-date::after,
+    &--end-date::after {
+      content: "Заезд";
+      position: absolute;
+      left: 16px;
+      bottom: 15px;
+      width: 60px;
+      height: 16px;
+    }
+
+    &--end-date::after {
+      content: "Выезд";
     }
   }
 }

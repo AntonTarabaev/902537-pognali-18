@@ -20,6 +20,8 @@
 
 @media (min-width: $tablet-width) {
   .profile {
+    padding-bottom: 30px;
+
     &::before {
       top: -55px;
 
@@ -28,8 +30,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .profile {
+    padding-bottom: 60px;
+  }
+}
+
 .profile__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 22px 25px 33px 25px;
   display: flex;
   flex-wrap: wrap;
@@ -38,8 +46,22 @@
 
 @media (min-width: $tablet-width) {
   .profile__wrapper {
-    @include tablet-container;
     padding: 65px 75px 60px 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__wrapper {
+    position: relative;
+    padding: 73px 60px 65px 124px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__level {
+    position: absolute;
+    top: -147px;
+    right: 390px;
   }
 }
 
@@ -59,6 +81,16 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .profile__image {
+    position: absolute;
+    top: -190px;
+    right: 155px;
+    width: 190px;
+    height: 190px;
+  }
+}
+
 .profile__change-photo {
   margin-top: 20px;
   margin-bottom: 18px;
@@ -73,10 +105,6 @@
 
     background-color: #dfe3f0;
 
-    font-weight: 500;
-    color: $light-blue;
-    letter-spacing: 2px;
-
     &:hover,
     &:focus {
       background-color: #d1d7e9;
@@ -88,8 +116,45 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .profile__change-photo {
+    position: absolute;
+    top: 0;
+    right: 155px;
+    width: 190px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .profile__change-photo-text {
+    font-weight: 500;
+    color: $light-blue;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__change-photo-text {
+    &--hide {
+      display: none;
+    }
+  }
+}
+
 .profile__form {
   width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .profile__form {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .profile__field {
@@ -105,14 +170,30 @@
 @media (min-width: $tablet-width) {
   .profile__field {
     margin-top: 0;
+    height: 94px;
 
     &--transport {
       position: absolute;
       width: 308px;
-      height: 94px;
       top: 64px;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__field {
+    &--tags {
+      width: 730px;
+    }
+
+    &--transport {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 384px;
     }
   }
 }

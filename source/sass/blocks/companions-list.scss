@@ -24,6 +24,10 @@
 @media (min-width: $tablet-width) {
   .companions-list__item {
     margin-top: 0;
+
+    &--mini-margin {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -36,4 +40,3 @@
     }
   }
 }
-

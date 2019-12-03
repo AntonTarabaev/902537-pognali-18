@@ -21,10 +21,6 @@
 
 @media (min-width: $tablet-width) {
   .directions {
-    background-image: url("../img/flags-back@1x.png");
-    background-repeat: no-repeat;
-    background-position: top 85px right 40px;
-
     &::after {
       bottom: -55px;
 
@@ -37,12 +33,17 @@
 
 .directions__wrapper {
   @include container;
+  position: relative;
   padding: 25px 25px 0 25px;
 }
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
     padding: 75px 75px 25px 75px;
+
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 85px right 40px;
   }
 }
 
@@ -129,4 +130,3 @@
     }
   }
 }
-

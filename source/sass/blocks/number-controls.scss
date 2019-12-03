@@ -10,6 +10,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .number-controls {
+    width: 181px;
+  }
+}
+
 .number-controls__btn {
   position: absolute;
   top: 0;

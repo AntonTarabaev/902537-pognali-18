@@ -10,7 +10,7 @@
 }
 
 .page-main__title {
-  @include mobile-container;
+  @include container;
   display: block;
   padding: 12px 27px;
 
@@ -22,11 +22,16 @@
 
 @media (min-width: $tablet-width) {
   .page-main__title {
-    @include tablet-container;
     padding: 69px 77px;
 
     font-size: 60px;
     line-height: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    padding: 69px 129px;
   }
 }
 

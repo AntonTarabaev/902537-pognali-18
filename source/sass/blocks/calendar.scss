@@ -13,6 +13,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .calendar__select {
+    padding: 27px 0 24px 0;
+  }
+}
+
 .calendar__month-year {
   display: block;
 
@@ -71,6 +77,18 @@
 
     &--next {
       margin-right: 16px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__btn {
+    width: 18px;
+    height: 34px;
+
+    &--prev,
+    &--next {
+      margin: 0;
     }
   }
 }

@@ -108,9 +108,12 @@
             </div>
           </div>
           <img class="profile__image" width="100" height="100" src="img/demin-tablet@1x.jpg" alt="Ваше фото">
-          <button class="profile__change-photo button" type="button">Сменить фото</button>
+          <button class="profile__change-photo button" type="button">
+            <span class="profile__change-photo-text profile__change-photo-text--hide">Сменить </span>
+            <span class="profile__change-photo-text">фото</span>
+          </button>
           <form class="profile__form" action="https://echo.htmlacademy.ru">
-            <div class="profile__field">
+            <div class="profile__field profile__field--tags">
               <legend class="profile__title">Тэги</legend>
               <label class="visually-hidden" for="hash-textarea">Ваши хэштеги</label>
               <textarea class="profile__hash" name="hash" id="hash-textarea" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
@@ -200,13 +203,13 @@
                   <table class="calendar__table calendar-table">
                     <thead class="calendar-table__thead">
                       <tr class="calandar-table__row">
-                        <th class="calendar-table__day-of-the-week">П</th>
-                        <th class="calendar-table__day-of-the-week">В</th>
-                        <th class="calendar-table__day-of-the-week">С</th>
-                        <th class="calendar-table__day-of-the-week">Ч</th>
-                        <th class="calendar-table__day-of-the-week">П</th>
-                        <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">С</th>
-                        <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">В</th>
+                        <th class="calendar-table__day-of-the-week">П<span class="calendar-table__day-hidden-letter">н</span></th>
+                        <th class="calendar-table__day-of-the-week">В<span class="calendar-table__day-hidden-letter">т</span></th>
+                        <th class="calendar-table__day-of-the-week">С<span class="calendar-table__day-hidden-letter">р</span></th>
+                        <th class="calendar-table__day-of-the-week">Ч<span class="calendar-table__day-hidden-letter">т</span></th>
+                        <th class="calendar-table__day-of-the-week">П<span class="calendar-table__day-hidden-letter">т</span></th>
+                        <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">С<span class="calendar-table__day-hidden-letter">б</span></th>
+                        <th class="calendar-table__day-of-the-week calendar-table__day-of-the-week--weekend">В<span class="calendar-table__day-hidden-letter">с</span></th>
                       </tr>
                     </thead>
                     <tbody class="calendar-table__tbody">
@@ -230,7 +233,9 @@
                           <button class="calendar-table__btn" type="button" disabled>28</button>
                         </td>
                         <td class="calendar-table__cell">
-                          <button class="calendar-table__btn" type="button" disabled>1</button>
+                          <button class="calendar-table__btn" type="button" disabled>1
+                            <span class="calendar-table__btn-month-name">мар</span>
+                          </button>
                         </td>
                       </tr>
                       <tr class="calendar-table__row">
@@ -319,7 +324,7 @@
                           <button class="calendar-table__btn calendar-table__btn--selected" type="button">27</button>
                         </td>
                         <td class="calendar-table__cell">
-                          <button class="calendar-table__btn calendar-table__btn--selected" type="button">28</button>
+                          <button class="calendar-table__btn calendar-table__btn--selected calendar-table__btn--end-date" type="button">28</button>
                         </td>
                         <td class="calendar-table__cell">
                           <button class="calendar-table__btn" type="button">29</button>
@@ -333,7 +338,9 @@
                           <button class="calendar-table__btn" type="button">31</button>
                         </td>
                         <td class="calendar-table__cell">
-                          <button class="calendar-table__btn" type="button">1</button>
+                          <button class="calendar-table__btn" type="button">1
+                            <span class="calendar-table__btn-month-name">мар</span>
+                          </button>
                         </td>
                         <td class="calendar-table__cell">
                           <button class="calendar-table__btn" type="button">2</button>

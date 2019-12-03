@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .route__wrapper {
     display: flex;
     justify-content: space-between;
@@ -103,7 +103,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .route__text {
     margin: 0;
     width: 650px;

@@ -124,6 +124,28 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .level__count {
+    &--small {
+      position: static;
+      transform: none;
+      line-height: 24px;
+
+      border-bottom: 1px solid rgba(29, 46, 91, 0.1);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level__count {
+    &--big {
+      color: #ffffff;
+
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
 .level__text {
   display: block;
 
@@ -135,5 +157,21 @@
     font-size: 18px;
 
     color: $grey-text;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level__text {
+    &--small {
+      color: rgba(68, 68, 68, 0.4);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level__text {
+    &--big {
+      color: #ffffff;
+    }
   }
 }

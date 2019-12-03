@@ -31,6 +31,18 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .country__item {
+    &--catalog {
+      margin-right: 28px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .country__text {
   display: none;
   position: absolute;

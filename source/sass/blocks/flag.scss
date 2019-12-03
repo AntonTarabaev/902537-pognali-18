@@ -80,15 +80,18 @@
 
 @media (min-width: $tablet-width) {
   .flag__title {
-    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
+    font-weight: 500;
 
     &--entertainment {
       width: 85%;
+      height: 47px;
       padding-left: 0;
 
       font-size: 30px;
+      line-height: 47px;
+      font-weight: 700;
 
       &::after {
         display: none;

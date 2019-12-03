@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .feedback__wrapper {
     padding: 143px 132px 49px 132px;
   }
@@ -135,7 +135,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .feedback__input {
     padding-right: 354px;
   }
