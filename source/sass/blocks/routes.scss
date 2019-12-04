@@ -18,6 +18,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .routes {
+    &::after {
+      right: 222px;
+    }
+  }
+}
+
 .routes__item {
   display: flex;
   position: relative;
@@ -67,6 +75,14 @@
       height: 70px;
 
       background: linear-gradient(to bottom, #d6d9e6 0%, rgba(214, 217, 230, 0.4) 60%, transparent 100%);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .routes__item {
+    &:last-child::before {
+      right: 222px;
     }
   }
 }
@@ -187,6 +203,17 @@
 
     &--add::before {
       background-color: #edeff6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .routes__select {
+    width: 73%;
+
+    &::before {
+      right: -41px;
+      transform: translate(100%, -50%);
     }
   }
 }

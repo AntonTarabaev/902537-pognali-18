@@ -359,6 +359,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .steps__routes-list {
+    margin-right: 0;
+  }
+}
+
 .steps__btns-wrapper {
   margin-top: 25px;
 }
@@ -390,5 +396,11 @@
 @media (min-width: $tablet-width) {
   .steps__entertainment-list {
     margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__entertainment-list {
+    margin-top: 82px;
   }
 }

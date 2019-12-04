@@ -47,6 +47,7 @@
 
 @media (min-width: $tablet-width) {
   .calendar-table__cell {
+    width: 76px;
     height: 70px;
 
     font-size: 18px;
@@ -141,5 +142,15 @@
     &--end-date::after {
       content: "Выезд";
     }
+  }
+}
+
+.calendar-table__btn-month-name {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__btn-month-name {
+    display: inline;
   }
 }

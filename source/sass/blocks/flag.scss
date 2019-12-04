@@ -107,3 +107,11 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .flag__title {
+    &::before {
+      left: 767px;
+    }
+  }
+}
