@@ -326,5 +326,13 @@
     &--bordered {
       width: 324px;
     }
+
+    &--more {
+      padding-right: 100px;
+
+      &::after {
+        left: 345px;
+      }
+    }
   }
 }

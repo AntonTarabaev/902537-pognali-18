@@ -23,6 +23,15 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companion {
+    &--catalog {
+      width: 950px;
+      padding: 0;
+    }
+  }
+}
+
 .companion__image {
   width: 270px;
   height: 270px;
@@ -55,6 +64,17 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companion__image {
+    &--catalog {
+      width: 285px;
+      height: 285px;
+
+      border-radius: 20px 0 0 20px;
+    }
+  }
+}
+
 .companion__countries-wrapper {
   margin-top: 20px;
 }
@@ -64,6 +84,14 @@
     margin-top: 0;
 
     order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__countries-wrapper {
+    padding-top: 49px;
+    padding-bottom: 138px;
+    margin-left: 81px;
   }
 }
 
@@ -94,6 +122,17 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companion__countries {
+    &--catalog {
+      height: 100%;
+      margin: 0;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
 .companion__info-wrapper {
   display: flex;
   flex-direction: column;
@@ -101,8 +140,15 @@
 
 @media (min-width: $tablet-width) {
   .companion__info-wrapper {
-    display: block;
     margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__info-wrapper {
+    padding-top: 46px;
+    padding-bottom: 47px;
+    margin-left: 59px;
   }
 }
 
@@ -270,6 +316,8 @@
 @media (min-width: $tablet-width) {
   .companion__btns-wrapper {
     padding-left: 0;
+
+    order: 5;
   }
 }
 
@@ -425,6 +473,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companion__text {
+    &--countries {
+      display: none;
+    }
+  }
+}
+
 .companion__transport-level-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -434,10 +490,23 @@
 
 @media (min-width: $tablet-width) {
   .companion__transport-level-wrapper {
-    display: block;
+    flex-direction: column;
     height: 193px;
     margin: 0;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__transport-level-wrapper {
+    position: absolute;
+    right: 44px;
+    bottom: 42px;
+    height: 60px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -457,6 +526,15 @@
       height: 120px;
       margin: 0;
       margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__transport {
+    &--catalog {
+      width: 120px;
+      height: 60px;
     }
   }
 }
@@ -485,6 +563,15 @@
       margin-top: 13px;
       top: 0;
       left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__level {
+    &--catalog {
+      margin-top: 0;
+      margin-left: 52px;
     }
   }
 }

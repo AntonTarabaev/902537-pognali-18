@@ -1,4 +1,4 @@
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .level-controls {
     position: absolute;
     top: -35px;
@@ -58,6 +58,15 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .level-controls__levels {
+    width: 100%;
+    margin-bottom: 36px;
+
+    order: 0;
+  }
+}
+
 .level-controls__min-level,
 .level-controls__max-level {
   width: 50%;
@@ -92,6 +101,12 @@
 @media (min-width: $tablet-width) {
   .level-controls__scale {
     width: 277px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level-controls__scale {
+    width: 191px;
   }
 }
 

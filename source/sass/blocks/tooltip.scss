@@ -22,6 +22,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .tooltip {
+    &--catalog {
+      flex-direction: row;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .tooltip__list-item {
     margin-right: 8px;
@@ -29,6 +37,12 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tooltip__list-item {
+    margin: 0;
   }
 }
 

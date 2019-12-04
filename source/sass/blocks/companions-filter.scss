@@ -19,6 +19,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companions-filter__wrapper {
+    padding: 90px 60px 62px 60px;
+  }
+}
+
 .companions-filter__more-btn {
   margin-top: 26px;
   margin-bottom: 27px;
@@ -28,5 +34,17 @@
   .companions-filter__more-btn {
     margin-top: 45px;
     margin-bottom: 51px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-filter__more-btn {
+    width: 960px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-filter__pagination {
+    width: 960px;
   }
 }

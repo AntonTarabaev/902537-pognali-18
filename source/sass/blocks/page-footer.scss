@@ -32,18 +32,23 @@
 }
 
 .page-footer__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 0 25px 25px 25px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
-    @include tablet-container;
     padding: 0 40px 46px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    padding: 0 59px 51px 61px;
   }
 }
 

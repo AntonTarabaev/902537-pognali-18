@@ -11,6 +11,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companions-form {
+    padding: 0 41px 47px 48px;
+  }
+}
+
 .companions-form__field {
   display: block;
   margin: 0;
@@ -20,7 +26,7 @@
   border-top: 1px solid #f3c72b;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .companions-form__field {
     position: relative;
     padding: 0;
@@ -40,6 +46,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companions-form__field {
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+}
+
 .companions-form__title {
   width: 100%;
   float: left;
@@ -49,6 +63,12 @@
 @media (min-width: $tablet-width) {
   .companions-form__title {
     width: 120px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__title {
+    width: 196px;
   }
 }
 
@@ -72,9 +92,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%), rotate(180deg);
     right: 0;
-    transform: rotate(180deg);
 
     width: 8px;
     height: 4px;
@@ -112,8 +132,19 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companions-form__btn {
+    cursor: pointer;
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
 .companions-form__list {
   @include list-reset;
+  width: 285px;
   margin-top: 40px;
 
   font-size: 15px;
@@ -121,7 +152,7 @@
   font-weight: 400;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .companions-form__list {
     position: absolute;
     margin: 0;
@@ -133,6 +164,18 @@
 
     &--tooltip {
       width: 215px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__list {
+    width: 196px;
+    margin-top: 50px;
+    margin-bottom: 33px;
+
+    &--tooltip {
+      width: 172px;
     }
   }
 }
@@ -149,6 +192,13 @@
   .companions-form__item {
     margin-bottom: 0;
     width: 164px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__item {
+    margin-bottom: 16px;
+    width: auto;
   }
 }
 
@@ -229,4 +279,11 @@
 
 .companions-form__level-controls {
   margin-top: 40px;
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__level-controls {
+    margin-top: 60px;
+    margin-bottom: 38px;
+  }
 }

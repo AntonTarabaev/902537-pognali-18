@@ -10,6 +10,13 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .alphabeth-btns {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 .alphabeth-btns__btn {
   display: block;
   padding: 0;
@@ -64,6 +71,17 @@
 
     &--active {
       color: $blue;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .alphabeth-btns__btn {
+    width: 20%;
+    text-align: left;
+
+    &:nth-last-child(5n) {
+      padding-left: 36px;
     }
   }
 }

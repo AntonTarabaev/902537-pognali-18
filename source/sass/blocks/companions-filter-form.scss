@@ -2,6 +2,12 @@
   background-color: $light-grey;
 }
 
+@media (min-width: $desktop-width) {
+  .companions-filter-form {
+    position: relative;
+  }
+}
+
 .companions-filter-form__wrapper {
   @include container;
   padding: 50px 25px 18px 25px;
@@ -12,6 +18,17 @@
     padding: 90px 40px 0 40px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .companions-filter-form__wrapper {
+    width: 285px;
+    position: absolute;
+    top: 130px;
+    right: 60px;
+    padding: 0;
+  }
+}
+
 
 .companions-filter-form__title {
   display: block;
@@ -32,5 +49,11 @@
 
     font-size: 30px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-filter-form__title {
+    padding: 48px 37px 37px 48px;
   }
 }

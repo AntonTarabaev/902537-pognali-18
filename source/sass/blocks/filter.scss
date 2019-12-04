@@ -56,6 +56,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter__wrapper {
+    padding: 60px;
+  }
+}
+
 .filter__menu-container {
   position: relative;
   display: flex;
