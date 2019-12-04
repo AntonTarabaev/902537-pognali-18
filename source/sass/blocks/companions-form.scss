@@ -22,12 +22,19 @@
 
 @media (min-width: $tablet-width) {
   .companions-form__field {
+    position: relative;
     padding: 0;
-    display: flex;
-    align-items: center;
+    margin-bottom: 30px;
+
     border: none;
 
+    &:first-of-type {
+      padding-top: 30px;
+      border-top: 1px solid #f3c72b;
+    }
+
     &:last-of-type {
+      padding-bottom: 42px;
       border-bottom: 1px solid #f3c72b;
     }
   }
@@ -41,9 +48,7 @@
 
 @media (min-width: $tablet-width) {
   .companions-form__title {
-    display: flex;
-    width: 110px;
-    float: none;
+    width: 120px;
   }
 }
 
@@ -53,6 +58,8 @@
   padding: 2px 0;
 
   text-align: left;
+  font-size: 16px;
+  line-height: 18px;
   color: $light-blue;
   font-weight: 700;
   text-transform: uppercase;
@@ -94,7 +101,10 @@
 
 @media (min-width: $tablet-width) {
   .companions-form__btn {
-    cursor: none;
+    font-size: 20px;
+    line-height: 30px;
+
+    cursor: normal;
 
     &::after {
       display: none;
@@ -111,16 +121,45 @@
   font-weight: 400;
 }
 
-.companions-form__item:not(:last-child) {
+@media (min-width: $tablet-width) {
+  .companions-form__list {
+    position: absolute;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    left: 126px;
+    width: 492px;
+
+    &--tooltip {
+      width: 215px;
+    }
+  }
+}
+
+.companions-form__item {
   margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-form__item {
+    margin-bottom: 0;
+    width: 164px;
+  }
 }
 
 .companions-form__label {
   position: relative;
   display: block;
   padding-left: 27px;
-  padding-top: 2px;
   padding-bottom: 1px;
+
+  font-size: 16px;
+  line-height: 18px;
 
   cursor: pointer;
 
@@ -140,8 +179,9 @@
     content: "";
     display: none;
     position: absolute;
-    top: 4px;
+    top: 50%;
     left: 5px;
+    transform: translateY(-50%);
     height: 9px;
     width: 9px;
 
@@ -160,6 +200,26 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-form__label {
+    padding-left: 36px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      left: 6px;
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 

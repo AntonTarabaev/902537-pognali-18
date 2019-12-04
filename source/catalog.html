@@ -20,7 +20,7 @@
           <ul class="main-nav__site-list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="">
-                <span class="site-list__text" data-hover="О сервисе">О сервисе</span>
+                <span class="site-list__text" data-hover="О&nbsp;сервисе">О сервисе</span>
               </a>
             </li>
             <li class="site-list__item">
@@ -797,7 +797,7 @@
               <legend class="companions-form__title">
                 <button class="companions-form__btn" type="button" aria-label="Открыть/закрыть меню">Транспорт</button>
               </legend>
-              <ul class="companions-form__list tooltip">
+              <ul class="companions-form__list companions-form__list--tooltip tooltip">
                 <li class="tooltip__list-item">
                   <input class="tooltip__checkbox visually-hidden" type="checkbox" name="filler" id="filter-plane" value="plane" checked>
                   <label class="tooltip__item tooltip__item--plane tooltip__item--small tooltip__item--button" for="filter-plane" aria-label="Самолёт"></label>
@@ -821,17 +821,19 @@
                 <button class="companions-form__btn" aria-label="Открыть/закрыть меню">Левел</button>
               </legend>
               <div class="companions-form__level-controls level-controls">
-                <label class="visually-hidden" for="min-level">Минимальный уровень</label>
-                <input class="level-controls__min-level" type="text" id="min-level" name="min-level" value="30">
-                <label class="visually-hidden" for="max-level">Максимальный уровень</label>
-                <input class="level-controls__max-level" type="text" id="max-level" name="max-level" value="100">
-              </div>
-              <div class="level-controls__range-controls">
-                <div class="level-controls__scale">
-                  <div class="level-controls__bar"></div>
+                <div class="level-controls__levels">
+                  <label class="visually-hidden" for="min-level">Минимальный уровень</label>
+                  <input class="level-controls__min-level" type="text" id="min-level" name="min-level" value="30">
+                  <label class="visually-hidden" for="max-level">Максимальный уровень</label>
+                  <input class="level-controls__max-level" type="text" id="max-level" name="max-level" value="100">
                 </div>
-                <button class="level-controls__toggle level-controls__toggle--toggle-min" type="button" aria-label="Задать минимальный уровень"></button>
-                <button class="level-controls__toggle level-controls__toggle--toggle-max" type="button" aria-label="Задать максимальный уровень"></button>
+                <div class="level-controls__range-controls">
+                  <div class="level-controls__scale">
+                    <div class="level-controls__bar"></div>
+                  </div>
+                  <button class="level-controls__toggle level-controls__toggle--min" type="button" aria-label="Задать минимальный уровень"></button>
+                  <button class="level-controls__toggle level-controls__toggle--max" type="button" aria-label="Задать максимальный уровень"></button>
+                </div>
               </div>
             </fieldset>
             <button class="companions-form__submit button button--white" type="submit">Показать</button>
@@ -1108,9 +1110,25 @@
             </li>
           </ul>
           <a class="companions-filter__more-btn button button--more">Показать еще</a>
-          <div class="companions-filter__btns-wrapper">
-            <button class="companions-filter__btn companions-filter__btn--prev-btn" type="button" aria-label="Предыдущая страница"></button>
-            <button class="companions-filter__btn companions-filter__btn--next-btn" type="button" aria-label="Следующая страница"></button>
+          <div class="companions-filter__pagination pagination">
+            <ol class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--current">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="">4</a>
+              </li>
+            </ol>
+            <div class="pagination__btns-wrapper">
+              <button class="pagination__btn pagination__btn--prev-btn" type="button" aria-label="Предыдущая страница"></button>
+              <button class="pagination__btn pagination__btn--next-btn" type="button" aria-label="Следующая страница"></button>
+            </div>
           </div>
         </div>
       </section>

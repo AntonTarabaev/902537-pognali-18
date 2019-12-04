@@ -127,16 +127,18 @@
   &--more {
     position: relative;
     background-color: transparent;
+    padding-left: 15px + 33px;
 
     color: $light-blue;
 
     &::after {
       content: "";
       position: absolute;
-      top: 14px;
-      left: 50px;
-      width: 12px;
-      height: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 60px;
+      width: 18px;
+      height: 18px;
 
       background-image: url("../img/show-more-plus.svg");
     }
@@ -300,6 +302,16 @@
         width: 19px;
         height: 19px;
         left: 243px;
+      }
+    }
+
+    &--more {
+      padding-left: 29px + 52px;
+
+      &::after {
+        left: 247px;
+        width: 27px;
+        height: 27px;
       }
     }
   }
