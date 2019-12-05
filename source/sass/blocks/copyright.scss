@@ -4,10 +4,19 @@
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0;
+
+    border: none;
+  }
+}
+
 .copyright__link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 
   color: $grey-text;
 
@@ -23,7 +32,18 @@
 
 .copyright__text {
   margin: 0;
-  padding-top: 5px;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 24px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .copyright__img {

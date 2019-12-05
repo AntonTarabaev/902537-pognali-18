@@ -2,10 +2,45 @@
   @include list-reset;
 }
 
+@media (min-width: $tablet-width) {
+  .companions-list {
+    display: flex;
+    justify-content: space-between;
+
+    &--catalog {
+      display: block;
+    }
+  }
+}
+
 .companions-list__item {
   margin-top: 30px;
 
   &--mini-margin {
     margin-top: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-list__item {
+    margin-top: 0;
+
+    &--mini-margin {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-list__item {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--mini-margin {
+      margin-right: 0;
+    }
   }
 }

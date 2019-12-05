@@ -4,11 +4,45 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   z-index: 1;
 
   &--filter {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tooltip {
+    &--catalog {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tooltip {
+    &--catalog {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tooltip__list-item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tooltip__list-item {
+    margin: 0;
   }
 }
 
@@ -101,6 +135,28 @@
 
   &--active::before {
     opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tooltip__item {
+    &--small {
+      width: 24px;
+      height: 21px;
+
+      &::before {
+        background-size: auto 21px;
+      }
+    }
+
+    &--button {
+      width: 43px;
+      height: 43px;
+    }
+
+    &--bg-gray {
+      background-color: transparent;
+    }
   }
 }
 

@@ -11,6 +11,27 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion {
+    &--catalog {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 35px 25px 25px 35px;
+
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion {
+    &--catalog {
+      width: 950px;
+      padding: 0;
+    }
+  }
+}
+
 .companion__image {
   width: 270px;
   height: 270px;
@@ -28,8 +49,50 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__image {
+    width: 285px;
+    height: 285px;
+
+    &--catalog {
+      position: static;
+      width: 190px;
+      height: 190px;
+
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__image {
+    &--catalog {
+      width: 285px;
+      height: 285px;
+
+      border-radius: 20px 0 0 20px;
+    }
+  }
+}
+
 .companion__countries-wrapper {
   margin-top: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .companion__countries-wrapper {
+    margin-top: 0;
+
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__countries-wrapper {
+    padding-top: 49px;
+    padding-bottom: 138px;
+    margin-left: 81px;
+  }
 }
 
 .companion__countries {
@@ -48,15 +111,50 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__countries {
+    top: 273px;
+
+    &--catalog {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__countries {
+    &--catalog {
+      height: 100%;
+      margin: 0;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
 .companion__info-wrapper {
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: $tablet-width) {
+  .companion__info-wrapper {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__info-wrapper {
+    padding-top: 46px;
+    padding-bottom: 47px;
+    margin-left: 59px;
+  }
+}
+
 .companion__title {
   display: block;
   margin: 25px auto 15px auto;
-  padding: 0 17px;
 
   font-weight: 700;
   font-size: 21px;
@@ -77,6 +175,22 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__title {
+    font-size: 24px;
+    line-height: 24px;
+
+    &--catalog {
+      min-height: 0;
+      padding-left: 0;
+      width: 100%;
+
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
 .companion__link {
   position: relative;
   padding: 0 16px;
@@ -86,12 +200,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 5px;
     height: 5px;
 
-    border-radius: 2.5px;
+    border-radius: 50%;
     background-color: #f97676;
   }
 
@@ -132,6 +247,28 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__link {
+    &::before {
+      width: 7px;
+      height: 7px;
+    }
+
+    &--catalog {
+      position: relative;
+      padding-right: 30px;
+
+      &::before {
+        width: 7px;
+        height: 7px;
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+      }
+    }
+  }
+}
+
 .companion__hash {
   display: block;
   width: 180px;
@@ -153,6 +290,20 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__hash {
+    width: 225px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &--catalog {
+      margin-top: 22px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
 .companion__btns-wrapper {
   display: flex;
   align-items: center;
@@ -160,6 +311,14 @@
 
   order: 2;
   z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .companion__btns-wrapper {
+    padding-left: 0;
+
+    order: 5;
+  }
 }
 
 .companion__like-btn {
@@ -229,6 +388,19 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__like-btn {
+    width: 50px;
+    height: 50px;
+    margin-right: 9px;
+
+    &::before {
+      width: 20px;
+      height: 17px;
+    }
+  }
+}
+
 .companion__like-number {
   color: $dark-blue;
   font-size: 14px;
@@ -237,12 +409,26 @@
   text-transform: uppercase;
 }
 
+@media (min-width: $tablet-width) {
+  .companion__like-number {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .companion__btn {
   position: absolute;
   bottom: 22px;
   left: 20px;
   right: 20px;
   width: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .companion__btn {
+    position: static;
+    width: 148px;
+  }
 }
 
 .companion__text {
@@ -269,11 +455,59 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companion__text {
+    display: none;
+
+    padding: 0 12px;
+
+    &::before {
+      left: -59px;
+      width: 688px;
+    }
+
+    &--countries {
+      display: inline;
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__text {
+    &--countries {
+      display: none;
+    }
+  }
+}
+
 .companion__transport-level-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .companion__transport-level-wrapper {
+    flex-direction: column;
+    height: 193px;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__transport-level-wrapper {
+    position: absolute;
+    right: 44px;
+    bottom: 42px;
+    height: 60px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .companion__transport {
@@ -283,6 +517,25 @@
   &--catalog {
     margin-top: 19px;
     padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companion__transport {
+    &--catalog {
+      height: 120px;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__transport {
+    &--catalog {
+      width: 120px;
+      height: 60px;
+    }
   }
 }
 
@@ -297,5 +550,28 @@
     left: 0;
     margin-top: 12px;
     margin-right: 5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companion__level {
+    top: 23px;
+    left: 23px;
+
+    &--catalog {
+      margin: 0;
+      margin-top: 13px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion__level {
+    &--catalog {
+      margin-top: 0;
+      margin-left: 52px;
+    }
   }
 }

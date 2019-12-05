@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -19,7 +20,7 @@
           <ul class="main-nav__site-list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="">
-                <span class="site-list__text" data-hover="О сервисе">О сервисе</span>
+                <span class="site-list__text" data-hover="О&nbsp;сервисе">О сервисе</span>
               </a>
             </li>
             <li class="site-list__item">
@@ -33,7 +34,7 @@
               </a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
               <a class="user-list__login button" href="login.html">Авторизация</a>
             </li>
@@ -91,16 +92,16 @@
       <h1 class="visually-hidden">Сервис по поиску попутчиков «Погнали»</h1>
 
       <section class="promo">
-        <div class="promo__wrapper promo__wrapper--top">
+        <div class="promo__wrapper">
           <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
           <div class="promo__contacts-wrapper">
             <ul class="promo__list contacts-list contacts-list--small">
-              <li class="contacts-list__item">
+              <li class="contacts-list__item contacts-list__item--small">
                 <a class="contacts-list__link contacts-list__link--phone contacts-list__link--small" href="tel:88005558628">
                   <span class="contacts-list__svg-bg contacts-list__svg-bg--phone">Позвонить нам</span>
                 </a>
               </li>
-              <li class="contacts-list__item">
+              <li class="contacts-list__item contacts-list__item--small">
                 <a class="contacts-list__link contacts-list__link--email contacts-list__link--small" href="mailto:mail@htmlacademy.ru">
                   <span class="contacts-list__svg-bg contacts-list__svg-bg--email">Написать нам</span>
                 </a>
@@ -112,8 +113,6 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="promo__wrapper promo__wrapper--bottom">
           <blockquote class="promo__review">
             <q class="promo__quote">Лучшее приложение, что я видел в жизни!</q>
             <cite class="promo__quote-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
@@ -139,7 +138,8 @@
         <div class="about__wrapper">
           <h2 class="about__title">О сервисе</h2>
           <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <b class="about__info">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
+          <b class="about__info">А если найдете кого-то близкого по духу — скорее зовите его в совместный трип!</b>
+          <a class="about__link button button--square" href="about.html">Подробнее</a>
         </div>
       </section>
 
@@ -150,8 +150,11 @@
           <ul class="directions__list countries-list">
             <li class="countries-list__item country-card">
               <img class="country-card__image" src="img/thailand-mobile@1x.jpg" alt="Таиланд">
-              <div class="country-card__about country-card__about--thailand">
+              <div class="country-card__about">
                 <div class="country-card__wrapper">
+                  <div class="country-card__flag flag">
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Таиланда" width="35" height="24">
+                  </div>
                   <h3 class="country-card__title">Таиланд</h3>
                   <p class="country-card__slogan">Джунгли зовут!</p>
                 </div>
@@ -160,8 +163,11 @@
             </li>
             <li class="countries-list__item country-card">
               <img class="country-card__image" src="img/france-mobile@1x.jpg" alt="Франция">
-              <div class="country-card__about country-card__about--france">
+              <div class="country-card__about">
                 <div class="country-card__wrapper">
+                  <div class="country-card__flag flag">
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Франции" width="35" height="24">
+                  </div>
                   <h3 class="country-card__title">Франция</h3>
                   <p class="country-card__slogan">Трэ бьен, манифик!</p>
                 </div>
@@ -170,8 +176,11 @@
             </li>
             <li class="countries-list__item country-card">
               <img class="country-card__image" src="img/czech-mobile@1x.jpg" alt="Чехия">
-              <div class="country-card__about country-card__about--czech">
+              <div class="country-card__about">
                 <div class="country-card__wrapper">
+                  <div class="country-card__flag flag">
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+                  </div>
                   <h3 class="country-card__title">Чехия</h3>
                   <p class="country-card__slogan">Закоулки старой Европы</p>
                 </div>
@@ -201,13 +210,22 @@
                 </div>
               </div>
               <ul class="companion__countries country">
-                <li class="country__item country__item--sri-lanka">
-                  <span class="country__text">Шри&#8209;Ланка</span>
+                <li class="country__item">
+                  <div class="country__flag flag">
+                    <img class="flag__picture" src="https://via.placeholder.com/35x24" alt="Флаг Шри-Ланки" width="35" height="24">
+                  </div>
+                  <span class="country__text">Шри-Ланка</span>
                 </li>
-                <li class="country__item country__item--thailand">
+                <li class="country__item">
+                  <div class="country__flag flag">
+                    <img class="flag__picture" src="https://via.placeholder.com/35x24" alt="Флаг Таиланда" width="35" height="24">
+                  </div>
                   <span class="country__text">Таиланд</span>
                 </li>
-                <li class="country__item country__item--seychelles">
+                <li class="country__item">
+                  <div class="country__flag flag">
+                    <img class="flag__picture" src="https://via.placeholder.com/35x24" alt="Флаг Сейшел" width="35" height="24">
+                  </div>
                   <span class="country__text">Сейшелы</span>
                 </li>
               </ul>
@@ -242,10 +260,16 @@
                 </div>
               </div>
               <ul class="companion__countries country">
-                <li class="country__item country__item--belgium">
+                <li class="country__item">
+                  <div class="country__flag flag">
+                    <img class="flag__picture" src="https://via.placeholder.com/35x24" alt="Флаг Бельгии" width="35" height="24">
+                  </div>
                   <span class="country__text">Бельгия</span>
                 </li>
-                <li class="country__item country__item--czech">
+                <li class="country__item">
+                  <div class="country__flag flag">
+                    <img class="flag__picture" src="https://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+                  </div>
                   <span class="country__text">Чехия</span>
                 </li>
               </ul>
@@ -279,22 +303,16 @@
           <b class="tariffs__title">Добавьте свой профиль</b>
           <ol class="tariffs__list">
             <li class="tariffs__item tariffs__item--orange-label">
-              <p class="tariffs__text">
-                Базовое размещение<br>
-                Бесплатно
-              </p>
+              <p class="tariffs__text">Базовое размещение</p>
+              <p class="tariffs__text">Бесплатно</p>
             </li>
             <li class="tariffs__item tariffs__item--yellow-orange-label">
-              <p class="tariffs__text">
-                Вывод на первых позициях<br>
-                99 руб./мес
-              </p>
+              <p class="tariffs__text">Вывод на первых позициях</p>
+              <p class="tariffs__text">99 руб./мес</p>
             </li>
             <li class="tariffs__item tariffs__item--yellow-label">
-              <p class="tariffs__text">
-                Кастомный цвет карточки<br>
-                59 руб./мес
-              </p>
+              <p class="tariffs__text">Кастомный цвет карточки</p>
+              <p class="tariffs__text">59 руб./мес</p>
             </li>
           </ol>
           <a class="tariffs__link" href="tariffs.html">Показать тарифы для бизнеса</a>
@@ -306,15 +324,17 @@
         <div class="feedback__wrapper">
           <b class="feedback__title">Заинтересовались?</b>
           <p class="feedback__text">
-            Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+            Зарегистрируйтесь, это быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__login" href="login.html">авторизуйтесь</a>.
           </p>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="GET">
             <label class="visually-hidden" for="feedback-email">E-mail</label>
             <input class="feedback__input" type="email" name="email" id="feedback-email" placeholder="E-mail">
-            <button class="feedback__button" type="submit" aria-label="Отправить"></button>
+            <button class="feedback__button" type="submit" aria-label="Отправить">
+              <span class="feedback__button-text">Регистрация</span>
+            </button>
           </form>
-          <p class="feedback__info">Остались вопросы?<br> Мы с радостью на них ответим!</p>
+          <p class="feedback__info">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
           <ul class="feedback__list contacts-list">
             <li class="contacts-list__item">
               <a class="contacts-list__link contacts-list__link--yellow" href="tel:88005558628">
@@ -376,7 +396,7 @@
         <ul class="page-footer__list social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--yellow" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
-              <svg class="social-list__svg" fill="#1d2e5b" width="11" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social-list__svg social-list__svg--fb" fill="#1d2e5b" width="11" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 11 21" style="enable-background: new 0 0 11 21;" xml:space="preserve">
                 <g>
                   <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
@@ -388,7 +408,7 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--yellow" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
-              <svg class="social-list__svg" fill="#1d2e5b" width="23" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social-list__svg social-list__svg--vk" fill="#1d2e5b" width="23" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 30 15.8" style="enable-background: new 0 0 30 15.8;" xml:space="preserve">
                 <g>
                 <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
@@ -413,7 +433,7 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--yellow" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
-              <svg class="social-list__svg" fill="#1d2e5b" width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social-list__svg social-list__svg--instagram" fill="#1d2e5b" width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 23 23" style="enable-background: new 0 0 23 23;" xml:space="preserve">
                 <path d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
                   M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>

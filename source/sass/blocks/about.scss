@@ -1,14 +1,34 @@
 .about {
   position: relative;
-  background-color: $blue;
 
   color: #ffffff;
 
   border-radius: 0 0 30px 30px;
+  background-color: $blue;
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    border-radius: 0 0 55px 55px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -55px;
+      left: 0;
+      width: 100%;
+      height: 55px;
+
+      background-color: inherit;
+
+      z-index: -1;
+    }
+  }
 }
 
 .about__wrapper {
-  @include mobile-container;
+  @include container;
   position: relative;
   padding: 300px 60px 80px 50px;
 
@@ -19,15 +39,48 @@
   &::after {
     position: absolute;
     left: 0;
-    bottom: 220px;
+    top: 282px;
     content: "";
 
     width: 113px;
     height: 132px;
 
     background-color: #141b3b;
+    border-radius: 20px;
 
     z-index: -1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about__wrapper {
+    padding: 280px 391px 88px 75px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: top 284px right 0;
+
+    &::after {
+      left: 40px;
+      top: 236px;
+      width: 688px;
+      height: 213px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__wrapper {
+    padding: 133px 690px 163px 131px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: bottom 0 right 59px;
+
+    &::after {
+      left: 60px;
+      top: 71px;
+      width: 213px;
+      height: 213px;
+    }
   }
 }
 
@@ -39,6 +92,64 @@
   color: $orange;
 }
 
+@media (min-width: $tablet-width) {
+  .about__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+.about__text {
+  margin-top: 23px;
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .about__text {
+    margin-top: 43px;
+    margin-bottom: 38px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__text {
+    margin-top: 61px;
+    margin-bottom: 44px;
+  }
+}
+
 .about__info {
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .about__info {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about__info {
+    display: block;
+    margin-bottom: 86px;
+    width: 420px;
+  }
+}
+
+.about__link {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about__link {
+    display: block;
+    margin-top: 53px;
+  }
 }

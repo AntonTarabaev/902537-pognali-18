@@ -21,12 +21,47 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .companions {
+    &::after {
+      bottom: -55px;
+
+      height: 55px;
+
+      border-radius: 0 0 55px 55px;
+    }
+  }
+}
+
 .companions__wrapper {
-  @include mobile-container;
+  @include container;
+  position: relative;
   padding: 50px 25px 0 25px;
 }
 
+@media (min-width: $tablet-width) {
+  .companions__wrapper {
+    padding: 198px 75px 33px 75px;
+
+    background-image: url("../img/rogovaya-back-desktop@1x.png"),
+      url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 135px right 40px,
+      top 481px left 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__wrapper {
+    padding: 186px 690px 79px 131px;
+
+    background-position: top 440px left 191px,
+      top 133px left 547px;
+  }
+}
+
 .companions__title {
+  position: relative;
   margin: 0;
   padding-left: 25px;
 
@@ -34,11 +69,59 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
+
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .companions__title {
+    padding: 0;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -63px;
+      left: -35px;
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__title {
+    &::after {
+      top: -63px;
+      left: -71px;
+    }
+  }
 }
 
 .companions__text {
+  position: relative;
   padding-left: 25px;
+  margin-top: 23px;
+  margin-bottom: 27px;
   width: 220px;
+
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .companions__text {
+    margin-top: 61px;
+    margin-bottom: 46px;
+    padding: 0;
+    width: 425px;
+  }
 }
 
 .companions__info {
@@ -48,6 +131,43 @@
   font-weight: 700;
 }
 
+@media (min-width: $tablet-width) {
+  .companions__info {
+    padding: 0;
+    width: 260px;
+    margin-bottom: 62px;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__info {
+    margin-bottom: 87px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__list {
+    position: absolute;
+    top: 188px;
+    right: 59px;
+  }
+}
+
 .companions__link {
   margin-top: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions__link {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions__link {
+    margin-top: 0;
+  }
 }

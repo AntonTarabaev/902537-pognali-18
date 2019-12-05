@@ -1,23 +1,29 @@
-.country-filter {
-  margin-top: 7px;
-}
-
-.country-filter__list {
-  @include list-reset;
-  padding: 0 25px 25px 25px;
-}
-
-.country-filter__link {
-  color: rgba(25, 33, 68, 0.3);
-  text-transform: uppercase;
-  font-weight: 700;
-
-  &--current {
-    color: $blue;
-  }
-}
-
 .country-filter__alphabeth {
   margin-bottom: 67px;
   margin-left: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .country-filter__alphabeth {
+    margin: 0;
+  }
+}
+
+.country-filter__list {
+  margin-left: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .country-filter__list {
+    position: absolute;
+    left: 443px;
+    top: 5px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .country-filter__hide-btn {
+    margin-top: 70px;
+  }
 }

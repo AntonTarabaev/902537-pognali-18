@@ -29,15 +29,55 @@
   }
 }
 
-.filter__wrapper {
-  @include mobile-container;
-  padding: 20px 25px 0 25px;
+@media (min-width: $tablet-width) {
+  .filter {
+    &::before {
+      top: -55px;
+      height: 55px;
+    }
 
-  &--top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    &::after {
+      bottom: -55px;
+      height: 55px;
+
+      border-radius: 0 0 55px 55px;
+    }
+  }
+}
+
+.filter__wrapper {
+  @include container;
+  padding: 20px 25px 0 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__wrapper {
+    padding: 60px 75px 19px 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__wrapper {
+    padding: 60px;
+  }
+}
+
+.filter__menu-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter__countries-container {
+  margin-top: 156px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__countries-container {
+    position: relative;
+    margin-top: 69px;
   }
 }
 
@@ -65,9 +105,53 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .filter__title {
+    display: none;
+  }
+}
+
+.filter__list {
+  @include list-reset;
+  position: absolute;
+  top: 72px;
+  left: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__list {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 370px;
+  }
+}
+
+.filter__link {
+  color: rgba(25, 33, 68, 0.3);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+
+  &--current {
+    color: $blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .filter__show-btn {
   width: 17px;
   height: 12px;
+  padding: 0;
 
   background-image: url("../img/dots.svg");
   background-color: inherit;
@@ -79,5 +163,33 @@
 
   &--opened {
     background-image: url("../img/filter-close.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter__show-btn {
+    width: 175px;
+    height: 19px;
+
+    text-align: left;
+
+    background-position: right center;
+  }
+}
+
+.filter__btn-show-text,
+.filter__btn-hide-text {
+  display: none;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $blue;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__btn-hide-text {
+    display: block;
   }
 }

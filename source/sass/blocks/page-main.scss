@@ -3,8 +3,14 @@
   border-radius: 0 0 30px 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .page-main__title-container {
+    border-radius: 0 0 55px 55px;
+  }
+}
+
 .page-main__title {
-  @include mobile-container;
+  @include container;
   display: block;
   padding: 12px 27px;
 
@@ -12,6 +18,21 @@
   line-height: 40px;
   font-weight: 700;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    padding: 69px 77px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    padding: 69px 129px;
+  }
 }
 
 .page-main__title-text {
@@ -29,5 +50,15 @@
 
     border-radius: 2.4px;
     background-color: $orange;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__title-text {
+    &::after {
+      bottom: -71px;
+    }
   }
 }

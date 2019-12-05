@@ -1,21 +1,81 @@
 .main-nav {
-  width: 320px;
+  @include container;
+  position: relative;
   min-height: 73px;
-  margin: 0 auto;
   padding: 25px 25px 40px 25px;
 
   background-color: #ffffff;
 }
 
+@media (min-width: $tablet-width) {
+  .main-nav {
+    min-height: 132px;
+    padding: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    min-height: 52px;
+    padding: 47px 60px 0 60px;
+    display: flex;
+
+    background-color: #161c34;
+  }
+}
+
 .main-nav__logo-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__logo-wrapper {
+    min-height: 50px;
+    padding-right: 48.3%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__logo-wrapper {
+    position: relative;
+    padding-right: 100px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 60px;
+      height: 2px;
+
+      background-color: #ffffff;
+      border-radius: 1px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__menu-wrapper {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__menu-wrapper {
+    display: flex;
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 290px;
+  }
 }
 
 .main-nav__toggle {
   display: block;
   width: 25px;
-  height: 25px;
+  height: 11px;
   padding: 0;
 
   border: none;
@@ -26,6 +86,12 @@
   cursor: pointer;
 }
 
+@media (min-width: $desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
 .main-nav__contacts-list {
   margin-top: 51px;
   margin-bottom: 40px;
@@ -34,4 +100,36 @@
 .main-nav__site-list {
   margin-top: 50px;
   margin-bottom: 58px;
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__site-list {
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__user-list {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__user-list {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__contacts-list {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    display: none;
+  }
 }

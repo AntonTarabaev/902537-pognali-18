@@ -16,6 +16,15 @@
 }
 
 .country-list__link {
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 400;
   color: $grey-text;
+}
+
+@media (min-width: $tablet-width) {
+  .country-list__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

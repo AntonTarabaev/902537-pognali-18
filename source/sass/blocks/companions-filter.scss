@@ -2,9 +2,27 @@
   padding-bottom: 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .companions-filter {
+    padding-bottom: 55px;
+  }
+}
+
 .companions-filter__wrapper {
-  @include mobile-container;
-  padding: 0 25px;
+  @include container;
+  padding: 0 25px 46px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter__wrapper {
+    padding: 0 40px 62px 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-filter__wrapper {
+    padding: 90px 60px 62px 60px;
+  }
 }
 
 .companions-filter__more-btn {
@@ -12,54 +30,21 @@
   margin-bottom: 27px;
 }
 
-.companions-filter__btns-wrapper {
-  display: flex;
-  margin-bottom: 46px;
+@media (min-width: $tablet-width) {
+  .companions-filter__more-btn {
+    margin-top: 45px;
+    margin-bottom: 51px;
+  }
 }
 
-.companions-filter__btn {
-  position: relative;
-  padding: 0;
-  width: 50%;
-  height: 50px;
-
-  background-color: #ffffff;
-  border: none;
-
-  cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    border-style: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent $light-blue transparent transparent;
+@media (min-width: $desktop-width) {
+  .companions-filter__more-btn {
+    width: 960px;
   }
+}
 
-  &--prev-btn {
-    border-radius: 20px 0 0 20px;
-
-    border-right: 1px solid #edeff6;
-  }
-
-  &--next-btn {
-    transform: rotate(180deg);
-
-    border-radius: 20px 0 0 20px;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 0.6;
-  }
-
-  &:active::before {
-    opacity: 0.3;
+@media (min-width: $desktop-width) {
+  .companions-filter__pagination {
+    width: 960px;
   }
 }

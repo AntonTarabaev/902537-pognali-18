@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+@media (min-width: $tablet-width) {
+  .social-list {
+    justify-content: flex-start;
+  }
+}
+
 .social-list__link {
   display: block;
   width: 45px;
@@ -47,6 +53,44 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .social-list__link {
+    width: 60px;
+    height: 60px;
+
+    &--facebook {
+      background-size: 14px 28px;
+    }
+
+    &--vk {
+      background-size: 31px 16px;
+    }
+
+    &--instagram {
+      background-size: 24px 24px;
+    }
+  }
+}
+
 .social-list__svg {
   fill: #1d2e5b;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list__svg {
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

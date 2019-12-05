@@ -21,15 +21,38 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .feedback {
+    &::after {
+      bottom: -55px;
+
+      height: 55px;
+
+      border-radius: 0 0 55px 55px;
+    }
+  }
+}
+
 .feedback__wrapper {
-  @include mobile-container;
+  @include container;
   padding: 50px 25px 0 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__wrapper {
+    padding: 127px 75px 7px 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    padding: 143px 132px 49px 132px;
+  }
 }
 
 .feedback__title {
   display: block;
-  width: 210px;
-  margin: 0 auto;
+  width: auto;
 
   font-size: 24px;
   line-height: 24px;
@@ -38,12 +61,31 @@
   text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .feedback__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
 .feedback__text {
   display: block;
   width: 200px;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__text {
+    width: 610px;
+    margin-top: 60px;
+    margin-bottom: 67px;
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .feedback__login {
@@ -60,14 +102,6 @@
   &:active {
     color: rgba(255, 141, 48, 0.3);
   }
-}
-
-.feedback__info {
-  display: block;
-  width: 220px;
-  margin: 20px auto;
-
-  text-align: center;
 }
 
 .feedback__form {
@@ -87,6 +121,23 @@
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__input {
+    padding: 25px 112px 26px 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__input {
+    padding-right: 354px;
   }
 }
 
@@ -125,5 +176,59 @@
 
   &:active::after {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__button {
+    width: 82px;
+
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__button {
+    width: 324px;
+    padding: 21px 46px 21px 37px;
+    text-align: left;
+
+    &::after {
+      left: 278px;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.feedback__button-text {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__button-text {
+    display: inline;
+
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $light-blue;
+  }
+}
+
+.feedback__info {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__info {
+    width: 605px;
+    margin-top: 63px;
+    margin-bottom: 43px;
   }
 }

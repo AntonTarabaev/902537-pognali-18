@@ -1,10 +1,11 @@
 .calendar-table {
+  width: 100%;
+
   border-collapse: collapse;
 }
 
 .calendar-table__day-of-the-week {
   padding: 0;
-  width: 32px;
   height: 32px;
 
   text-align: center;
@@ -18,14 +19,47 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .calendar-table__day-of-the-week {
+    height: 40px;
+
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $tablet-width - 1px) {
+  .calendar-table__day-hidden-letter {
+    display: none;
+  }
+}
+
 .calendar-table__cell {
   padding: 0;
-  width: 32px;
   height: 32px;
 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
 
   border: 1px solid #d6d9e6;
+}
+
+@media (min-width: $tablet-width) {
+  .calendar-table__cell {
+    width: 76px;
+    height: 70px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__cell {
+    width: 142px;
+    height: 72px;
+  }
 }
 
 .calendar-table__btn {
@@ -76,5 +110,47 @@
     color: #ffffff;
 
     background-color: $light-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .calendar-table__btn {
+    &::before {
+      top: -4px;
+      left: -4px;
+
+      border-width: 4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__btn {
+    padding: 15px 16px 36px 16px;
+    text-align: left;
+
+    &--start-date::after,
+    &--end-date::after {
+      content: "Заезд";
+      position: absolute;
+      left: 16px;
+      bottom: 15px;
+      width: 60px;
+      height: 16px;
+    }
+
+    &--end-date::after {
+      content: "Выезд";
+    }
+  }
+}
+
+.calendar-table__btn-month-name {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__btn-month-name {
+    display: inline;
   }
 }
