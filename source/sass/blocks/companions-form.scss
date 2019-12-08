@@ -7,7 +7,7 @@
 
 @media (min-width: $tablet-width) {
   .companions-form {
-    padding: 35px 35px 38px 35px;
+    padding: 0 35px 38px 35px;
   }
 }
 
@@ -144,7 +144,7 @@
 
 .companions-form__list {
   @include list-reset;
-  width: 285px;
+  width: 220px;
   margin-top: 40px;
 
   font-size: 15px;

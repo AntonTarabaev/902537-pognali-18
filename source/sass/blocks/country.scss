@@ -43,6 +43,19 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .country__item {
+    &--catalog {
+      margin: 0;
+      margin-bottom: 13px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .country__text {
   display: none;
   position: absolute;

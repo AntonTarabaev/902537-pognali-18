@@ -334,5 +334,11 @@
         left: 345px;
       }
     }
+
+    &--collapse {
+      &::after {
+        left: 594px;
+      }
+    }
   }
 }

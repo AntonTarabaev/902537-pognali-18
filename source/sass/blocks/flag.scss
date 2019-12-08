@@ -115,3 +115,27 @@
     }
   }
 }
+
+.flag__picture {
+  width: 35px;
+  height: 24px;
+
+  &--small {
+    width: 26px;
+    height: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .flag__picture {
+    &--adaptive {
+      width: 70px;
+      height: 47px;
+    }
+
+    &--small {
+      width: 35px;
+      height: 24px;
+    }
+  }
+}

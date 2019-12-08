@@ -70,6 +70,15 @@
   flex-wrap: wrap;
 }
 
+@media (min-width: $desktop-width) {
+  .filter__menu-container {
+    margin-left: 20px;
+    margin-right: 68px;
+
+    justify-content: flex-start;
+  }
+}
+
 .filter__countries-container {
   margin-top: 156px;
 }
@@ -111,6 +120,22 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter__title {
+    display: block;
+    padding-left: 44px;
+    margin-right: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+    }
+  }
+}
+
 .filter__list {
   @include list-reset;
   position: absolute;
@@ -126,6 +151,14 @@
     justify-content: space-between;
     align-items: center;
     width: 370px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__list {
+    line-height: 24px;
+
+    padding-bottom: 5px;
   }
 }
 
@@ -174,6 +207,12 @@
     text-align: left;
 
     background-position: right center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__show-btn {
+    margin-left: auto;
   }
 }
 
