@@ -1,6 +1,6 @@
 .guide-list {
   @include list-reset;
-  width: 270px;
+  width: 84.37%;
 
   counter-reset: section;
 }
@@ -22,6 +22,7 @@
 .guide-list__item {
   position: relative;
   padding: 10px 25px 30px 25px;
+  min-height: 84px;
 
   background-color: $orange;
 

@@ -1,5 +1,6 @@
 .feedback {
   position: relative;
+  padding-top: 30px;
 
   color: #ffffff;
 
@@ -23,6 +24,8 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
+    padding-top: 55px;
+
     &::after {
       bottom: -55px;
 
@@ -35,18 +38,18 @@
 
 .feedback__wrapper {
   @include container;
-  padding: 50px 25px 0 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .feedback__wrapper {
-    padding: 127px 75px 7px 75px;
+    padding: 72px 75px 7px 75px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .feedback__wrapper {
-    padding: 143px 132px 49px 132px;
+    padding: 88px 132px 49px 132px;
   }
 }
 
@@ -70,7 +73,7 @@
 
 .feedback__text {
   display: block;
-  width: 200px;
+  width: 74.07%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -217,7 +220,7 @@
 
 .feedback__info {
   display: block;
-  width: 220px;
+  width: 81.48%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;

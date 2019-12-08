@@ -47,7 +47,7 @@
 
 .filter__wrapper {
   @include container;
-  padding: 20px 25px 0 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -140,7 +140,7 @@
   @include list-reset;
   position: absolute;
   top: 72px;
-  left: 25px;
+  left: 9.26%;
 }
 
 @media (min-width: $tablet-width) {
@@ -172,6 +172,15 @@
   &--current {
     color: $blue;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(25, 33, 68, 0.6);
+  }
+
+  &:active {
+    color: $blue;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -193,6 +202,15 @@
   border: none;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--opened {
     background-image: url("../img/filter-close.svg");

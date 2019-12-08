@@ -1,7 +1,7 @@
 .country-filter__list {
   @include list-reset;
   position: relative;
-  margin-left: 25px;
+  margin-left: 9.26%;
   padding-bottom: 283px;
   width: 220px;
   display: flex;
@@ -134,6 +134,15 @@
     &--active {
       color: $blue;
     }
+
+    &:hover,
+    &:focus {
+      color: rgba(25, 33, 68, 0.6);
+    }
+
+    &:active {
+      color: $blue;
+    }
   }
 }
 
@@ -143,6 +152,13 @@
     height: auto;
 
     color: $blue;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    cursor: auto;
   }
 }
 
@@ -151,6 +167,15 @@
   line-height: 22px;
   font-weight: 400;
   color: $grey-text;
+
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

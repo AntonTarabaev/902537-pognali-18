@@ -1,5 +1,13 @@
 .companions-filter-form {
+  padding-top: 30px;
+
   background-color: $light-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter-form {
+    padding-top: 55px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -11,12 +19,13 @@
 
 .companions-filter-form__wrapper {
   @include container;
-  padding: 50px 25px 18px 25px;
+  padding-top: 20px;
+  padding-bottom: 18px;
 }
 
 @media (min-width: $tablet-width) {
   .companions-filter-form__wrapper {
-    padding: 90px 40px 0 40px;
+    padding: 35px 40px 0 40px;
   }
 }
 
@@ -33,7 +42,7 @@
 
 .companions-filter-form__title {
   display: block;
-  padding: 22px 100px 10px 25px;
+  padding: 22px 9.26% 10px 9.26%;
   margin: 0;
 
   font-size: 22.5px;

@@ -20,14 +20,20 @@
 
 .country-card__image {
   vertical-align: middle;
+  object-fit: cover;
+  width: 100%;
+  height: 109px;
 }
 
 @media (min-width: $tablet-width) {
   .country-card__image {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+
     order: 2;
   }
 }
-
 
 .country-card__about {
   display: flex;
@@ -60,6 +66,8 @@
     padding: 30px 30px 25px 30px;
     flex-grow: 1;
     flex-direction: column;
+
+    border-radius: 20px 0 0 20px;
 
     &::before {
       display: none;

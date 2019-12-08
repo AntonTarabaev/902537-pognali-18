@@ -33,7 +33,7 @@
 
 .page-footer__wrapper {
   @include container;
-  padding: 0 25px 25px 25px;
+  padding-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {

@@ -7,7 +7,7 @@
 .steps__item {
   margin: 0;
   margin-top: 10px;
-  padding: 24px 20px 22px 20px;
+  padding: 24px 7.41% 22px 7.41%;
 
   border: none;
   background-color: #ffffff;
@@ -43,8 +43,8 @@
 .steps__title {
   position: relative;
   margin: 0;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
   padding-top: 20px;
 
   &::before {
@@ -77,10 +77,9 @@
 }
 
 .steps__text {
-  width: 215px;
   margin: 0;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
   margin-top: 18px;
 
   font-size: 16px;
@@ -131,8 +130,8 @@
 
 .steps__wrapper {
   margin-top: 21px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,14 +228,16 @@
 }
 
 .steps__checkboxes {
+  width: 150px;
   margin-top: 21px;
   margin-bottom: 21px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
 }
 
 @media (min-width: $tablet-width) {
   .steps__checkboxes {
+    width: auto;
     margin: 0;
     margin-top: 25px;
     margin-bottom: 26px;
@@ -323,8 +324,8 @@
 }
 
 .steps__calendar {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
   margin-bottom: 22px;
 }
 
@@ -345,8 +346,8 @@
 
 .steps__routes-list {
   margin-top: 24px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 2.17%;
+  margin-left: 2.17%;
 }
 
 @media (min-width: $tablet-width) {
@@ -388,8 +389,8 @@
 }
 
 .steps__entertainment-list {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2.17%;
+  margin-right: 2.17%;
   margin-top: 27px;
 }
 

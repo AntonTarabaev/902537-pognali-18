@@ -1,5 +1,6 @@
 .companions {
   position: relative;
+  padding-top: 30px;
 
   color: #ffffff;
 
@@ -23,6 +24,8 @@
 
 @media (min-width: $tablet-width) {
   .companions {
+    padding-top: 55px;
+
     &::after {
       bottom: -55px;
 
@@ -36,12 +39,12 @@
 .companions__wrapper {
   @include container;
   position: relative;
-  padding: 50px 25px 0 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .companions__wrapper {
-    padding: 198px 75px 33px 75px;
+    padding: 143px 75px 33px 75px;
 
     background-image: url("../img/rogovaya-back-desktop@1x.png"),
       url("../img/smolov-back-desktop@1x.png");
@@ -53,7 +56,7 @@
 
 @media (min-width: $desktop-width) {
   .companions__wrapper {
-    padding: 186px 690px 79px 131px;
+    padding: 131px 690px 79px 131px;
 
     background-position: top 440px left 191px,
       top 133px left 547px;
@@ -63,7 +66,7 @@
 .companions__title {
   position: relative;
   margin: 0;
-  padding-left: 25px;
+  padding-left: 9.26%;
 
   color: $orange;
   font-size: 24px;
@@ -107,10 +110,10 @@
 
 .companions__text {
   position: relative;
-  padding-left: 25px;
+  padding-left: 9.26%;
   margin-top: 23px;
   margin-bottom: 27px;
-  width: 220px;
+  width: 88.88%;
 
   z-index: 1;
 }
@@ -126,7 +129,7 @@
 
 .companions__info {
   display: block;
-  padding-left: 25px;
+  padding-left: 9.26%;
 
   font-weight: 700;
 }

@@ -38,7 +38,8 @@
 
 .profile__wrapper {
   @include container;
-  padding: 22px 25px 33px 25px;
+  padding-top: 22px;
+  padding-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -229,7 +230,7 @@
 
 .profile__hash {
   width: 100%;
-  padding: 14px 25px 25px 20px;
+  padding: 14px 7.4% 25px 7.4%;
 
   font-size: 16px;
   line-height: 22px;

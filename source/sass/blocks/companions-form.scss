@@ -150,6 +150,10 @@
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
+
+  &--tooltip {
+    width: 100%;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
