@@ -43,7 +43,8 @@
 
 @media (min-width: $tablet-width) {
   .route__wrapper {
-    padding: 47px 75px 30px 75px;
+    padding-top: 47px;
+    padding-bottom: 30px;
   }
 }
 
@@ -91,8 +92,8 @@
 
 @media (min-width: $tablet-width) {
   .route__text {
-    width: 525px;
-    padding: 21px 0 18px 93px;
+    width: 84.95%;
+    padding: 21px 0 18px 15.05%;
 
     font-size: 28px;
     line-height: 28px;

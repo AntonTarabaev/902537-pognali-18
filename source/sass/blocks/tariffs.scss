@@ -42,7 +42,7 @@
 
 @media (min-width: $tablet-width) {
   .tariffs__wrapper {
-    padding: 75px 40px 25px 40px;
+    padding: 75px 5.21% 25px 5.21%;
   }
 }
 
@@ -100,17 +100,18 @@
 @media (min-width: $tablet-width) {
   .tariffs__list {
     padding-right: 0;
-    padding-left: 91px;
+    padding-left: 90px;
 
     &::before {
       top: 220px;
-      right: 46px;
+      right: 6.69%;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 198px;
+      width: 28.78%;
+      max-width: 260px;
       height: 285px;
       top: -43px;
       right: 0;
@@ -190,7 +191,7 @@
   .tariffs__item {
     display: flex;
     justify-content: space-between;
-    width: 562px;
+    width: 94.14%;
     padding-top: 16px;
     padding-bottom: 16px;
 

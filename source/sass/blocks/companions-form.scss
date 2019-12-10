@@ -1,5 +1,5 @@
 .companions-form {
-  padding: 16px 25px 22px 25px;
+  padding: 16px 9.26% 22px 9.26%;
 
   background-color: $yellow;
   border-radius: 0 0 20px 20px;
@@ -7,7 +7,7 @@
 
 @media (min-width: $tablet-width) {
   .companions-form {
-    padding: 0 35px 38px 35px;
+    padding: 0 5.09% 38px 5.09%;
   }
 }
 
@@ -163,11 +163,11 @@
     display: flex;
     justify-content: space-between;
     bottom: 0;
-    left: 126px;
-    width: 492px;
+    left: 20.39%;
+    width: 79.61%;
 
     &--tooltip {
-      width: 215px;
+      width: 34.79%;
     }
   }
 }

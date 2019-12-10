@@ -4,10 +4,17 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 35px 25px 28px;
+    padding: 25px 5.09% 25px 4.07%;
 
     background-color: #ffffff;
     border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding-right: 35px;
+    padding-left: 28px;
   }
 }
 
@@ -19,6 +26,14 @@
   .pagination__list {
     @include list-reset;
     display: flex;
+    justify-content: space-between;
+    width: 32%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination__list {
+    justify-content: flex-start;
   }
 }
 
@@ -64,8 +79,14 @@
 
 @media (min-width: $tablet-width) {
   .pagination__btns-wrapper {
-    width: 53px;
+    width: 8.48%;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination__btns-wrapper {
+    width: 53px;
   }
 }
 

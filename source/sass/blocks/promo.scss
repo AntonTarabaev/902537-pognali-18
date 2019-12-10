@@ -163,8 +163,10 @@
 @media (min-width: $desktop-width) {
   .promo__review {
     position: static;
+    width: 285px;
     margin: 0;
     padding-top: 125px;
+    padding-bottom: 250px;
   }
 }
 

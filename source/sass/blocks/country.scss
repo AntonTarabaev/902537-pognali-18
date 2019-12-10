@@ -11,6 +11,22 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .country {
+    &--catalog {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country {
+    &--catalog {
+      flex-direction: column;
+    }
+  }
+}
+
 .country__item {
   position: relative;
   width: 35px;
@@ -37,7 +53,9 @@
 @media (min-width: $tablet-width) {
   .country__item {
     &--catalog {
-      margin-right: 28px;
+      height: 30px;
+      margin-right: 4.46%;
+      margin-bottom: 13px;
 
       &:last-child {
         margin-right: 0;

@@ -292,22 +292,22 @@
 
     &--collapse {
       padding: 35px;
-      padding-left: 35px + 39px;
+      padding-left: 11.97%;
 
       border-radius: 20px;
 
       &::after {
         width: 19px;
         height: 19px;
-        left: 243px;
+        left: 39.32%;
       }
     }
 
     &--more {
-      padding-left: 29px + 52px;
+      padding-left: 11.77%;
 
       &::after {
-        left: 247px;
+        left: 35.9%;
         width: 27px;
         height: 27px;
       }
@@ -336,6 +336,7 @@
     }
 
     &--more {
+      padding-left: 29px + 52px;
       padding-right: 100px;
 
       &::after {
@@ -344,6 +345,8 @@
     }
 
     &--collapse {
+      padding-left: 35px + 39px;
+
       &::after {
         left: 594px;
       }

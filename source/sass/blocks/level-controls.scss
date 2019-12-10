@@ -3,7 +3,7 @@
     position: absolute;
     top: -35px;
     right: 5px;
-    width: 487px;
+    width: 78.8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +53,8 @@
   .level-controls__levels {
     width: 150px;
     margin: 0;
+    margin-left: 12.52%;
+    flex-grow: 1;
 
     order: 1;
   }
@@ -61,6 +63,7 @@
 @media (min-width: $desktop-width) {
   .level-controls__levels {
     width: 100%;
+    margin: 0;
     margin-bottom: 36px;
 
     order: 0;

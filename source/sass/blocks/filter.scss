@@ -52,7 +52,8 @@
 
 @media (min-width: $tablet-width) {
   .filter__wrapper {
-    padding: 60px 75px 19px 75px;
+    padding-top: 60px;
+    padding-bottom: 19px;
   }
 }
 
@@ -151,16 +152,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 370px;
+    width: 59.87%;
     transform: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .filter__list {
-    line-height: 24px;
-
+    width: 370px;
     padding-bottom: 5px;
+
+    line-height: 24px;
   }
 }
 
