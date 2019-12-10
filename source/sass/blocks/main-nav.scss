@@ -11,7 +11,7 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     min-height: 132px;
-    padding: 40px;
+    padding: 40px 5.21% 75px 5.21%;
   }
 }
 
@@ -60,7 +60,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__menu-wrapper {
-    padding-left: 60px;
+    padding-left: 8.72%;
   }
 }
 
@@ -102,7 +102,14 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__contacts-list {
-    width: 100%;
+    width: 600px;
+    margin: 0 auto 115px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__contacts-list {
+    display: none;
   }
 }
 
@@ -115,7 +122,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__site-list {
-    width: 100%;
+    width: 600px;
+    margin: 58px auto 150px 0;
   }
 }
 
@@ -129,18 +137,12 @@
   .main-nav__user-list {
     position: absolute;
     top: 40px;
-    right: 40px;
+    right: 5.21%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav__user-list {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-nav__contacts-list {
     display: none;
   }
 }

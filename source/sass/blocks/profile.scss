@@ -47,7 +47,8 @@
 
 @media (min-width: $tablet-width) {
   .profile__wrapper {
-    padding: 65px 75px 60px 75px;
+    padding-top: 65px;
+    padding-bottom: 60px;
   }
 }
 
@@ -175,7 +176,7 @@
 
     &--transport {
       position: absolute;
-      width: 308px;
+      width: 40.1%;
       top: 64px;
       left: 50%;
       transform: translateX(-50%);
@@ -260,10 +261,16 @@
 
 @media (min-width: $tablet-width) {
   .profile__hash {
-    padding: 22px 25px;
+    padding: 22px 4.04%;
 
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__hash {
+    padding: 22px 25px;
   }
 }
 

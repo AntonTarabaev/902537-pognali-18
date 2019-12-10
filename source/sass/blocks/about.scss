@@ -54,7 +54,9 @@
 
 @media (min-width: $tablet-width) {
   .about__wrapper {
-    padding: 280px 391px 88px 75px;
+    padding-top: 280px;
+    padding-bottom: 88px;
+    padding-right: 391px;
 
     background-image: url("../img/about-tablet@1x.png");
     background-position: top 284px right 0;
@@ -135,7 +137,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .about__info {
     display: block;
     margin-bottom: 86px;
@@ -151,5 +153,12 @@
   .about__link {
     display: block;
     margin-top: 53px;
+    width: 90.73%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__link {
+    width: 274px;
   }
 }

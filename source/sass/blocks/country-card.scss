@@ -63,7 +63,7 @@
 
 @media (min-width: $tablet-width) {
   .country-card__about {
-    padding: 30px 30px 25px 30px;
+    padding: 30px 4.85% 25px 4.85%;
     flex-grow: 1;
     flex-direction: column;
 
@@ -72,6 +72,13 @@
     &::before {
       display: none;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-card__about {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -89,10 +96,17 @@
 @media (min-width: $tablet-width) {
   .country-card__flag {
     top: 16px;
-    left: 398px;
+    left: 100%;
+    transform: translateX(-50%);
 
     width: 70px;
     height: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-card__flag {
+    top: 23px;
   }
 }
 

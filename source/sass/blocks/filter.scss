@@ -140,7 +140,8 @@
   @include list-reset;
   position: absolute;
   top: 72px;
-  left: 9.26%;
+  left: 50%;
+  transform: translateX(-110px);
 }
 
 @media (min-width: $tablet-width) {
@@ -151,6 +152,7 @@
     justify-content: space-between;
     align-items: center;
     width: 370px;
+    transform: none;
   }
 }
 

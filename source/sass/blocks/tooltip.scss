@@ -36,17 +36,21 @@
 
 @media (min-width: $tablet-width) {
   .tooltip__list-item {
-    margin-right: 8px;
+    &--form {
+      margin-right: 2.61%;
 
-    &:last-child {
-      margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .tooltip__list-item {
-    margin: 0;
+    &--form {
+      margin: 0;
+    }
   }
 }
 

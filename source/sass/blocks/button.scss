@@ -223,8 +223,8 @@
 
     &--next-step {
       position: relative;
-      padding: 24px 46px 27px 34px;
-      width: 285px;
+      padding: 24px 8.65% 27px 6.39%;
+      width: 53.57%;
 
       text-align: left;
       color: $light-blue;
@@ -239,7 +239,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 36px;
+        right: 12.63%;
         width: 0;
         height: 0;
 
@@ -256,9 +256,8 @@
 
     &--prev-step {
       position: relative;
-      padding: 24px 0 27px 34px;
-
       width: 190px;
+      padding: 24px 0 27px 34px;
 
       text-align: left;
       color: $light-blue;
@@ -324,6 +323,16 @@
 
     &--bordered {
       width: 324px;
+    }
+
+    &--next-step {
+      width: 285px;
+      padding-right: 46px;
+      padding-left: 34px;
+
+      &::after {
+        right: 36px;
+      }
     }
 
     &--more {

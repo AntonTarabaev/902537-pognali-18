@@ -9,7 +9,7 @@
 
 @media (min-width: $tablet-width) {
   .calendar__select {
-    padding: 29px 0 28px 0;
+    padding: 29px 3% 28px 3%;
   }
 }
 
@@ -70,14 +70,6 @@
   .calendar__btn {
     width: 15px;
     height: 28px;
-
-    &--prev {
-      margin-left: 16px;
-    }
-
-    &--next {
-      margin-right: 16px;
-    }
   }
 }
 
@@ -85,11 +77,6 @@
   .calendar__btn {
     width: 18px;
     height: 34px;
-
-    &--prev,
-    &--next {
-      margin: 0;
-    }
   }
 }
 
