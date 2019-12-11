@@ -39,7 +39,20 @@
 .companions__wrapper {
   @include container;
   position: relative;
-  padding-top: 20px;
+  padding-top: 73px;
+
+  background-image: url("../img/rogovaya-back-mobile@1x.png"),
+    url("../img/smolov-back-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: top 311px left -10px,
+    top 39px right 14.12%;
+  background-size: 71px auto,
+    143px auto;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/rogovaya-back-mobile@2x.png"),
+      url("../img/smolov-back-desktop@2x.png");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -49,9 +62,15 @@
 
     background-image: url("../img/rogovaya-back-desktop@1x.png"),
       url("../img/smolov-back-desktop@1x.png");
-    background-repeat: no-repeat;
     background-position: top 135px right 8.28%,
       top 481px left 6.4%;
+    background-size: 285px auto,
+      143px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png"),
+        url("../img/smolov-back-desktop@2x.png");
+    }
   }
 }
 
@@ -75,6 +94,20 @@
   font-weight: 700;
 
   z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: -44px;
+    width: 132px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+
+    z-index: -1;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -85,17 +118,10 @@
     line-height: 45px;
 
     &::after {
-      content: "";
-      position: absolute;
       top: -63px;
       left: -35px;
       width: 213px;
       height: 213px;
-
-      background-color: #141b3b;
-      border-radius: 20px;
-
-      z-index: -1;
     }
   }
 }
@@ -137,6 +163,7 @@
 .companions__info {
   display: block;
   padding-left: 9.26%;
+  padding-bottom: 30px;
 
   font-weight: 700;
 }

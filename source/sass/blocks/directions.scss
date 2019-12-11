@@ -57,6 +57,11 @@
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: top 85px right 40px;
+    background-size: 289px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 }
 

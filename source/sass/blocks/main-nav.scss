@@ -41,6 +41,7 @@
 @media (min-width: $desktop-width) {
   .main-nav__logo-wrapper {
     position: relative;
+    min-height: 52px;
     padding-right: 100px;
 
     &::after {
@@ -76,7 +77,7 @@
 .main-nav__toggle {
   display: block;
   width: 25px;
-  height: 25px;
+  height: 19px;
   padding: 0;
 
   border: none;
@@ -86,6 +87,13 @@
   background-position: center;
 
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    width: 24px;
+    height: 18px;
+  }
 }
 
 @media (min-width: $desktop-width) {
