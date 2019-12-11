@@ -1,5 +1,6 @@
 .feedback {
   position: relative;
+  padding-top: 30px;
 
   color: #ffffff;
 
@@ -23,6 +24,8 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
+    padding-top: 55px;
+
     &::after {
       bottom: -55px;
 
@@ -35,18 +38,19 @@
 
 .feedback__wrapper {
   @include container;
-  padding: 50px 25px 0 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .feedback__wrapper {
-    padding: 127px 75px 7px 75px;
+    padding-top: 72px;
+    padding-bottom: 7px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .feedback__wrapper {
-    padding: 143px 132px 49px 132px;
+    padding: 88px 132px 49px 132px;
   }
 }
 
@@ -70,7 +74,7 @@
 
 .feedback__text {
   display: block;
-  width: 200px;
+  width: 74.07%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -80,11 +84,17 @@
 
 @media (min-width: $tablet-width) {
   .feedback__text {
-    width: 610px;
+    width: 100%;
     margin-top: 60px;
     margin-bottom: 67px;
     font-size: 28px;
     line-height: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__text {
+    width: 610px;
   }
 }
 
@@ -217,7 +227,7 @@
 
 .feedback__info {
   display: block;
-  width: 220px;
+  width: 81.48%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -227,8 +237,27 @@
 
 @media (min-width: $tablet-width) {
   .feedback__info {
-    width: 605px;
+    width: 100%;
     margin-top: 63px;
     margin-bottom: 43px;
+
+    text-align: center;
+  }
+}
+
+.feedback__list {
+  width: 270px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .feedback__list {
+    width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__list {
+    width: auto;
   }
 }

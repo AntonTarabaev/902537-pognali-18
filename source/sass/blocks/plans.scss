@@ -36,12 +36,13 @@
 
 .plans__wrapper {
   @include container;
-  padding: 0 25px 30px 25px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .plans__wrapper {
-    padding: 28px 75px 74px 75px;
+    padding-top: 28px;
+    padding-bottom: 74px;
   }
 }
 
@@ -77,7 +78,7 @@
 
 .plans__item {
   margin-top: 10px;
-  padding: 25px;
+  padding: 25px 9.26%;
 
   background-color: #ffffff;
   border-radius: 10px;
@@ -88,7 +89,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 37px 36px 19px 33px;
+    padding: 37px 5.82% 19px 5.34%;
   }
 }
 
@@ -195,6 +196,7 @@
 
 .plans__change-link {
   display: block;
+  width: 100px;
   margin-top: 27px;
 
   color: rgba(0, 0, 0, 0.3);

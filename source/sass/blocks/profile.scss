@@ -38,7 +38,8 @@
 
 .profile__wrapper {
   @include container;
-  padding: 22px 25px 33px 25px;
+  padding-top: 22px;
+  padding-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -46,7 +47,8 @@
 
 @media (min-width: $tablet-width) {
   .profile__wrapper {
-    padding: 65px 75px 60px 75px;
+    padding-top: 65px;
+    padding-bottom: 60px;
   }
 }
 
@@ -88,6 +90,8 @@
     right: 155px;
     width: 190px;
     height: 190px;
+
+    border-radius: 5px 5px 0 0;
   }
 }
 
@@ -174,7 +178,7 @@
 
     &--transport {
       position: absolute;
-      width: 308px;
+      width: 40.1%;
       top: 64px;
       left: 50%;
       transform: translateX(-50%);
@@ -229,7 +233,7 @@
 
 .profile__hash {
   width: 100%;
-  padding: 14px 25px 25px 20px;
+  padding: 14px 7.4% 25px 7.4%;
 
   font-size: 16px;
   line-height: 22px;
@@ -259,10 +263,16 @@
 
 @media (min-width: $tablet-width) {
   .profile__hash {
-    padding: 22px 25px;
+    padding: 22px 4.04%;
 
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile__hash {
+    padding: 22px 25px;
   }
 }
 

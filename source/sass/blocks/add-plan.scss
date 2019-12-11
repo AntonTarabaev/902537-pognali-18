@@ -40,12 +40,13 @@
 
 .add-plan__wrapper {
   @include container;
-  padding: 0 25px 44px 25px;
+  padding-bottom: 44px;
 }
 
 @media (min-width: $tablet-width) {
   .add-plan__wrapper {
-    padding: 27px 75px 63px 75px;
+    padding-top: 27px;
+    padding-bottom: 63px;
   }
 }
 

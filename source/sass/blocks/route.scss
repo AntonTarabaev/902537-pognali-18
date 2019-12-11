@@ -1,5 +1,6 @@
 .route {
   position: relative;
+  padding-top: 30px;
 
   color: $blue;
 
@@ -23,6 +24,8 @@
 
 @media (min-width: $tablet-width) {
   .route {
+    padding-top: 55px;
+
     &::after {
       bottom: -55px;
 
@@ -35,12 +38,13 @@
 
 .route__wrapper {
   @include container;
-  padding: 50px 25px 0 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .route__wrapper {
-    padding: 102px 75px 30px 75px;
+    padding-top: 47px;
+    padding-bottom: 30px;
   }
 }
 
@@ -50,7 +54,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 109px 133px 0 284px;
+    padding: 54px 133px 0 284px;
   }
 }
 
@@ -62,7 +66,7 @@
   margin-top: 15px;
   margin-bottom: 30px;
   padding-left: 70px;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
 
   font-size: 16px;
   line-height: 22px;
@@ -88,8 +92,8 @@
 
 @media (min-width: $tablet-width) {
   .route__text {
-    width: 525px;
-    padding: 21px 0 18px 93px;
+    width: 84.95%;
+    padding: 21px 0 18px 15.05%;
 
     font-size: 28px;
     line-height: 28px;

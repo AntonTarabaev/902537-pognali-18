@@ -28,7 +28,7 @@
 
   &--square {
     position: relative;
-    padding: 24px 34px 24px 24px;
+    padding: 24px 12.59% 24px 8.89%;
 
     font-size: 18px;
     line-height: 18px;
@@ -43,7 +43,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 24px;
+      right: 8.89%;
       width: 10px;
       height: 14px;
 
@@ -66,7 +66,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 24px;
+      right: 8.89%;
       width: 0;
       height: 0;
 
@@ -98,8 +98,7 @@
 
   &--collapse {
     position: relative;
-    padding-left: 39px;
-
+    padding-left: 20px + 24px;
     background-color: #d6daed;
 
     &::after {
@@ -107,7 +106,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 85px;
+      left: 31.48%;
       width: 12px;
       height: 12px;
 
@@ -136,7 +135,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 60px;
+      left: 22.22%;
       width: 18px;
       height: 18px;
 
@@ -224,8 +223,8 @@
 
     &--next-step {
       position: relative;
-      padding: 24px 46px 27px 34px;
-      width: 285px;
+      padding: 24px 8.65% 27px 6.39%;
+      width: 53.57%;
 
       text-align: left;
       color: $light-blue;
@@ -240,7 +239,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 36px;
+        right: 12.63%;
         width: 0;
         height: 0;
 
@@ -257,9 +256,8 @@
 
     &--prev-step {
       position: relative;
-      padding: 24px 0 27px 34px;
-
       width: 190px;
+      padding: 24px 0 27px 34px;
 
       text-align: left;
       color: $light-blue;
@@ -294,22 +292,22 @@
 
     &--collapse {
       padding: 35px;
-      padding-left: 35px + 39px;
+      padding-left: 11.97%;
 
       border-radius: 20px;
 
       &::after {
         width: 19px;
         height: 19px;
-        left: 243px;
+        left: 39.32%;
       }
     }
 
     &--more {
-      padding-left: 29px + 52px;
+      padding-left: 11.77%;
 
       &::after {
-        left: 247px;
+        left: 35.9%;
         width: 27px;
         height: 27px;
       }
@@ -327,11 +325,30 @@
       width: 324px;
     }
 
+    &--next-step {
+      width: 285px;
+      padding-right: 46px;
+      padding-left: 34px;
+
+      &::after {
+        right: 36px;
+      }
+    }
+
     &--more {
+      padding-left: 29px + 52px;
       padding-right: 100px;
 
       &::after {
         left: 345px;
+      }
+    }
+
+    &--collapse {
+      padding-left: 35px + 39px;
+
+      &::after {
+        left: 594px;
       }
     }
   }

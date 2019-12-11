@@ -33,12 +33,12 @@
 
 .page-footer__wrapper {
   @include container;
-  padding: 0 25px 25px 25px;
+  padding-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
-    padding: 0 40px 46px 40px;
+    padding: 0 5.21% 46px 5.21%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

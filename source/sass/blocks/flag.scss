@@ -99,7 +99,7 @@
 
       &::before {
         top: 50%;
-        left: 409px;
+        left: 90.49%;
         transform: translateY(-50%);
         width: 15px;
         height: 15px;
@@ -112,6 +112,30 @@
   .flag__title {
     &::before {
       left: 767px;
+    }
+  }
+}
+
+.flag__picture {
+  width: 35px;
+  height: 24px;
+
+  &--small {
+    width: 26px;
+    height: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .flag__picture {
+    &--adaptive {
+      width: 70px;
+      height: 47px;
+    }
+
+    &--small {
+      width: 35px;
+      height: 24px;
     }
   }
 }

@@ -12,7 +12,8 @@
 .page-main__title {
   @include container;
   display: block;
-  padding: 12px 27px;
+  padding: 12px 8.44%;
+  margin: 0;
 
   font-size: 36px;
   line-height: 40px;
@@ -22,7 +23,7 @@
 
 @media (min-width: $tablet-width) {
   .page-main__title {
-    padding: 69px 77px;
+    padding: 69px 10.03%;
 
     font-size: 60px;
     line-height: 70px;

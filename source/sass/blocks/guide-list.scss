@@ -1,13 +1,13 @@
 .guide-list {
   @include list-reset;
-  width: 270px;
+  width: 84.37%;
 
   counter-reset: section;
 }
 
 @media (min-width: $tablet-width) {
   .guide-list {
-    width: 688px;
+    width: 89.58%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -22,6 +22,7 @@
 .guide-list__item {
   position: relative;
   padding: 10px 25px 30px 25px;
+  min-height: 84px;
 
   background-color: $orange;
 
@@ -70,7 +71,7 @@
 @media (min-width: $tablet-width) {
   .guide-list__item {
     width: 50%;
-    padding: 31px 34px 61px 34px;
+    padding: 31px 4.94% 61px 4.94%;
 
     border-radius: 20px 0 0 0;
 
@@ -103,7 +104,8 @@
 
     &::after {
       top: 89px;
-      right: 295px;
+      right: unset;
+      left: 9.88%;
 
       font-size: 30px;
     }
@@ -150,6 +152,7 @@
 
     &::after {
       top: 29px;
+      left: unset;
       right: 33px;
     }
   }

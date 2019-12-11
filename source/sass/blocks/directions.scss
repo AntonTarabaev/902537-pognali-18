@@ -3,6 +3,18 @@
 
   background-color: $light-grey;
 
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -30px;
+
+    width: 100%;
+    height: 30px;
+
+    background-color: inherit;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -12,7 +24,7 @@
     width: 100%;
     height: 30px;
 
-    background-color: $light-grey;
+    background-color: inherit;
     border-radius: 0 0 30px 30px;
 
     z-index: 1;
@@ -34,12 +46,13 @@
 .directions__wrapper {
   @include container;
   position: relative;
-  padding: 25px 25px 0 25px;
+  padding-top: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
-    padding: 75px 75px 25px 75px;
+    padding-top: 75px;
+    padding-bottom: 25px;
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
@@ -55,7 +68,7 @@
 
 .directions__title {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 9.26%;
 
   color: $orange;
   font-size: 24px;
@@ -72,8 +85,8 @@
 }
 
 .directions__text {
-  padding-left: 25px;
-  width: 200px;
+  padding-left: 9.26%;
+  width: 83.33%;
   margin-top: 23px;
   margin-bottom: 66px;
 }

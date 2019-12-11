@@ -2,7 +2,8 @@
   @include container;
   position: relative;
   min-height: 73px;
-  padding: 25px 25px 40px 25px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   background-color: #ffffff;
 }
@@ -10,7 +11,7 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     min-height: 132px;
-    padding: 40px;
+    padding: 40px 5.21% 75px 5.21%;
   }
 }
 
@@ -59,7 +60,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__menu-wrapper {
-    padding-left: 60px;
+    padding-left: 8.72%;
   }
 }
 
@@ -75,13 +76,14 @@
 .main-nav__toggle {
   display: block;
   width: 25px;
-  height: 11px;
+  height: 25px;
   padding: 0;
 
   border: none;
   background-color: #ffffff;
   background-image: url("../img/menu.svg");
   background-repeat: no-repeat;
+  background-position: center;
 
   cursor: pointer;
 }
@@ -93,13 +95,36 @@
 }
 
 .main-nav__contacts-list {
+  width: 270px;
   margin-top: 51px;
   margin-bottom: 40px;
 }
 
+@media (min-width: $tablet-width) {
+  .main-nav__contacts-list {
+    width: 600px;
+    margin: 0 auto 115px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__contacts-list {
+    display: none;
+  }
+}
+
 .main-nav__site-list {
+  width: 250px;
+  margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 58px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__site-list {
+    width: 600px;
+    margin: 58px auto 150px 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -112,18 +137,12 @@
   .main-nav__user-list {
     position: absolute;
     top: 40px;
-    right: 40px;
+    right: 5.21%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav__user-list {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-nav__contacts-list {
     display: none;
   }
 }

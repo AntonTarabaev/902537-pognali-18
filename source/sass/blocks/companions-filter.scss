@@ -10,12 +10,12 @@
 
 .companions-filter__wrapper {
   @include container;
-  padding: 0 25px 46px 25px;
+  padding-bottom: 46px;
 }
 
 @media (min-width: $tablet-width) {
   .companions-filter__wrapper {
-    padding: 0 40px 62px 40px;
+    padding: 0 5.21% 62px 5.21%;
   }
 }
 
