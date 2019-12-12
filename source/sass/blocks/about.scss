@@ -35,6 +35,11 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: 292px auto;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 
   &::after {
     position: absolute;
@@ -60,6 +65,11 @@
 
     background-image: url("../img/about-tablet@1x.png");
     background-position: top 284px right 0;
+    background-size: 376px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
 
     &::after {
       left: 40px;
@@ -76,6 +86,11 @@
 
     background-image: url("../img/about-desktop@1x.png");
     background-position: bottom 0 right 59px;
+    background-size: 630px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
 
     &::after {
       left: 60px;
