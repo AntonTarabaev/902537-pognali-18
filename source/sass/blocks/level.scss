@@ -35,6 +35,10 @@
 }
 
 .level__svg {
+  width: 60px;
+  height: 60px;
+  transform: rotate(-90deg);
+
   &--small {
     width: 45px;
     height: 45px;
@@ -44,27 +48,7 @@
     width: 100px;
     height: 100px;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .level__svg {
-    &--small {
-      width: 60px;
-      height: 60px;
-    }
-
-    &--big {
-      width: 94px;
-      height: 94px;
-    }
-  }
-}
-
-.level__progress {
-  transform: rotate(-90deg) translateX(-60px);
-
-  //Потом думаю избавиться от этих классов и добавлять stroke-dashoffset
-  //через JS исходя из значений level__count, правильно?
   &--99 {
     stroke-dashoffset: 188px -  99 * 1.76px;
   }
@@ -79,6 +63,20 @@
 
   &--25 {
     stroke-dashoffset: 188px -  25 * 1.76px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level__svg {
+    &--small {
+      width: 60px;
+      height: 60px;
+    }
+
+    &--big {
+      width: 94px;
+      height: 94px;
+    }
   }
 }
 
