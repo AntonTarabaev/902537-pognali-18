@@ -12,6 +12,10 @@
   }
 }
 
+.social-list__svg {
+  fill: $blue;
+}
+
 @media (min-width: $tablet-width) {
   .social-list__svg {
     &--fb {
@@ -62,17 +66,17 @@
   }
 
   &--facebook {
-    background-image: url("../img/facebook.svg");
+    background-image: url("../img/icon-facebook.svg");
     background-size: 11px 21px;
   }
 
   &--vk {
-    background-image: url("../img/vk.svg");
+    background-image: url("../img/icon-vk.svg");
     background-size: 23px 12px;
   }
 
   &--instagram {
-    background-image: url("../img/instagram.svg");
+    background-image: url("../img/icon-instagram.svg");
     background-size: 18px 18px;
   }
 }

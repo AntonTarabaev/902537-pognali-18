@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
 
@@ -920,7 +925,7 @@
                   <span class="companion__text companion__text--level">левел:</span>
                   <div class="companion__level companion__level--catalog level level--small" aria-label="99 уровень">
                     <svg class="level__svg level__svg--small level__svg--99" width="45" height="45" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#level-progress"></use>
+                      <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
                     <div class="level__wrapper">
                       <span class="level__count level__count--small level__count--blue">99</span>
@@ -997,7 +1002,7 @@
                   <span class="companion__text companion__text--level">левел:</span>
                   <div class="companion__level companion__level--catalog level level--small" aria-label="80 уровень">
                     <svg class="level__svg level__svg--small level__svg--80" width="45" height="45" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#level-progress"></use>
+                      <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
                     <div class="level__wrapper">
                       <span class="level__count level__count--small level__count--blue">80</span>
@@ -1082,7 +1087,7 @@
                   <span class="companion__text companion__text--level">левел:</span>
                   <div class="companion__level companion__level--catalog level level--small" aria-label="25 уровень">
                     <svg class="level__svg level__svg--small level__svg--25" width="45" height="45" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#level-progress"></use>
+                      <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
                     <div class="level__wrapper">
                       <span class="level__count level__count--small level__count--blue">25</span>
@@ -1159,7 +1164,7 @@
                   <span class="companion__text companion__text--level">левел:</span>
                   <div class="companion__level companion__level--catalog level level--small" aria-label="50 уровень">
                     <svg class="level__svg level__svg--small level__svg--50" width="45" height="45" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#level-progress"></use>
+                      <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
                     <div class="level__wrapper">
                       <span class="level__count level__count--small level__count--blue">50</span>
@@ -1219,7 +1224,7 @@
           <li class="social-list__item">
             <a class="social-list__link social-list__link--yellow" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
               <svg class="social-list__svg social-list__svg--vk" width="23" height="12" fill="#1d2e5b" role="img" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -1241,5 +1246,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/svg4everybody.min.js" onload="svg4everybody({})" async=""></script>
   </body>
 </html>

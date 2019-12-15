@@ -151,6 +151,21 @@
   }
 }
 
+.feedback__button-text {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__button-text {
+    display: inline;
+
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $light-blue;
+  }
+}
+
 .feedback__button {
   position: absolute;
   top: 0;
@@ -184,6 +199,10 @@
     background-color: $yellow-orange;
   }
 
+  &:active .feedback__button-text {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
   &:active::after {
     opacity: 0.3;
   }
@@ -207,21 +226,6 @@
       left: 278px;
       transform: translate(0, -50%);
     }
-  }
-}
-
-.feedback__button-text {
-  display: none;
-}
-
-@media (min-width: $desktop-width) {
-  .feedback__button-text {
-    display: inline;
-
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 700;
-    color: $light-blue;
   }
 }
 
