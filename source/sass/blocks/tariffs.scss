@@ -91,12 +91,12 @@
     top: -134px;
     right: 0;
 
-    background-image: url("../img/rates@1x.png");
+    background-image: url("../img/rates-back@1x.png");
     background-repeat: no-repeat;
     background-size: 99px 99px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/rates@2x.png");
+      background-image: url("../img/rates-back@2x.png");
     }
   }
 }

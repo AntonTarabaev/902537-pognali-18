@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
 
@@ -234,7 +239,7 @@
               </div>
               <div class="companion__level level" aria-label="99 уровень">
                 <svg class="level__svg level__svg--99" width="60" height="60" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#level-progress"></use>
+                  <use xlink:href="img/sprite.svg#icon-level"></use>
                 </svg>
                 <div class="level__wrapper">
                   <span class="level__count">99</span>
@@ -296,7 +301,7 @@
               </div>
               <div class="companion__level level" aria-label="80 уровень">
                 <svg class="level__svg level__svg--80" width="60" height="60" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#level-progress"></use>
+                  <use xlink:href="img/sprite.svg#icon-level"></use>
                 </svg>
                 <div class="level__wrapper">
                   <span class="level__count">80</span>
@@ -456,7 +461,7 @@
           <li class="social-list__item">
             <a class="social-list__link social-list__link--yellow" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
               <svg class="social-list__svg social-list__svg--vk" width="23" height="12" fill="#1d2e5b" role="img" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -478,5 +483,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/svg4everybody.min.js" onload="svg4everybody({})" async=""></script>
   </body>
 </html>
