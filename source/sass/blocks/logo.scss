@@ -20,6 +20,43 @@
 }
 
 .logo__image {
+  display: none;
   width: 100%;
   height: 100%;
+
+  &--footer-logo {
+    display: block;
+  }
+
+  &--shown {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--scroll-menu {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    &--blue {
+      display: none;
+    }
+
+    &--white {
+      display: block;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--scroll-menu {
+      display: block;
+    }
+  }
 }

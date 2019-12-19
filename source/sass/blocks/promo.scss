@@ -152,16 +152,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .promo__contacts-wrapper {
-    width: 290px;
-    display: flex;
-    top: -52px;
-    right: 59px;
-    transform: none;
-  }
-}
-
 .promo__user-list {
   flex-grow: 1;
 }
