@@ -5,20 +5,10 @@
 }
 
 @mixin container {
-  /*
-  margin: 0 auto;
-  width: $mobile-width;
-  padding: 0 25px;
-  */
   width: auto;
   padding: 0 7.81%;
 
   @media (min-width: $tablet-width) {
-    /*
-    width: $tablet-width;
-    margin: 0 auto;
-    padding: 0 75px;
-    */
     width: auto;
     padding: 0 9.76%;
   }

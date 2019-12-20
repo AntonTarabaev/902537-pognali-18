@@ -82,6 +82,7 @@
     min-height: 52px;
     padding: 19px 60px 19px 60px;
     display: flex;
+    justify-content: center;
 
     background-color: #161c34;
 
@@ -142,7 +143,7 @@
 @media (min-width: $desktop-width) {
   .main-nav__menu-wrapper {
     display: flex;
-    width: 100%;
+    width: 1020px;
     padding-left: 45px;
   }
 }
