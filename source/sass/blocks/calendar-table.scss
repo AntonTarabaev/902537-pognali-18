@@ -96,6 +96,12 @@
     display: block;
   }
 
+  &:hover {
+    color: #ffffff;
+
+    background-color: $light-blue;
+  }
+
   &:hover:not(:disabled)::before {
     display: block;
   }
@@ -109,7 +115,7 @@
   &--selected {
     color: #ffffff;
 
-    background-color: $light-blue;
+    background-color: #101d41;
   }
 }
 

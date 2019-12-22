@@ -4,7 +4,16 @@
   counter-reset: steps;
 }
 
+@media (max-width: $desktop-width - 1px) {
+  .steps__list {
+    &--no-js .steps__markers {
+      display: none;
+    }
+  }
+}
+
 .steps__item {
+  position: relative;
   margin: 0;
   margin-top: 10px;
   padding: 24px 7.41% 22px 7.41%;
@@ -12,6 +21,11 @@
   border: none;
   background-color: #ffffff;
   border-radius: 10px;
+
+  &.visually-hidden {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -33,10 +47,99 @@
     padding: 100px 160px 105px 160px;
 
     border-radius: 60px;
+  }
+}
 
-    &--dates {
-      position: relative;
+.steps__markers {
+  @include list-reset;
+  display: flex;
+  position: absolute;
+  top: -44px;
+  right: 17px;
+}
+
+@media (min-width: $tablet-width) {
+  .steps__markers {
+    top: -79px;
+    right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__markers {
+    top: 108px;
+    right: unset;
+    left: 932px;
+    flex-direction: column;
+  }
+}
+
+.steps__markers-item {
+  position: relative;
+  height: 5px;
+  padding-left: 5px;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+    background-color: #808285;
+    opacity: 0.3;
+  }
+
+  &--current::before {
+    background-color: $light-blue;
+    opacity: 1;
+  }
+
+  &--current .steps__markers-text {
+    color: $light-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .steps__markers-item {
+    margin-right: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__markers-item {
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 24px;
+    padding-left: 42px;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
     }
+  }
+}
+
+.steps__markers-text {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .steps__markers-text {
+    display: block;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    font-weight: 400;
   }
 }
 
