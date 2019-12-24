@@ -27,6 +27,10 @@
     &--small {
       margin-right: 0;
     }
+
+    &--navigation {
+      margin-right: 0;
+    }
   }
 }
 
@@ -109,6 +113,41 @@
       width: 50px;
       height: 50px;
     }
+
+    &--navigation {
+      width: 50px;
+      height: 50px;
+
+      font-size: 0;
+
+      border-radius: 50%;
+    }
+
+    &--nav-phone {
+      background-color: $orange;
+
+      &:hover,
+      &:focus {
+        background-color: $dark-orange;
+      }
+
+      &:active .contacts-list__svg-container {
+        opacity: 0.3;
+      }
+    }
+
+    &--nav-email {
+      background-color: $yellow-orange;
+
+      &:hover,
+      &:focus {
+        background-color: $orange;
+      }
+
+      &:active .contacts-list__svg-container {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
@@ -128,6 +167,33 @@
   .contacts-list__svg-container {
     width: 67px;
     height: 67px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-list__svg-container {
+    &--navigation {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px auto;
+    }
+
+    &--navigation .contacts-list__svg {
+      display: none;
+    }
+
+    &--nav-phone {
+      background-image: url("../img/topmenu-phone.svg");
+    }
+
+    &--nav-email {
+      background-image: url("../img/topmenu-mail.svg");
+    }
   }
 }
 

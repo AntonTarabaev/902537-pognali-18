@@ -1,3 +1,40 @@
+@media (min-width: $tablet-width) {
+  .country-filter {
+    &--form {
+      position: relative;
+      height: 476px;
+
+      background-color: #ffffff;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 63.6%;
+        width: 1px;
+        height: 100%;
+
+        background-color: $light-blue;
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-filter {
+    &--form {
+      width: 730px;
+
+      &::after {
+        left: 489px;
+      }
+    }
+  }
+}
+
 .country-filter__list {
   @include list-reset;
   position: relative;
@@ -6,6 +43,17 @@
   width: 220px;
   display: flex;
   flex-wrap: wrap;
+
+  &--form {
+    width: 100%;
+    padding-bottom: 265px;
+
+    background-color: #ffffff;
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+    border: 1px solid #cbced9;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -14,6 +62,19 @@
     margin: 0 auto 76px auto;
     padding: 0;
     padding-right: 228px;
+
+    &--form {
+      position: static;
+      width: 46.5%;
+      padding-right: 0;
+      margin: 0;
+      margin-top: 34px;
+      margin-left: 27px;
+
+      box-shadow: none;
+      border-radius: 0;
+      border: 1px solid #cbced9;
+    }
   }
 }
 
@@ -24,26 +85,41 @@
     margin-bottom: 65px;
     margin-left: 37px;
     justify-content: space-between;
+
+    &--form {
+      width: 360px;
+      margin-left: 27px;
+
+      border: none;
+    }
   }
 }
 
 .country-filter__list-by-letter {
   @include list-reset;
+  position: absolute;
   display: none;
+  left: 0;
+  top: 277px;
 
   &--shown {
-    position: absolute;
     display: block;
-    left: 0;
-    top: 277px;
+  }
+
+  &--form {
+    left: 9.1%;
+    top: 264px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .country-filter__list-by-letter {
-    &--shown {
-      top: 5px;
-      left: 443px;
+    top: 5px;
+    left: 443px;
+
+    &--form {
+      top: 37px;
+      left: 68.52%;
     }
   }
 }
@@ -51,11 +127,19 @@
 @media (min-width: $desktop-width) {
   .country-filter__list-by-letter {
     display: block;
+    position: static;
     margin-top: 48px;
     margin-bottom: 56px;
 
-    &--shown {
-      position: static;
+    &--form {
+      display: none;
+      left: 515px;
+      margin: 0;
+    }
+
+    &--form.country-filter__list-by-letter--shown {
+      position: absolute;
+      display: block;
     }
   }
 }
@@ -75,6 +159,22 @@
   &:nth-last-child(-n+5) {
     border-bottom: 1px solid #cbced9;
   }
+
+  &--form {
+    width: 20%;
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+
+    &:nth-child(-n+5) {
+      border-top: none;
+    }
+
+    &:nth-last-child(5n) {
+      border-left: none;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -91,6 +191,15 @@
     &:nth-last-child(-n+5) {
       border-bottom: none;
     }
+
+    &--form {
+      width: 20%;
+      height: 70px;
+
+      border: 1px solid #cbced9;
+      border-right: none;
+      border-bottom: none;
+    }
   }
 }
 
@@ -98,6 +207,39 @@
   .country-filter__item {
     width: 250px;
     height: auto;
+
+    &--form {
+      width: 60px;
+      height: 70px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+      overflow: hidden;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+
+        border-right: 1px solid #cbced9;
+      }
+
+      &:nth-child(-n+5) {
+        border-top: 1px solid #cbced9;
+      }
+
+      &:nth-last-child(5n) {
+        border-left: 1px solid #cbced9;
+      }
+
+      &:nth-last-child(-n+5) {
+        border-bottom: 1px solid #cbced9;
+      }
+
+      &:hover {
+        border-color: #959bb2;
+      }
+    }
   }
 }
 
@@ -119,6 +261,12 @@
   &--active {
     background-color: $light-blue;
     color: #ffffff;
+  }
+
+  &--form.country-filter__alphabeth-btn--active {
+    color: $light-blue;
+
+    background-color: #edeff6;
   }
 }
 
@@ -142,6 +290,24 @@
     &:active {
       color: $blue;
     }
+
+    &--form {
+      font-size: 20px;
+      font-weight: 500;
+
+      color: $light-blue;
+    }
+
+    &--form.country-filter__alphabeth-btn--active {
+      color: #ffffff;
+
+      background-color: $light-blue;
+
+      &:hover,
+      &:focus {
+        color: #ffffff;
+      }
+    }
   }
 }
 
@@ -152,12 +318,28 @@
 
     color: $blue;
 
+    cursor: auto;
+
     &:hover,
     &:focus {
       color: $blue;
     }
 
-    cursor: auto;
+    &--form {
+      width: 100%;
+      height: 100%;
+
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $light-blue;
+      }
+
+      &:active {
+        background-color: $light-blue;
+      }
+    }
   }
 }
 
@@ -166,6 +348,10 @@
   line-height: 22px;
   font-weight: 400;
   color: $grey-text;
+
+  &--hidden {
+    display: none;
+  }
 
   &:hover,
   &:focus {

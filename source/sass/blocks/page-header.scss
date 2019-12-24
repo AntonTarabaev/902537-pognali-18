@@ -1,9 +1,18 @@
 .page-header {
   background-color: #ffffff;
+  padding-bottom: 73px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-bottom: 132px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
+    padding-bottom: 90px;
+
     background-color: #161c34;
   }
 }

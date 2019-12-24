@@ -14,17 +14,27 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--menu-opened main-nav--no-js">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo logo" href="index.html">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__image logo__image--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
+            </picture>
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
+              <img class="logo__image logo__image--blue logo__image--shown" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
             </picture>
           </a>
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -53,9 +63,9 @@
             </li>
           </ul>
           <ul class="main-nav__contacts-list contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="tel:88005558628" aria-label="Позвонить нам">
-                <span class="contacts-list__svg-container">
+            <li class="contacts-list__item contacts-list__item--navigation">
+              <a class="contacts-list__link contacts-list__link--navigation contacts-list__link--nav-phone" href="tel:88005558628" aria-label="Позвонить нам">
+                <span class="contacts-list__svg-container contacts-list__svg-container--navigation contacts-list__svg-container--nav-phone">
                   <svg class="contacts-list__svg" width="18" height="18" role="img" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
@@ -63,9 +73,9 @@
                 8 800 555-86-28
               </a>
             </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать нам">
-                <span class="contacts-list__svg-container">
+            <li class="contacts-list__item contacts-list__item--navigation">
+              <a class="contacts-list__link contacts-list__link--navigation contacts-list__link--nav-email" href="mailto:mail@htmlacademy.ru" aria-label="Написать нам">
+                <span class="contacts-list__svg-container contacts-list__svg-container--navigation contacts-list__svg-container--nav-email">
                   <svg class="contacts-list__svg" width="18" height="13" role="img" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>
@@ -96,22 +106,22 @@
         </h1>
       </div>
 
-      <section class="filter">
+      <section class="filter filter--opened filter--no-js">
         <div class="filter__wrapper">
           <div class="filter__menu-container">
             <h2 class="filter__title">Фильтрация по странам</h2>
             <ul class="filter__list">
               <li class="filter__item">
-                <a class="filter__link filter__link--current" href="europe.html">Европа</a>
+                <a class="filter__link filter__link--current" href="europe.html" data-filter="europe/">Европа</a>
               </li>
               <li class="filter__item">
-                <a class="filter__link" href="asia.html">Азия</a>
+                <a class="filter__link" href="asia.html" data-filter="asia/">Азия</a>
               </li>
               <li class="filter__item">
-                <a class="filter__link" href="usa.html">Америка</a>
+                <a class="filter__link" href="america.html" data-filter="america/">Америка</a>
               </li>
               <li class="filter__item">
-                <a class="filter__link" href="islands.html">Острова</a>
+                <a class="filter__link" href="islands.html" data-filter="islands/">Острова</a>
               </li>
             </ul>
             <button class="filter__show-btn filter__show-btn--opened" type="button" aria-label="Показать/свернуть фильтр">
@@ -125,31 +135,31 @@
                 <button class="country-filter__alphabeth-btn country-filter__alphabeth-btn--active">А</button>
                 <ul class="country-filter__list-by-letter country-filter__list-by-letter--shown">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Афганистан</a>
+                    <a class="country-filter__link" href="asia/afghanistan.html">Афганистан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Албания</a>
+                    <a class="country-filter__link" href="europe/albania.html">Албания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Алжир</a>
+                    <a class="country-filter__link" href="islands/algeria.html">Алжир</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Андорра</a>
+                    <a class="country-filter__link" href="europe/andorra.html">Андорра</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Аргентина</a>
+                    <a class="country-filter__link" href="america/argentina.html">Аргентина</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Армения</a>
+                    <a class="country-filter__link" href="asia/armenia.html">Армения</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Австралия</a>
+                    <a class="country-filter__link" href="islands/australia.html">Австралия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Австрия</a>
+                    <a class="country-filter__link" href="europe/austria.html">Австрия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Азербайджан</a>
+                    <a class="country-filter__link" href="asia/aserbaidschan.html">Азербайджан</a>
                   </li>
                 </ul>
               </li>
@@ -157,55 +167,55 @@
                 <button class="country-filter__alphabeth-btn">Б</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Багамские Острова</a>
+                    <a class="country-filter__link" href="islands/bahamas.html">Багамские Острова</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бангладеш</a>
+                    <a class="country-filter__link" href="asia/bangladesh.html">Бангладеш</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Барбадос</a>
+                    <a class="country-filter__link" href="islands/barbados.html">Барбадос</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бахрейн</a>
+                    <a class="country-filter__link" href="asia/bahrain.html">Бахрейн</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Белоруссия</a>
+                    <a class="country-filter__link" href="europe/belarus.html">Белоруссия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Белиз</a>
+                    <a class="country-filter__link" href="america/belize.html">Белиз</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бельгия</a>
+                    <a class="country-filter__link" href="europe/belgium.html">Бельгия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бенин</a>
+                    <a class="country-filter__link" href="islands/benin.html">Бенин</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Болгария</a>
+                    <a class="country-filter__link" href="europe/bulgaria.html">Болгария</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Боливия</a>
+                    <a class="country-filter__link" href="america/bolivia.html">Боливия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Босния и Герцеговина</a>
+                    <a class="country-filter__link" href="europe/bosnia.html">Босния и Герцеговина</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ботсвана</a>
+                    <a class="country-filter__link" href="islands/botswana.html">Ботсвана</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бразилия</a>
+                    <a class="country-filter__link" href="america/brasil.html">Бразилия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бруней</a>
+                    <a class="country-filter__link" href="asia/brunei.html">Бруней</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Буркина-Фасо</a>
+                    <a class="country-filter__link" href="islands/burkina-faso.html">Буркина-Фасо</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бурунди</a>
+                    <a class="country-filter__link" href="islands/burundi.html">Бурунди</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Бутан</a>
+                    <a class="country-filter__link" href="asia/butan.html">Бутан</a>
                   </li>
                 </ul>
               </li>
@@ -213,22 +223,22 @@
                 <button class="country-filter__alphabeth-btn">В</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Вануату</a>
+                    <a class="country-filter__link" href="islands/vanuatu.html">Вануату</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Великобритания</a>
+                    <a class="country-filter__link" href="europe/britain.html">Великобритания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Венгрия</a>
+                    <a class="country-filter__link" href="europe/hungary.html">Венгрия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Венесуэла</a>
+                    <a class="country-filter__link" href="america/venezuela.html">Венесуэла</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Восточный Тимор</a>
+                    <a class="country-filter__link" href="asia/east-timor.html">Восточный Тимор</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Вьетнам</a>
+                    <a class="country-filter__link" href="asia/vietnam.html">Вьетнам</a>
                   </li>
                 </ul>
               </li>
@@ -236,43 +246,43 @@
                 <button class="country-filter__alphabeth-btn">Г</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Габон</a>
+                    <a class="country-filter__link" href="islands/gabon.html">Габон</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гаити</a>
+                    <a class="country-filter__link" href="islands/haiti.html">Гаити</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гайана</a>
+                    <a class="country-filter__link" href="america/guyana.html">Гайана</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гамбия</a>
+                    <a class="country-filter__link" href="islands/gambia.html">Гамбия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гана</a>
+                    <a class="country-filter__link" href="islands/gana.html">Гана</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гватемала</a>
+                    <a class="country-filter__link" href="america/gvatemala.html">Гватемала</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гвинея</a>
+                    <a class="country-filter__link" href="islands/guinea.html">Гвинея</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гвинея-Бисау</a>
+                    <a class="country-filter__link" href="islands/guinea-bissau.html">Гвинея-Бисау</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Германия</a>
+                    <a class="country-filter__link" href="europe/germany.html">Германия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гондурас</a>
+                    <a class="country-filter__link" href="america/honduras.html">Гондурас</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Гренада</a>
+                    <a class="country-filter__link" href="islands/grenada.html">Гренада</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Греция</a>
+                    <a class="country-filter__link" href="europe/greece.html">Греция</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Грузия</a>
+                    <a class="country-filter__link" href="asia/georgia.html">Грузия</a>
                   </li>
                 </ul>
               </li>
@@ -280,16 +290,16 @@
                 <button class="country-filter__alphabeth-btn">Д</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Дания</a>
+                    <a class="country-filter__link" href="europe/dania.html">Дания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Джибути</a>
+                    <a class="country-filter__link" href="islands/djibouti.html">Джибути</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Доминика</a>
+                    <a class="country-filter__link" href="islands/dominica.html">Доминика</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Доминикана</a>
+                    <a class="country-filter__link" href="islands/dominicana.html">Доминикана</a>
                   </li>
                 </ul>
               </li>
@@ -297,7 +307,7 @@
                 <button class="country-filter__alphabeth-btn">Е</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Египет</a>
+                    <a class="country-filter__link" href="islands/egypt.html">Египет</a>
                   </li>
                 </ul>
               </li>
@@ -305,10 +315,10 @@
                 <button class="country-filter__alphabeth-btn">З</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Замбия</a>
+                    <a class="country-filter__link" href="islands/zambia.html">Замбия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Зимбабве</a>
+                    <a class="country-filter__link" href="islands/zimbabwe.html">Зимбабве</a>
                   </li>
                 </ul>
               </li>
@@ -316,34 +326,34 @@
                 <button class="country-filter__alphabeth-btn">И</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Израиль</a>
+                    <a class="country-filter__link" href="asia/israel.html">Израиль</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Индия</a>
+                    <a class="country-filter__link" href="asia/india.html">Индия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Индонезия</a>
+                    <a class="country-filter__link" href="asia/indonesia.html">Индонезия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Иордания</a>
+                    <a class="country-filter__link" href="asia/iordaniya.html">Иордания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ирак</a>
+                    <a class="country-filter__link" href="asia/iraq.html">Ирак</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Иран</a>
+                    <a class="country-filter__link" href="asia/iran.html">Иран</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ирландия</a>
+                    <a class="country-filter__link" href="europe/ireland.html">Ирландия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Исландия</a>
+                    <a class="country-filter__link" href="europe/islandia.html">Исландия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Испания</a>
+                    <a class="country-filter__link" href="europe/spain.html">Испания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Италия</a>
+                    <a class="country-filter__link" href="europe/italy.html">Италия</a>
                   </li>
                 </ul>
               </li>
@@ -351,40 +361,40 @@
                 <button class="country-filter__alphabeth-btn">К</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Кабо-Верде</a>
+                    <a class="country-filter__link" href="islands/cabo-verde.html">Кабо-Верде</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Казахстан</a>
+                    <a class="country-filter__link" href="asia/kazakhstan.html">Казахстан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Камбоджа</a>
+                    <a class="country-filter__link" href="asia/cambodia.html">Камбоджа</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Камерун</a>
+                    <a class="country-filter__link" href="islands/cameroon.html">Камерун</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Канада</a>
+                    <a class="country-filter__link" href="america/canada.html">Канада</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Катар</a>
+                    <a class="country-filter__link" href="asia/qatar.html">Катар</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Кения</a>
+                    <a class="country-filter__link" href="islands/kenya.html">Кения</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Кипр</a>
+                    <a class="country-filter__link" href="asia/cyprus.html">Кипр</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Киргизия</a>
+                    <a class="country-filter__link" href="asia/kyrgyzstan.html">Киргизия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Кирибати</a>
+                    <a class="country-filter__link" href="islands/kiribati.html">Кирибати</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Китай</a>
+                    <a class="country-filter__link" href="asia/china.html">Китай</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Колумбия</a>
+                    <a class="country-filter__link" href="america/colombia.html">Колумбия</a>
                   </li>
                 </ul>
               </li>
@@ -392,31 +402,31 @@
                 <button class="country-filter__alphabeth-btn">Л</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Лаос</a>
+                    <a class="country-filter__link" href="asia/laos.html">Лаос</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Латвия</a>
+                    <a class="country-filter__link" href="europe/latvia.html">Латвия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Лесото</a>
+                    <a class="country-filter__link" href="islands/lesotho.html">Лесото</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Либерия</a>
+                    <a class="country-filter__link" href="islands/liberia.html">Либерия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ливан</a>
+                    <a class="country-filter__link" href="asia/lebanon.html">Ливан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ливия</a>
+                    <a class="country-filter__link" href="islands/libya.html">Ливия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Литва</a>
+                    <a class="country-filter__link" href="europe/lithuania.html">Литва</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Лихтенштейн</a>
+                    <a class="country-filter__link" href="europe/lichtenstein.html">Лихтенштейн</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Люксембург</a>
+                    <a class="country-filter__link" href="europe/luxemburg.html">Люксембург</a>
                   </li>
                 </ul>
               </li>
@@ -424,34 +434,34 @@
                 <button class="country-filter__alphabeth-btn">М</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Маврикий</a>
+                    <a class="country-filter__link" href="islands/mauritius.html">Маврикий</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мавритания</a>
+                    <a class="country-filter__link" href="islands/mauritania.html">Мавритания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мадагаскар</a>
+                    <a class="country-filter__link" href="islands/madagascar.html">Мадагаскар</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Малави</a>
+                    <a class="country-filter__link" href="islands/malawi.html">Малави</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Малайзия</a>
+                    <a class="country-filter__link" href="asia/malaysia.html">Малайзия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мали</a>
+                    <a class="country-filter__link" href="islands/mali.html">Мали</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мальдивы</a>
+                    <a class="country-filter__link" href="asia/maldives.html">Мальдивы</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мальта</a>
+                    <a class="country-filter__link" href="europe/malta.html">Мальта</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Марокко</a>
+                    <a class="country-filter__link" href="islands/maroko.html">Марокко</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Мексика</a>
+                    <a class="country-filter__link" href="america/mexico.html">Мексика</a>
                   </li>
                 </ul>
               </li>
@@ -459,31 +469,31 @@
                 <button class="country-filter__alphabeth-btn">Н</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Намибия</a>
+                    <a class="country-filter__link" href="islands/namibia.html">Намибия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Науру</a>
+                    <a class="country-filter__link" href="islands/nauru.html">Науру</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Непал</a>
+                    <a class="country-filter__link" href="asia/nepal.html">Непал</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Нигер</a>
+                    <a class="country-filter__link" href="islands/niger.html">Нигер</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Нигерия</a>
+                    <a class="country-filter__link" href="islands/nigeria.html">Нигерия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Нидерланды</a>
+                    <a class="country-filter__link" href="europe/niderland.html">Нидерланды</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Никарагуа</a>
+                    <a class="country-filter__link" href="america/nicaragua.html">Никарагуа</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Новая Зеландия</a>
+                    <a class="country-filter__link" href="islands/new-zealand.html">Новая Зеландия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Норвегия</a>
+                    <a class="country-filter__link" href="europe/norway.html">Норвегия</a>
                   </li>
                 </ul>
               </li>
@@ -491,10 +501,10 @@
                 <button class="country-filter__alphabeth-btn">О</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">ОАЭ</a>
+                    <a class="country-filter__link" href="asia/uae.html">ОАЭ</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Оман</a>
+                    <a class="country-filter__link" href="asia/oman.html">Оман</a>
                   </li>
                 </ul>
               </li>
@@ -502,28 +512,28 @@
                 <button class="country-filter__alphabeth-btn">П</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Пакистан</a>
+                    <a class="country-filter__link" href="asia/pakistan.html">Пакистан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Палау</a>
+                    <a class="country-filter__link" href="islands/palau.html">Палау</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Панама</a>
+                    <a class="country-filter__link" href="america/panama.html">Панама</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Папуа — Новая Гвинея</a>
+                    <a class="country-filter__link" href="islands/papua-new-guinea.html">Папуа — Новая Гвинея</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Парагвай</a>
+                    <a class="country-filter__link" href="america/paraguay.html">Парагвай</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Перу</a>
+                    <a class="country-filter__link" href="america/peru.html">Перу</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Польша</a>
+                    <a class="country-filter__link" href="europe/poland.html">Польша</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Португалия</a>
+                    <a class="country-filter__link" href="europe/portugal.html">Португалия</a>
                   </li>
                 </ul>
               </li>
@@ -531,13 +541,13 @@
                 <button class="country-filter__alphabeth-btn">Р</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Руанда</a>
+                    <a class="country-filter__link" href="islands/rwanda.html">Руанда</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Румыния</a>
+                    <a class="country-filter__link" href="europe/romania.html">Румыния</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Россия</a>
+                    <a class="country-filter__link" href="asia/russia.html">Россия</a>
                   </li>
                 </ul>
               </li>
@@ -545,40 +555,40 @@
                 <button class="country-filter__alphabeth-btn">С</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сальвадор</a>
+                    <a class="country-filter__link" href="america/salvador.html">Сальвадор</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Самоа</a>
+                    <a class="country-filter__link" href="islands/samoa.html">Самоа</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сан-Марино</a>
+                    <a class="country-filter__link" href="europe/san-marino.html">Сан-Марино</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Саудовская Аравия</a>
+                    <a class="country-filter__link" href="asia/saudi-arabia.html">Саудовская Аравия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сейшелы</a>
+                    <a class="country-filter__link" href="islands/seychelles.html">Сейшелы</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сенегал</a>
+                    <a class="country-filter__link" href="islands/senegal.html">Сенегал</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сербия</a>
+                    <a class="country-filter__link" href="europe/serbia.html">Сербия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сингапур</a>
+                    <a class="country-filter__link" href="asia/singapore.html">Сингапур</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Сирия</a>
+                    <a class="country-filter__link" href="asia/syria.html">Сирия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Словакия</a>
+                    <a class="country-filter__link" href="europe/slovakia.html">Словакия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Словения</a>
+                    <a class="country-filter__link" href="europe/slovenia.html">Словения</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">США</a>
+                    <a class="country-filter__link" href="america/usa.html">США</a>
                   </li>
                 </ul>
               </li>
@@ -586,34 +596,34 @@
                 <button class="country-filter__alphabeth-btn">Т</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Таджикистан</a>
+                    <a class="country-filter__link" href="asia/tajikistan.html">Таджикистан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Таиланд</a>
+                    <a class="country-filter__link" href="asia/thailand.html">Таиланд</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Танзания</a>
+                    <a class="country-filter__link" href="islands/tanzania.html">Танзания</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Того</a>
+                    <a class="country-filter__link" href="islands/togo.html">Того</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Тонга</a>
+                    <a class="country-filter__link" href="islands/tonga.html">Тонга</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Тринидад и Тобаго</a>
+                    <a class="country-filter__link" href="islands/trinidad-and-tobago.html">Тринидад и Тобаго</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Тувалу</a>
+                    <a class="country-filter__link" href="islands/tuvalu.html">Тувалу</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Тунис</a>
+                    <a class="country-filter__link" href="islands/tunisia.html">Тунис</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Туркмения</a>
+                    <a class="country-filter__link" href="asia/turkmenistan.html">Туркмения</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Турция</a>
+                    <a class="country-filter__link" href="asia/turkey.html">Турция</a>
                   </li>
                 </ul>
               </li>
@@ -621,16 +631,16 @@
                 <button class="country-filter__alphabeth-btn">У</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Уганда</a>
+                    <a class="country-filter__link" href="islands/uganda.html">Уганда</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Узбекистан</a>
+                    <a class="country-filter__link" href="asia/uzbekistan.html">Узбекистан</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Украина</a>
+                    <a class="country-filter__link" href="europe/ukraine.html">Украина</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Уругвай</a>
+                    <a class="country-filter__link" href="america/uruguay.html">Уругвай</a>
                   </li>
                 </ul>
               </li>
@@ -638,16 +648,16 @@
                 <button class="country-filter__alphabeth-btn">Ф</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Фиджи</a>
+                    <a class="country-filter__link" href="islands/fidji.html">Фиджи</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Филиппины</a>
+                    <a class="country-filter__link" href="asia/philippines.html">Филиппины</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Финляндия</a>
+                    <a class="country-filter__link" href="europe/finland.html">Финляндия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Франция</a>
+                    <a class="country-filter__link" href="europe/france.html">Франция</a>
                   </li>
                 </ul>
               </li>
@@ -655,7 +665,7 @@
                 <button class="country-filter__alphabeth-btn">Х</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Хорватия</a>
+                    <a class="country-filter__link" href="europe/croatia.html">Хорватия</a>
                   </li>
                 </ul>
               </li>
@@ -663,16 +673,16 @@
                 <button class="country-filter__alphabeth-btn">Ч</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Чад</a>
+                    <a class="country-filter__link" href="islands/chad.html">Чад</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Черногория</a>
+                    <a class="country-filter__link" href="europe/montenegro.html">Черногория</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Чехия</a>
+                    <a class="country-filter__link" href="europe/czech.html">Чехия</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Чили</a>
+                    <a class="country-filter__link" href="america/chile.html">Чили</a>
                   </li>
                 </ul>
               </li>
@@ -680,13 +690,13 @@
                 <button class="country-filter__alphabeth-btn">Ш</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Швейцария</a>
+                    <a class="country-filter__link" href="europe/switzerland.html">Швейцария</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Швеция</a>
+                    <a class="country-filter__link" href="europe/sweden.html">Швеция</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Шри-Ланка</a>
+                    <a class="country-filter__link" href="asia/sri-lanka.html">Шри-Ланка</a>
                   </li>
                 </ul>
               </li>
@@ -694,19 +704,19 @@
                 <button class="country-filter__alphabeth-btn">Э</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Эквадор</a>
+                    <a class="country-filter__link" href="america/ecuador.html">Эквадор</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Эритрея</a>
+                    <a class="country-filter__link" href="islands/eritrea.html">Эритрея</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Эсватини</a>
+                    <a class="country-filter__link" href="islands/esvatini.html">Эсватини</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Эстония</a>
+                    <a class="country-filter__link" href="europe/estonia.html">Эстония</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Эфиопия</a>
+                    <a class="country-filter__link" href="islands/ethiopia.html">Эфиопия</a>
                   </li>
                 </ul>
               </li>
@@ -714,10 +724,10 @@
                 <button class="country-filter__alphabeth-btn">Ю</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">ЮАР</a>
+                    <a class="country-filter__link" href="islands/south-africa.html">ЮАР</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Южный Судан</a>
+                    <a class="country-filter__link" href="islands/south-sudan.html">Южный Судан</a>
                   </li>
                 </ul>
               </li>
@@ -725,10 +735,10 @@
                 <button class="country-filter__alphabeth-btn">Я</button>
                 <ul class="country-filter__list-by-letter">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Ямайка</a>
+                    <a class="country-filter__link" href="islands/jamaica.html">Ямайка</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="">Япония</a>
+                    <a class="country-filter__link" href="asia/japan.html">Япония</a>
                   </li>
                 </ul>
               </li>
@@ -1210,7 +1220,7 @@
 
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
+            <img class="logo__image logo__image--footer-logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
           </picture>
         </a>
         <ul class="page-footer__list social-list">
@@ -1248,5 +1258,6 @@
     </footer>
 
     <script src="js/svg4everybody.min.js" onload="svg4everybody({})" async=""></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

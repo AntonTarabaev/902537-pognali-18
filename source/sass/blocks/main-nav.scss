@@ -1,27 +1,102 @@
 .main-nav {
   @include container;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   min-height: 73px;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 
-  background-color: #ffffff;
+  background-color: #161c34;
+
+  &--no-js {
+    position: relative;
+  }
+
+  &--scroll-menu {
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: $desktop-width - 1px) {
+  .main-nav {
+    &--no-js .main-nav__toggle {
+      display: none;
+    }
+
+    &--menu-opened {
+      padding-bottom: 40px;
+
+      background-color: #ffffff;
+    }
+
+    &--menu-opened .main-nav__site-list,
+    &--menu-opened .main-nav__user-list,
+    &--menu-opened .main-nav__contacts-list {
+      display: block;
+    }
+
+    &--menu-opened .main-nav__list {
+      display: flex;
+    }
+
+    &--menu-opened .main-nav__toggle {
+      background-image: url("../img/menu-close.svg");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .main-nav .main-nav__user-list {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    width: 100%;
     min-height: 132px;
-    padding: 40px 5.21% 75px 5.21%;
+    padding: 40px 5.21% 35px 5.21%;
+
+    &--bg-light-blue {
+      background-color: #182044;
+    }
+
+    &--menu-opened {
+      padding-bottom: 75px;
+
+      background-color: #ffffff;
+    }
+
+    &--scroll-menu {
+      background-color: #ffffff;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    width: 100%;
     min-height: 52px;
-    padding: 47px 60px 0 60px;
+    padding: 19px 60px 19px 60px;
     display: flex;
+    justify-content: center;
 
     background-color: #161c34;
+
+    &--scroll-menu {
+      background-color: #ffffff;
+    }
+
+    &--scroll-menu .main-nav__logo-wrapper::after {
+      background-color: $blue;
+    }
+
+    &--scroll-menu .site-list__link {
+      color: $blue;
+    }
   }
 }
 
@@ -68,9 +143,8 @@
 @media (min-width: $desktop-width) {
   .main-nav__menu-wrapper {
     display: flex;
-    width: 100%;
+    width: 1020px;
     padding-left: 45px;
-    padding-right: 290px;
   }
 }
 
@@ -81,7 +155,7 @@
   padding: 0;
 
   border: none;
-  background-color: #ffffff;
+  background-color: transparent;
   background-image: url("../img/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -103,6 +177,7 @@
 }
 
 .main-nav__contacts-list {
+  display: none;
   width: 270px;
   margin-top: 51px;
   margin-bottom: 40px;
@@ -117,11 +192,15 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__contacts-list {
-    display: none;
+    width: 100px;
+    display: flex;
+    margin: 0;
+    margin-left: auto;
   }
 }
 
 .main-nav__site-list {
+  display: none;
   width: 250px;
   margin: 0 auto;
   margin-top: 50px;
@@ -137,8 +216,18 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__site-list {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__site-list {
     margin: 0;
   }
+}
+
+.main-nav__user-list {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -151,12 +240,12 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__user-list {
-    display: none;
+    display: block;
+    position: static;
+    order: 1;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-nav__list {
-    display: none;
-  }
+.main-nav__list {
+  display: none;
 }
