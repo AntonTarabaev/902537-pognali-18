@@ -46,12 +46,12 @@
 .directions__wrapper {
   @include container;
   position: relative;
-  padding-top: 25px;
+  padding-top: 70px;
 }
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
-    padding-top: 75px;
+    padding-top: 71px;
     padding-bottom: 25px;
 
     background-image: url("../img/flags-back@1x.png");
@@ -92,21 +92,21 @@
 .directions__text {
   padding-left: 9.26%;
   width: 83.33%;
-  margin-top: 23px;
-  margin-bottom: 66px;
+  margin-top: 21px;
+  margin-bottom: 61px;
 }
 
 @media (min-width: $tablet-width) {
   .directions__text {
     padding: 0;
-    margin-top: 62px;
-    margin-bottom: 113px;
+    margin-top: 59px;
+    margin-bottom: 105px;
 
-    width: 340px;
+    width: 55%;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .directions__text {
     width: 100%;
     margin-bottom: 105px;
@@ -147,4 +147,8 @@
       left: -71px;
     }
   }
+}
+
+.directions__link {
+  margin-top: 16px;
 }

@@ -34,6 +34,7 @@
 .page-footer__wrapper {
   @include container;
   padding-bottom: 25px;
+  padding-top: 9px;
 }
 
 @media (min-width: $tablet-width) {
@@ -42,7 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -55,7 +56,6 @@
 .page-footer__logo {
   display: block;
   margin: 0 auto;
-  margin-top: 10px;
 }
 
 @media (min-width: $tablet-width) {
@@ -66,12 +66,23 @@
 }
 
 .page-footer__list {
-  margin-top: 40px;
-  margin-bottom: 37px;
+  margin-top: 36px;
+  margin-bottom: 36px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__list {
     margin: 0;
+    margin-top: -4px;
+    margin-right: 10px;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__list {
+    margin: 0;
+    margin-right: 50px;
   }
 }

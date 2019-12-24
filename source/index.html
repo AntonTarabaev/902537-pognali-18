@@ -10,6 +10,36 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/1pognali-index-mobile.png");
+      }
+      /* Планшет */
+      @media (min-width: 768px) {
+        html {
+          /* Планшетный макет */
+          background-image: url("img/1pognali-index-tablet.png");
+        }
+      }
+      /* Десктоп */
+      @media (min-width: 1440px) {
+        html {
+          /* Десктопный макет */
+          background-image: url("img/1pognali-index-desktop.png");
+        }
+      }
+
+      body {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="css/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
 
@@ -136,7 +166,7 @@
               <h3 class="guide-list__title">Изучите идеи путешественников</h3>
             </li>
             <li class="guide-list__item">
-              <h3 class="guide-list__title">Находите тех, кто похож на вас</h3>
+              <h3 class="guide-list__title">Находите тех, кто&nbsp;похож на вас</h3>
             </li>
             <li class="guide-list__item">
               <h3 class="guide-list__title">Путешествуйте вместе!</h3>
@@ -148,8 +178,8 @@
       <section class="about">
         <div class="about__wrapper">
           <h2 class="about__title">О сервисе</h2>
-          <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <b class="about__info">А если найдете кого-то близкого по духу — скорее зовите его в совместный трип!</b>
+          <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий <br>и черпайте вдохновение в чужих.</p>
+          <b class="about__info">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
           <a class="about__link button button--square" href="about.html">Подробнее</a>
         </div>
       </section>
@@ -236,8 +266,8 @@
       <section class="companions">
         <div class="companions__wrapper">
           <h2 class="companions__title">Попутчики</h2>
-          <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а&nbsp;другому маршрут для хайкинга.</p>
-          <b class="companions__info">Теперь можно легко найти единомышленников!</b>
+          <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br>а другому маршрут для хайкинга.</p>
+          <b class="companions__info">Теперь можно легко <br>найти единомышленников!</b>
           <ul class="companions__list companions-list">
             <li class="companions-list__item companion">
               <div class="companion__image-container">
@@ -356,7 +386,7 @@
               </ul>
             </li>
           </ul>
-          <a class="companions__link button button--square" href="catalog.html">Показать все</a>
+          <a class="companions__link button button--square" href="catalog.html">Показать всех</a>
         </div>
       </section>
 
@@ -409,7 +439,7 @@
         <div class="feedback__wrapper">
           <b class="feedback__title">Заинтересовались?</b>
           <p class="feedback__text">
-            Зарегистрируйтесь, это быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
+            Зарегистрируйтесь, это&nbsp;быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__login" href="login.html">авторизуйтесь</a>.
           </p>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="GET">

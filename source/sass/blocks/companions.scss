@@ -39,7 +39,7 @@
 .companions__wrapper {
   @include container;
   position: relative;
-  padding-top: 73px;
+  padding-top: 70px;
 
   background-image: url("../img/rogovaya-back-mobile@1x.png"),
     url("../img/smolov-back-desktop@1x.png");
@@ -57,7 +57,7 @@
 
 @media (min-width: $tablet-width) {
   .companions__wrapper {
-    padding-top: 143px;
+    padding-top: 137px;
     padding-bottom: 33px;
 
     background-image: url("../img/rogovaya-back-desktop@1x.png"),
@@ -138,44 +138,64 @@
 .companions__text {
   position: relative;
   padding-left: 9.26%;
-  margin-top: 23px;
-  margin-bottom: 27px;
+  margin-top: 20px;
+  margin-bottom: 21px;
   width: 88.88%;
 
   z-index: 1;
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .companions__text {
-    margin-top: 61px;
-    margin-bottom: 46px;
+    margin-top: 58px;
+    margin-bottom: 40px;
     padding: 0;
     width: 68.77%;
+
+    br {
+      display: inline;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions__text {
     width: 425px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .companions__info {
   display: block;
   padding-left: 9.26%;
-  padding-bottom: 30px;
+  padding-bottom: 47px;
 
   font-weight: 700;
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .companions__info {
     padding: 0;
     width: 42.07%;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
 
     font-size: 21px;
     line-height: 25px;
+
+    br {
+      display: inline;
+    }
   }
 }
 

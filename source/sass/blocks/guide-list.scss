@@ -21,8 +21,7 @@
 
 .guide-list__item {
   position: relative;
-  padding: 10px 25px 30px 25px;
-  min-height: 84px;
+  padding: 11px 25px 33px 25px;
 
   background-color: $orange;
 
@@ -36,6 +35,7 @@
 
   &:nth-child(4) {
     background-color: $yellow;
+    padding-bottom: 23px;
     border-radius: 0 0 10px 10px;
   }
 
@@ -59,7 +59,7 @@
     content: counter(section);
 
     position: absolute;
-    top: 13px;
+    top: 9px;
     right: 21px;
 
     font-size: 18px;
@@ -71,7 +71,7 @@
 @media (min-width: $tablet-width) {
   .guide-list__item {
     width: 50%;
-    padding: 31px 4.94% 61px 4.94%;
+    padding: 29px 5.04% 63px 4.84%;
 
     border-radius: 20px 0 0 0;
 
@@ -103,9 +103,9 @@
     }
 
     &::after {
-      top: 89px;
+      top: 85px;
       right: unset;
-      left: 9.88%;
+      left: 9.68%;
 
       font-size: 30px;
     }
@@ -115,7 +115,7 @@
 @media (min-width: $desktop-width) {
   .guide-list__item {
     width: 25%;
-    padding: 29px 38px 30px 35px;
+    padding: 29px 42px 30px 31px;
 
     z-index: 1;
 
@@ -151,7 +151,7 @@
     }
 
     &::after {
-      top: 29px;
+      top: 22px;
       left: unset;
       right: 33px;
     }
@@ -163,6 +163,8 @@
   width: 145px;
 
   color: $dark-blue;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 @media (min-width: $tablet-width) {

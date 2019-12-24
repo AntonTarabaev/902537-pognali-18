@@ -80,13 +80,14 @@
   .main-nav {
     width: 100%;
     min-height: 52px;
-    padding: 19px 60px 19px 60px;
+    padding: 45px 60px 19px 60px;
     display: flex;
     justify-content: center;
 
     background-color: #161c34;
 
     &--scroll-menu {
+      padding-top: 19px;
       background-color: #ffffff;
     }
 
@@ -145,6 +146,7 @@
     display: flex;
     width: 1020px;
     padding-left: 45px;
+    padding-top: 2px;
   }
 }
 

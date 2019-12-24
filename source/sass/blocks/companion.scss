@@ -225,6 +225,8 @@
 
 @media (min-width: $tablet-width) {
   .companion__title {
+    margin-top: 29px;
+    margin-bottom: 21px;
     font-size: 24px;
     line-height: 24px;
 
@@ -297,7 +299,10 @@
 
 @media (min-width: $tablet-width) {
   .companion__link {
+    padding: 0 22px;
+
     &::before {
+      top: 15px;
       width: 7px;
       height: 7px;
     }
@@ -323,6 +328,8 @@
   margin: 0 auto;
 
   font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
 
   &--catalog {
@@ -591,8 +598,8 @@
 }
 
 .companion__transport {
-  margin-top: 27px;
-  padding-bottom: 29px;
+  margin-top: 17px;
+  padding-bottom: 22px;
 
   &--catalog {
     margin-top: 19px;
@@ -603,6 +610,9 @@
 
 @media (min-width: $tablet-width) {
   .companion__transport {
+    margin-top: 26px;
+    padding-bottom: 29px;
+
     &--catalog {
       height: 120px;
       padding: 0;
@@ -651,8 +661,8 @@
 
 @media (min-width: $tablet-width) {
   .companion__level {
-    top: 23px;
-    left: 8.07%;
+    top: 20px;
+    left: 7.47%;
 
     &--catalog {
       margin: 0;
