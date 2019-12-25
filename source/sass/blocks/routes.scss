@@ -9,7 +9,7 @@
       content: "";
       position: absolute;
       top: 0;
-      right: 25.71%;
+      right: 25.41%;
       width: 1px;
       height: 100%;
 
@@ -21,7 +21,7 @@
 @media (min-width: $desktop-width) {
   .routes {
     &::after {
-      right: 222px;
+      right: 225px;
     }
   }
 }
@@ -109,7 +109,7 @@
       display: block;
       bottom: -70px;
       transform: none;
-      right: 25.71%;
+      right: 25.41%;
       width: 1px;
       height: 70px;
 
@@ -141,7 +141,7 @@
 @media (min-width: $desktop-width) {
   .routes__item {
     &:last-child::before {
-      right: 222px;
+      right: 225px;
     }
 
     &--active .routes__select {
@@ -245,18 +245,22 @@
 @media (min-width: $tablet-width) {
   .routes__select {
     position: static;
-    width: 69.3%;
+    width: 69.8%;
     height: 70px;
-    padding: 15px 8.32% 15px 5.1%;
+    padding: 16px 8.32% 15px 4.8%;
 
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
 
     &::after {
-      right: 35.92%;
+      right: 35.4%;
       width: 17px;
       height: 9px;
+    }
+
+    &--add {
+      margin: 0;
     }
 
     &--add::after {
@@ -267,7 +271,7 @@
     }
 
     &::before {
-      right: 25.71%;
+      right: 25.41%;
       width: 15px;
       height: 15px;
       transform: translate(50%, -50%);
@@ -284,14 +288,14 @@
     position: relative;
     width: 73%;
     padding-right: 44px;
-    padding-left: 27px;
+    padding-left: 25px;
 
     &::after {
       right: 27px;
     }
 
     &::before {
-      right: -41px;
+      right: -39px;
       transform: translate(100%, -50%);
     }
   }
@@ -314,7 +318,13 @@
     width: 22%;
     height: 47px;
     border: none;
-    padding-right: 7%;
+    padding-right: 5%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .routes__flag {
+    padding-right: 78px;
   }
 }
 
@@ -402,6 +412,14 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .routes__remove {
+    right: 5px;
+    width: 18px;
+    height: 18px;
   }
 }
 

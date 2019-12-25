@@ -25,7 +25,7 @@
     padding-bottom: 60px;
 
     &::before {
-      top: -60px;
+      top: -53px;
 
       height: 60px;
 
@@ -41,14 +41,14 @@
 
 @media (min-width: $tablet-width) {
   .plans__wrapper {
-    padding-top: 28px;
+    padding-top: 25px;
     padding-bottom: 74px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .plans__wrapper {
-    padding: 2px 60px 63px 124px;
+    padding: 2px 60px 57px 124px;
   }
 }
 
@@ -63,10 +63,16 @@
 
 @media (min-width: $tablet-width) {
   .plans__title {
-    margin-bottom: 56px;
+    margin-bottom: 50px;
 
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__title {
+    margin-left: 6px;
   }
 }
 
@@ -89,7 +95,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 37px 5.82% 19px 5.34%;
+    padding: 37px 5.32% 19px 5.34%;
   }
 }
 
@@ -127,15 +133,18 @@
     width: 100%;
     padding: 0;
     margin-bottom: 55px;
+    margin-left: 3px;
 
     font-size: 24px;
     line-height: 24px;
 
     &::before {
+      top: 1px;
       left: 100%;
       transform: translateX(-100%);
 
       font-weight: 500;
+      font-size: 20px;
     }
   }
 }
@@ -144,7 +153,7 @@
   .plans__country {
     width: 419px;
     margin: 0;
-    margin-right: 114px;
+    margin-right: 165px;
     padding-left: 52px;
 
     &::before {
@@ -180,7 +189,8 @@
     letter-spacing: 2px;
 
     &--date {
-      width: 45%;
+      width: 40%;
+      margin-right: 5%;
       text-align: center;
     }
   }
@@ -189,7 +199,9 @@
 @media (min-width: $desktop-width) {
   .plans__text {
     width: 167px;
-    margin-right: 10px;
+    margin-right: 8px;
+
+    text-align: left;
 
     &--date {
       width: 277px;

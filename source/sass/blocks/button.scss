@@ -222,7 +222,7 @@
 
     &--next-step {
       position: relative;
-      padding: 24px 8.65% 27px 6.39%;
+      padding: 27px 8.65% 29px 6.39%;
       width: 53.57%;
 
       text-align: left;
@@ -256,7 +256,7 @@
     &--prev-step {
       position: relative;
       width: 190px;
-      padding: 24px 0 27px 34px;
+      padding: 28px 0 27px 42px;
 
       text-align: left;
       color: $light-blue;
@@ -269,7 +269,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 0;
+        left: 11px;
         width: 0;
         height: 0;
 

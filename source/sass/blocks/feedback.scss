@@ -50,7 +50,7 @@
 
 @media (min-width: $desktop-width) {
   .feedback__wrapper {
-    padding: 88px 132px 49px 132px;
+    padding: 102px 132px 49px 132px;
   }
 }
 
@@ -98,6 +98,7 @@
 @media (min-width: $desktop-width) {
   .feedback__text {
     width: 610px;
+    margin-bottom: 63px;
   }
 }
 
@@ -222,7 +223,7 @@
 @media (min-width: $desktop-width) {
   .feedback__button {
     width: 324px;
-    padding: 21px 46px 21px 37px;
+    padding: 19px 46px 25px 35px;
     text-align: left;
 
     &::after {
@@ -240,6 +241,9 @@
   margin-bottom: 17px;
 
   text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
 }
 
 @media (min-width: $tablet-width) {
@@ -249,6 +253,16 @@
     margin-bottom: 43px;
 
     text-align: center;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__info {
+    width: auto;
+    margin-right: 15px;
+    margin-top: 66px;
   }
 }
 

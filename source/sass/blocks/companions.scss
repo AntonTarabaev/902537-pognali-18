@@ -78,7 +78,7 @@
   .companions__wrapper {
     padding: 131px 690px 79px 131px;
 
-    background-position: top 440px left 191px,
+    background-position: top 390px left 191px,
       top 133px left 547px;
   }
 }
@@ -164,11 +164,8 @@
 
 @media (min-width: $desktop-width) {
   .companions__text {
+    margin-top: 56px;
     width: 425px;
-
-    br {
-      display: none;
-    }
   }
 }
 
@@ -202,14 +199,14 @@
 @media (min-width: $desktop-width) {
   .companions__info {
     width: 260px;
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions__list {
     position: absolute;
-    top: 188px;
+    top: 138px;
     right: 59px;
   }
 }

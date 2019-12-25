@@ -48,7 +48,7 @@
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
-    padding: 108px 245px 110px 131px;
+    padding: 77px 245px 105px 131px;
   }
 }
 
@@ -86,6 +86,14 @@
       margin-top: 15px;
       margin-bottom: 47px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs__title {
+    width: auto;
+    margin-left: 121px;
+    margin-bottom: 133px;
   }
 }
 

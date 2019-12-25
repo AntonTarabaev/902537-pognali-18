@@ -14,7 +14,7 @@
 
 @media (min-width: $desktop-width) {
   .country-card {
-    width: 618px;
+    width: 560px;
   }
 }
 
@@ -82,8 +82,7 @@
 
 @media (min-width: $desktop-width) {
   .country-card__about {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 26px 30px;
   }
 }
 

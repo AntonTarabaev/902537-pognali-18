@@ -28,22 +28,33 @@
 
 @media (min-width: $tablet-width) {
   .entertainment-list__item {
-    margin-bottom: 46px;
+    margin-bottom: 31px;
 
     &::before {
-      display: none;
+      top: 30px;
+      left: 98.9%;
+      height: 260px;
+      width: 3px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .entertainment-list__item {
+    margin-bottom: 26px;
+
     &::before {
       display: block;
       left: 773px;
       top: 26px;
       height: 261px;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .entertainment-list__flag {
+    margin-top: 17px;
   }
 }
 
@@ -68,9 +79,10 @@
 
 @media (min-width: $tablet-width) {
   .entertainment-list__plan {
+    width: 94.2%;
     height: 142px;
-    margin-top: 26px;
-    padding: 21px 3.57%;
+    margin-top: 29px;
+    padding: 16px 3.57% 21px 3.57%;
 
     font-size: 20px;
     line-height: 24px;
@@ -80,7 +92,6 @@
 @media (min-width: $desktop-width) {
   .entertainment-list__plan {
     width: 73%;
-    padding-right: 19px;
-    padding-left: 19px;
+    padding: 20px 19px 20px 24px;
   }
 }
