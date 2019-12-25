@@ -10,6 +10,36 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/1pognali-form-mobile.png");
+      }
+      /* Планшет */
+      @media (min-width: 768px) {
+        html {
+          /* Планшетный макет */
+          background-image: url("img/1pognali-form-tablet.png");
+        }
+      }
+      /* Десктоп */
+      @media (min-width: 1440px) {
+        html {
+          /* Десктопный макет */
+          background-image: url("img/1pognali-form-desktop.png");
+        }
+      }
+
+      body {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="js/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
 
@@ -186,7 +216,7 @@
 
       <section class="add-plan">
         <div class="add-plan__wrapper">
-          <h2 class="add-plan__title">Добавить план</h2>
+          <h2 class="add-plan__title">Добавить план:</h2>
           <form class="add-plan__form steps" action="https://echo.htmlacademy.ru" method="POST">
             <ol class="steps__list steps__list--no-js">
               <li class="steps__item steps__item--dates" id="step-1">

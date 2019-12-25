@@ -6,6 +6,7 @@
 
 .calendar-table__day-of-the-week {
   padding: 0;
+  padding-left: 2px;
   height: 32px;
 
   text-align: center;
@@ -21,6 +22,7 @@
 
 @media (min-width: $tablet-width) {
   .calendar-table__day-of-the-week {
+    padding: 0;
     height: 40px;
 
     font-size: 18px;
@@ -35,7 +37,7 @@
 
 .calendar-table__cell {
   padding: 0;
-  height: 32px;
+  height: 31px;
 
   font-weight: 400;
   font-size: 14px;

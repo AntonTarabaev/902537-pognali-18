@@ -20,7 +20,7 @@
 .companions-form__field {
   display: block;
   margin: 0;
-  padding: 13px 0;
+  padding: 8px 1px 9px 1px;
 
   border: none;
   border-top: 1px solid #f3c72b;
@@ -93,7 +93,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%), rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     right: 0;
 
     width: 8px;
@@ -103,9 +103,13 @@
     background-repeat: no-repeat;
   }
 
+  &--closed .companions-form__list {
+    display: none;
+  }
+
   &--closed {
     &::after {
-      transform: none;
+      transform: translateY(-50%) rotate(0);
     }
   }
 
@@ -150,6 +154,10 @@
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
+
+  &--collapsed {
+    display: none;
+  }
 
   &--tooltip {
     width: 100%;

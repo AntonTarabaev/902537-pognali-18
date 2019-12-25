@@ -175,6 +175,9 @@
   }
 
   &--prev-step {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 15px;
     background-color: transparent;
 
     &:hover,

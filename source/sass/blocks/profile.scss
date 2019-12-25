@@ -38,7 +38,7 @@
 
 .profile__wrapper {
   @include container;
-  padding-top: 22px;
+  padding-top: 24px;
   padding-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
@@ -59,6 +59,10 @@
   }
 }
 
+.profile__level {
+  margin-left: 18px;
+}
+
 @media (min-width: $desktop-width) {
   .profile__level {
     position: absolute;
@@ -70,6 +74,8 @@
 .profile__image-wrapper {
   width: 100px;
   height: 100px;
+
+  margin-right: 17px;
 }
 
 @media (min-width: $tablet-width) {
@@ -109,7 +115,9 @@
 
 .profile__change-photo {
   margin-top: 20px;
-  margin-bottom: 18px;
+  margin-bottom: 23px;
+
+  background-color: #dfe3f0;
 }
 
 @media (min-width: $tablet-width) {
@@ -178,6 +186,8 @@
   margin-top: 10px;
 
   &--transport {
+    margin-top: 20px;
+
     border-radius: 10px;
     border: 1px solid #cbced9;
   }
@@ -245,7 +255,7 @@
 
 .profile__hash {
   width: 100%;
-  padding: 14px 7.4% 25px 7.4%;
+  padding: 20px 7% 22px 9%;
 
   font-size: 16px;
   line-height: 22px;
@@ -289,8 +299,8 @@
 }
 
 .profile__transport {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 13px;
+  margin-bottom: 14px;
 }
 
 @media (min-width: $tablet-width) {

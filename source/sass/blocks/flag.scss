@@ -5,12 +5,24 @@
   &--entertainment {
     justify-content: space-between;
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 10px;
+      left: -2px;
+
+      background-color: #000000;
+      border-radius: 50%;
+    }
+
     &::before {
       content: "";
       position: absolute;
       width: 15px;
       height: 2px;
-      top: 9px;
+      top: 12px;
       left: -12px;
 
       background-color: #000000;
@@ -23,6 +35,24 @@
     &--entertainment {
       &::before {
         display: none;
+      }
+
+      &::after {
+        top: 50%;
+        left: 90.49%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .flag {
+    &--entertainment {
+      &::after {
+        left: 767px;
       }
     }
   }
@@ -42,6 +72,7 @@
     position: relative;
     width: 75%;
     margin-left: 0;
+    padding-top: 3px;
     padding-left: 12px;
     height: 24px;
 
@@ -62,18 +93,6 @@
       height: 100%;
 
       background: linear-gradient(to right, transparent 0%, #ffffff 40%, #ffffff 100%);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      top: 7px;
-      left: 0;
-
-      background-color: #000000;
-      border-radius: 50%;
     }
   }
 }
@@ -96,22 +115,6 @@
       &::after {
         display: none;
       }
-
-      &::before {
-        top: 50%;
-        left: 90.49%;
-        transform: translateY(-50%);
-        width: 15px;
-        height: 15px;
-      }
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .flag__title {
-    &::before {
-      left: 767px;
     }
   }
 }

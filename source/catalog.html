@@ -10,6 +10,36 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/1pognali-catalog-mobile.png");
+      }
+      /* Планшет */
+      @media (min-width: 768px) {
+        html {
+          /* Планшетный макет */
+          background-image: url("img/1pognali-catalog-tablet.png");
+        }
+      }
+      /* Десктоп */
+      @media (min-width: 1440px) {
+        html {
+          /* Десктопный макет */
+          background-image: url("img/1pognali-catalog-desktop.png");
+        }
+      }
+
+      body {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="js/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
 
