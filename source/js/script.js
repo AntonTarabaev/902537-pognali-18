@@ -114,6 +114,22 @@ if (filter) {
   for (var i=0; i<alphabethBtns.length; i++) {
     alphabethBtnsClickHandler(alphabethBtns[i], countryLists[i]);
   }
+
+  var companionsForm = document.querySelector(".companions-form");
+  var formBtns = companionsForm.querySelectorAll(".companions-form__btn");
+  var formFields = companionsForm.querySelectorAll(".companions-form__field");
+
+  var formBtnsClickHandler = function (formBtn, formField) {
+    formBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      formBtn.classList.toggle("companions-form__btn--closed");
+      formField.classList.toggle("companions-form__field--collapsed");
+    });
+  }
+
+  for (var i=0; i<formBtns.length; i++) {
+    formBtnsClickHandler(formBtns[i], formFields[i]);
+  }
 }
 
 var stepsList = document.querySelector(".steps__list");
@@ -125,7 +141,7 @@ if (stepsList) {
   var adultsN = stepsList.querySelector("[name=adults]");
   var daysN = stepsList.querySelector("[name=days]");
   var plusBtns = stepsList.querySelectorAll(".number-controls__btn--more");
-  var minusBtns =stepsList.querySelectorAll(".number-controls__btn--less");
+  var minusBtns = stepsList.querySelectorAll(".number-controls__btn--less");
 
   stepsList.classList.remove("steps__list--no-js");
   for (var i=1; i<steps.length; i++) {

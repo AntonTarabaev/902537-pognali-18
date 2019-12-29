@@ -24,24 +24,41 @@
 
   border: none;
   border-top: 1px solid #f3c72b;
+
+  &--collapsed .companions-form__list,
+  &--collapsed .companions-form__level-controls {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .companions-form__field {
     position: relative;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
 
     border: none;
 
+    &--transport {
+      height: 43px;
+      padding-top: 4px;
+      margin-bottom: 22px;
+    }
+
     &:first-of-type {
-      padding-top: 30px;
+      padding-top: 27px;
       border-top: 1px solid #f3c72b;
     }
 
     &:last-of-type {
       padding-bottom: 42px;
+      margin-bottom: 23px;
       border-bottom: 1px solid #f3c72b;
+    }
+
+    &--collapsed .companions-form__list,
+    &--collapsed .companions-form__level-controls {
+      display: flex;
     }
   }
 }
@@ -125,6 +142,7 @@
 
 @media (min-width: $tablet-width) {
   .companions-form__btn {
+    padding: 0;
     font-size: 20px;
     line-height: 30px;
 
@@ -149,18 +167,17 @@
 .companions-form__list {
   @include list-reset;
   width: 220px;
-  margin-top: 40px;
+  margin-top: 36px;
+  margin-bottom: 11px;
 
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
 
-  &--collapsed {
-    display: none;
-  }
-
   &--tooltip {
     width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 9px;
   }
 }
 
@@ -175,6 +192,9 @@
     width: 79.61%;
 
     &--tooltip {
+      left: 0;
+      position: relative;
+      justify-content: flex-start;
       width: 34.79%;
     }
   }
@@ -203,7 +223,7 @@
 @media (min-width: $tablet-width) {
   .companions-form__item {
     margin-bottom: 0;
-    width: 164px;
+    width: 30.85%;
   }
 }
 
@@ -218,10 +238,11 @@
   position: relative;
   display: block;
   padding-left: 27px;
+  padding-top: 2px;
   padding-bottom: 1px;
 
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 15px;
 
   cursor: pointer;
 
@@ -290,7 +311,7 @@
 }
 
 .companions-form__level-controls {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 @media (min-width: $desktop-width) {
@@ -298,4 +319,8 @@
     margin-top: 60px;
     margin-bottom: 38px;
   }
+}
+
+.companions-form__submit {
+  margin-top: 12px;
 }

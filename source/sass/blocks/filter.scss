@@ -84,14 +84,13 @@
 
 @media (min-width: $tablet-width) {
   .filter__wrapper {
-    padding-top: 60px;
-    padding-bottom: 19px;
+    padding-top: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .filter__wrapper {
-    padding: 60px;
+    padding: 55px 51px 10px 60px;
   }
 }
 
@@ -229,7 +228,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 59.87%;
+    width: 58.7%;
     transform: none;
   }
 }
