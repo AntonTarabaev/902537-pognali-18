@@ -120,6 +120,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .flag__title {
+    margin-left: 18px;
+  }
+}
+
 .flag__picture {
   width: 35px;
   height: 24px;

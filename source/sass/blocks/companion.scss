@@ -4,11 +4,12 @@
   color: $grey-text;
 
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 10px;
 
   &--catalog {
     padding: 13px 7.41% 60px 7.41%;
 
+    border-radius: 20px;
     overflow: hidden;
   }
 }
@@ -83,6 +84,8 @@
 @media (min-width: $desktop-width) {
   .companion__image-container {
     &--catalog {
+      margin-top: 0;
+
       width: 285px;
       height: 100%;
     }
@@ -138,9 +141,9 @@
 @media (min-width: $desktop-width) {
   .companion__countries-wrapper {
     width: auto;
-    padding-top: 49px;
+    padding-top: 43px;
     padding-bottom: 100px;
-    margin-left: 41px;
+    margin-left: 43px;
   }
 }
 
@@ -199,7 +202,7 @@
     width: 290px;
     padding-top: 46px;
     padding-bottom: 47px;
-    margin-left: 59px;
+    margin-left: 56px;
   }
 }
 
@@ -327,6 +330,16 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .companion__link {
+    &--catalog {
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+}
+
 .companion__hash {
   display: block;
   width: 66.67%;
@@ -371,6 +384,11 @@
 @media (min-width: $desktop-width) {
   .companion__hash {
     width: 225px;
+
+    &--catalog {
+      width: 230px;
+      margin-bottom: 45px;
+    }
   }
 }
 
@@ -638,6 +656,7 @@
 @media (min-width: $desktop-width) {
   .companion__transport {
     &--catalog {
+      margin-top: 1px;
       width: 120px;
       height: 60px;
     }

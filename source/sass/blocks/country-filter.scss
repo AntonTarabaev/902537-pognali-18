@@ -82,8 +82,8 @@
   .country-filter__list {
     width: 1250px;
     padding: 0;
-    margin-bottom: 65px;
-    margin-left: 37px;
+    margin-bottom: 32px;
+    margin-left: 35px;
     justify-content: space-between;
 
     &--form {
@@ -128,8 +128,8 @@
   .country-filter__list-by-letter {
     display: block;
     position: static;
-    margin-top: 48px;
-    margin-bottom: 56px;
+    margin-top: 27px;
+    margin-bottom: 44px;
 
     &--form {
       display: none;
@@ -367,5 +367,13 @@
   .country-filter__link {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-filter__link {
+    display: block;
+
+    line-height: 30px;
   }
 }

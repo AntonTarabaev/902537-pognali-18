@@ -66,8 +66,9 @@
 @media (min-width: $desktop-width) {
   .companions-form__field {
     position: relative;
+    padding: 0 0 6px 0;
+
     border: none;
-    padding: 0;
   }
 }
 
@@ -85,7 +86,7 @@
 
 @media (min-width: $desktop-width) {
   .companions-form__title {
-    width: 196px;
+    width: 189px;
   }
 }
 
@@ -203,10 +204,12 @@
 @media (min-width: $desktop-width) {
   .companions-form__list {
     width: 196px;
-    margin-top: 50px;
-    margin-bottom: 33px;
+    margin-top: 53px;
+    margin-bottom: 16px;
 
     &--tooltip {
+      margin-top: 48px;
+      margin-bottom: 19px;
       width: 172px;
     }
   }
@@ -229,7 +232,7 @@
 
 @media (min-width: $desktop-width) {
   .companions-form__item {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     width: auto;
   }
 }
@@ -316,11 +319,17 @@
 
 @media (min-width: $desktop-width) {
   .companions-form__level-controls {
-    margin-top: 60px;
+    margin-top: 48px;
     margin-bottom: 38px;
   }
 }
 
 .companions-form__submit {
   margin-top: 12px;
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__submit {
+    margin-top: 0;
+  }
 }

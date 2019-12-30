@@ -21,7 +21,7 @@
 
 @media (min-width: $desktop-width) {
   .companions-filter__wrapper {
-    padding: 90px 60px 62px 60px;
+    padding: 90px 60px 76px 60px;
   }
 }
 
@@ -39,12 +39,14 @@
 
 @media (min-width: $desktop-width) {
   .companions-filter__more-btn {
+    margin-top: 52px;
+    margin-bottom: 56px;
     width: 960px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions-filter__pagination {
-    width: 960px;
+    width: 950px;
   }
 }

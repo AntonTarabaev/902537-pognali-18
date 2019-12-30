@@ -2,7 +2,7 @@
   .level-controls {
     position: absolute;
     top: -35px;
-    right: 5px;
+    right: 0;
     width: 78.8%;
     display: flex;
     justify-content: space-between;
@@ -54,16 +54,20 @@
     width: 150px;
     height: 45px;
     margin: 0;
-    margin-left: 12.52%;
+    margin-left: 12.3%;
     flex-grow: 1;
 
     order: 1;
+
+    &::after {
+      width: 22px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .level-controls__levels {
-    width: 100%;
+    width: 97.8%;
     margin: 0;
     margin-bottom: 36px;
 
@@ -90,9 +94,32 @@
   border-right: 1px solid #cbced9;
 }
 
+@media (min-width: $tablet-width) {
+  .level-controls__min-level,
+  .level-controls__max-level {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
 .level-controls__range-controls {
+  width: 100%;
   position: relative;
   padding-bottom: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .level-controls__range-controls {
+    width: 278px;
+    height: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level-controls__range-controls {
+    width: 191px;
+  }
 }
 
 .level-controls__scale {
@@ -101,19 +128,6 @@
   height: 2px;
 
   background-color: rgba(29, 46, 91, 0.2);
-}
-
-@media (min-width: $tablet-width) {
-  .level-controls__scale {
-    width: 277px;
-    height: 3px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .level-controls__scale {
-    width: 191px;
-  }
 }
 
 .level-controls__bar {

@@ -32,8 +32,6 @@
     height: 20px;
 
     background-color: inherit;
-
-    z-index: -1;
   }
 
   &::after {
@@ -77,6 +75,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter {
+    &--opened {
+      background-color: #edeff6;
+    }
+  }
+}
+
 .filter__wrapper {
   @include container;
   padding-top: 16px;
@@ -90,7 +96,7 @@
 
 @media (min-width: $desktop-width) {
   .filter__wrapper {
-    padding: 55px 51px 10px 60px;
+    padding: 55px 60px 10px 60px;
   }
 }
 
@@ -106,7 +112,7 @@
 @media (min-width: $desktop-width) {
   .filter__menu-container {
     margin-left: 20px;
-    margin-right: 68px;
+    margin-right: 61px;
 
     justify-content: flex-start;
   }
@@ -157,8 +163,11 @@
     position: relative;
     top: unset;
     left: unset;
+    padding-top: 64px;
     padding-left: 0;
     padding-right: 0;
+
+    background-color: #edeff6;
 
     &::after {
       display: none;
