@@ -1,7 +1,7 @@
 .calendar__select {
   display: flex;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 11px 0;
 
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6;
@@ -9,7 +9,7 @@
 
 @media (min-width: $tablet-width) {
   .calendar__select {
-    padding: 29px 3% 28px 3%;
+    padding: 28px 3% 26px 3%;
   }
 }
 
@@ -68,8 +68,8 @@
 
 @media (min-width: $tablet-width) {
   .calendar__btn {
-    width: 15px;
-    height: 28px;
+    width: 19px;
+    height: 32px;
   }
 }
 
@@ -81,11 +81,17 @@
 }
 
 .calendar__table {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .calendar__table {
     margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__table {
+    margin-top: 3px;
   }
 }

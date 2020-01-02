@@ -20,6 +20,7 @@
   .site-list {
     display: flex;
     align-items: center;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -53,7 +54,7 @@
 
 @media (min-width: $desktop-width) {
   .site-list__link {
-    padding-right: 36px;
+    padding-right: 34px;
     color: #ffffff;
   }
 }

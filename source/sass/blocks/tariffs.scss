@@ -36,19 +36,19 @@
 
 .tariffs__wrapper {
   @include container;
-  padding-top: 52px;
+  padding-top: 25px;
   padding-left: 15.62%;
 }
 
 @media (min-width: $tablet-width) {
   .tariffs__wrapper {
-    padding: 75px 5.21% 25px 5.21%;
+    padding: 45px 5.21% 4px 5.21%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
-    padding: 108px 245px 110px 131px;
+    padding: 77px 245px 105px 131px;
   }
 }
 
@@ -56,8 +56,8 @@
   display: block;
   width: 105px;
   margin: 0;
-  margin-top: 24px;
-  margin-bottom: 44px;
+  margin-top: 25px;
+  margin-bottom: 45px;
 
   color: $orange;
   font-size: 24px;
@@ -89,6 +89,14 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .tariffs__title {
+    width: auto;
+    margin-left: 121px;
+    margin-bottom: 133px;
+  }
+}
+
 .tariffs__list {
   @include list-reset;
   position: relative;
@@ -103,8 +111,8 @@
     position: absolute;
     width: 99px;
     height: 99px;
-    top: -134px;
-    right: 0;
+    top: -129px;
+    right: 1px;
 
     background-image: url("../img/rates-back@1x.png");
     background-repeat: no-repeat;
@@ -165,8 +173,8 @@
 .tariffs__item {
   position: relative;
   width: 100%;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-bottom: 10px;
 
   border-top: 1px solid rgba(25, 33, 68, 0.05);
 
@@ -181,7 +189,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 3px;
+    top: 4px;
     left: 105%;
     width: 34px;
     height: 34px;
@@ -223,7 +231,7 @@
 
     &::before {
       left: -91px;
-      top: 0;
+      top: 2px;
       width: 67px;
       height: 67px;
 
@@ -280,6 +288,7 @@
   display: inline-block;
   width: auto;
   margin-top: 31px;
+  margin-bottom: 9px;
 
   color: #132576;
   font-size: 16px;
@@ -299,8 +308,8 @@
 @media (min-width: $tablet-width) {
   .tariffs__link {
     position: relative;
-    padding-top: 22px;
-    padding-bottom: 25px;
+    padding-top: 26px;
+    padding-bottom: 21px;
     padding-left: 90px;
     margin-top: 34px;
 

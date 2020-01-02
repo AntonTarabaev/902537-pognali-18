@@ -29,7 +29,7 @@
 @media (min-width: $desktop-width) {
   .add-plan {
     &::before {
-      top: -60px;
+      top: -54px;
 
       height: 60px;
 
@@ -45,14 +45,14 @@
 
 @media (min-width: $tablet-width) {
   .add-plan__wrapper {
-    padding-top: 27px;
+    padding-top: 21px;
     padding-bottom: 63px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-plan__wrapper {
-    padding: 2px 60px 72px 60px;
+    padding: 0 60px 72px 60px;
   }
 }
 
@@ -70,5 +70,11 @@
 
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan__title {
+    margin-left: 70px;
   }
 }

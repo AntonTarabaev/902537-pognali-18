@@ -4,8 +4,15 @@
   border-collapse: collapse;
 }
 
+@media (min-width: $tablet-width) {
+  .calendar-table {
+    width: 99.8%;
+  }
+}
+
 .calendar-table__day-of-the-week {
   padding: 0;
+  padding-left: 2px;
   height: 32px;
 
   text-align: center;
@@ -21,9 +28,21 @@
 
 @media (min-width: $tablet-width) {
   .calendar-table__day-of-the-week {
+    padding-left: 3px;
     height: 40px;
 
     font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar-table__day-of-the-week {
+    padding-left: 17px;
+    padding-bottom: 10px;
+    height: 50px;
+
+    text-align: left;
   }
 }
 
@@ -35,7 +54,7 @@
 
 .calendar-table__cell {
   padding: 0;
-  height: 32px;
+  height: 31px;
 
   font-weight: 400;
   font-size: 14px;
@@ -47,18 +66,17 @@
 
 @media (min-width: $tablet-width) {
   .calendar-table__cell {
-    width: 76px;
-    height: 70px;
+    width: 14.3%;
+    height: 69px;
 
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .calendar-table__cell {
     width: 142px;
-    height: 72px;
+    height: 71px;
   }
 }
 
@@ -88,6 +106,7 @@
     box-sizing: content-box;
 
     border: 2px solid #ff5c23;
+    border-radius: 4px;
 
     z-index: 1;
   }
@@ -115,15 +134,20 @@
   &--selected {
     color: #ffffff;
 
-    background-color: #101d41;
+    background-color: $light-blue;
   }
 }
 
 @media (min-width: $tablet-width) {
   .calendar-table__btn {
+    letter-spacing: 2px;
+
     &::before {
-      top: -4px;
-      left: -4px;
+      width: 95%;
+      height: 94%;
+
+      top: -2px;
+      left: -2px;
 
       border-width: 4px;
     }
@@ -132,8 +156,12 @@
 
 @media (min-width: $desktop-width) {
   .calendar-table__btn {
-    padding: 15px 16px 36px 16px;
+    padding: 11px 16px 36px 16px;
     text-align: left;
+
+    &::before {
+      width: 100%;
+    }
 
     &--start-date::after,
     &--end-date::after {
@@ -158,5 +186,7 @@
 @media (min-width: $desktop-width) {
   .calendar-table__btn-month-name {
     display: inline;
+
+    letter-spacing: 1.8px;
   }
 }

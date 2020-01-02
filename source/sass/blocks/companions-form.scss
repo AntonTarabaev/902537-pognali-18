@@ -20,28 +20,45 @@
 .companions-form__field {
   display: block;
   margin: 0;
-  padding: 13px 0;
+  padding: 8px 1px 9px 1px;
 
   border: none;
   border-top: 1px solid #f3c72b;
+
+  &--collapsed .companions-form__list,
+  &--collapsed .companions-form__level-controls {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .companions-form__field {
     position: relative;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
 
     border: none;
 
+    &--transport {
+      height: 43px;
+      padding-top: 4px;
+      margin-bottom: 22px;
+    }
+
     &:first-of-type {
-      padding-top: 30px;
+      padding-top: 27px;
       border-top: 1px solid #f3c72b;
     }
 
     &:last-of-type {
       padding-bottom: 42px;
+      margin-bottom: 23px;
       border-bottom: 1px solid #f3c72b;
+    }
+
+    &--collapsed .companions-form__list,
+    &--collapsed .companions-form__level-controls {
+      display: flex;
     }
   }
 }
@@ -49,8 +66,9 @@
 @media (min-width: $desktop-width) {
   .companions-form__field {
     position: relative;
+    padding: 0 0 6px 0;
+
     border: none;
-    padding: 0;
   }
 }
 
@@ -68,7 +86,7 @@
 
 @media (min-width: $desktop-width) {
   .companions-form__title {
-    width: 196px;
+    width: 189px;
   }
 }
 
@@ -93,7 +111,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%), rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     right: 0;
 
     width: 8px;
@@ -103,9 +121,13 @@
     background-repeat: no-repeat;
   }
 
+  &--closed .companions-form__list {
+    display: none;
+  }
+
   &--closed {
     &::after {
-      transform: none;
+      transform: translateY(-50%) rotate(0);
     }
   }
 
@@ -121,6 +143,7 @@
 
 @media (min-width: $tablet-width) {
   .companions-form__btn {
+    padding: 0;
     font-size: 20px;
     line-height: 30px;
 
@@ -145,7 +168,8 @@
 .companions-form__list {
   @include list-reset;
   width: 220px;
-  margin-top: 40px;
+  margin-top: 36px;
+  margin-bottom: 11px;
 
   font-size: 15px;
   line-height: 15px;
@@ -153,6 +177,8 @@
 
   &--tooltip {
     width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 9px;
   }
 }
 
@@ -167,6 +193,9 @@
     width: 79.61%;
 
     &--tooltip {
+      left: 0;
+      position: relative;
+      justify-content: flex-start;
       width: 34.79%;
     }
   }
@@ -175,10 +204,12 @@
 @media (min-width: $desktop-width) {
   .companions-form__list {
     width: 196px;
-    margin-top: 50px;
-    margin-bottom: 33px;
+    margin-top: 53px;
+    margin-bottom: 16px;
 
     &--tooltip {
+      margin-top: 48px;
+      margin-bottom: 19px;
       width: 172px;
     }
   }
@@ -195,13 +226,13 @@
 @media (min-width: $tablet-width) {
   .companions-form__item {
     margin-bottom: 0;
-    width: 164px;
+    width: 30.85%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .companions-form__item {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     width: auto;
   }
 }
@@ -210,10 +241,11 @@
   position: relative;
   display: block;
   padding-left: 27px;
+  padding-top: 2px;
   padding-bottom: 1px;
 
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 15px;
 
   cursor: pointer;
 
@@ -282,12 +314,22 @@
 }
 
 .companions-form__level-controls {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 @media (min-width: $desktop-width) {
   .companions-form__level-controls {
-    margin-top: 60px;
+    margin-top: 48px;
     margin-bottom: 38px;
+  }
+}
+
+.companions-form__submit {
+  margin-top: 12px;
+}
+
+@media (min-width: $desktop-width) {
+  .companions-form__submit {
+    margin-top: 0;
   }
 }

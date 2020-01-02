@@ -16,11 +16,15 @@
   position: relative;
   margin: 0;
   margin-top: 10px;
-  padding: 24px 7.41% 22px 7.41%;
+  padding: 22px 7.41% 12px 7.41%;
 
   border: none;
   background-color: #ffffff;
   border-radius: 10px;
+
+  &--dates {
+    padding-bottom: 22px;
+  }
 
   &.visually-hidden {
     padding: 0;
@@ -31,9 +35,13 @@
 @media (min-width: $tablet-width) {
   .steps__item {
     margin-top: 40px;
-    padding: 49px 6.96% 55px 6.96%;
+    padding: 44px 6.96% 55px 6.96%;
 
     border-radius: 30px;
+
+    &:last-child {
+      margin-top: 50px;
+    }
 
     &--dates {
       display: flex;
@@ -44,9 +52,14 @@
 
 @media (min-width: $desktop-width) {
   .steps__item {
-    padding: 100px 160px 105px 160px;
+    padding: 95px 160px 105px 160px;
+    margin-top: 43px;
 
     border-radius: 60px;
+
+    &--dates {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -54,8 +67,8 @@
   @include list-reset;
   display: flex;
   position: absolute;
-  top: -44px;
-  right: 17px;
+  top: -45px;
+  right: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -67,7 +80,7 @@
 
 @media (min-width: $desktop-width) {
   .steps__markers {
-    top: 108px;
+    top: 106px;
     right: unset;
     left: 932px;
     flex-direction: column;
@@ -140,6 +153,7 @@
     color: rgba(0, 0, 0, 0.6);
     text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 2px;
   }
 }
 
@@ -149,6 +163,9 @@
   margin-left: 2.17%;
   margin-right: 2.17%;
   padding-top: 20px;
+
+  font-size: 20px;
+  line-height: 20px;
 
   &::before {
     counter-increment: steps;
@@ -183,7 +200,7 @@
   margin: 0;
   margin-left: 2.17%;
   margin-right: 2.17%;
-  margin-top: 18px;
+  margin-top: 16px;
 
   font-size: 16px;
   line-height: 22px;
@@ -195,7 +212,7 @@
   .steps__text {
     margin: 0;
     margin-top: 37px;
-    margin-bottom: 42px;
+    margin-bottom: 39px;
     width: 93.98%;
 
     font-size: 20px;
@@ -216,6 +233,7 @@
     position: relative;
     width: 580px;
     margin-bottom: 0;
+    margin-top: 35px;
     padding-bottom: 57px;
 
     &::after {
@@ -228,11 +246,20 @@
 
       background-color: #d6d9e6;
     }
+
+    &--route {
+      width: 400px;
+      padding-bottom: 59px;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 
 .steps__wrapper {
-  margin-top: 21px;
+  margin-top: 17px;
   margin-left: 2.17%;
   margin-right: 2.17%;
   display: flex;
@@ -314,7 +341,7 @@
 }
 
 .steps__number-controls {
-  margin-top: 9px;
+  margin-top: 6px;
 }
 
 @media (min-width: $tablet-width) {
@@ -352,8 +379,8 @@
 @media (min-width: $desktop-width) {
   .steps__checkboxes {
     position: absolute;
-    top: 328px;
-    right: 163px;
+    top: 316px;
+    right: 104px;
     margin: 0;
   }
 }
@@ -414,11 +441,27 @@
 
 @media (min-width: $tablet-width) {
   .steps__label {
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      width: 36px;
+      height: 36px;
+
+      background-size: 11px 11px;
+    }
   }
 }
 
@@ -436,7 +479,7 @@
   .steps__calendar {
     margin: 0;
     margin-top: 59px;
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 }
 
@@ -448,7 +491,7 @@
 }
 
 .steps__routes-list {
-  margin-top: 24px;
+  margin-top: 22px;
   margin-right: 2.17%;
   margin-left: 2.17%;
 }
@@ -466,18 +509,29 @@
 @media (min-width: $desktop-width) {
   .steps__routes-list {
     margin-right: 0;
+    padding-top: 62px;
   }
-}
-
-.steps__btns-wrapper {
-  margin-top: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .steps__btns-wrapper {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    margin-top: 47px;
+
+    &--last-step {
+      margin-top: 38px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__btns-wrapper {
+    margin-top: 53px;
+
+    &--last-step {
+      margin-top: 48px;
+    }
   }
 }
 
@@ -494,17 +548,21 @@
 .steps__entertainment-list {
   margin-left: 2.17%;
   margin-right: 2.17%;
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .steps__entertainment-list {
     margin: 0;
+
+    border-top: 1px solid #d4d9eb;
   }
 }
 
 @media (min-width: $desktop-width) {
   .steps__entertainment-list {
-    margin-top: 82px;
+    margin-top: 63px;
+
+    border: none;
   }
 }

@@ -39,11 +39,12 @@
 .route__wrapper {
   @include container;
   padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
   .route__wrapper {
-    padding-top: 47px;
+    padding-top: 38px;
     padding-bottom: 30px;
   }
 }
@@ -63,9 +64,9 @@
   display: block;
   width: 220px;
   margin: 0;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  padding-left: 70px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+  padding-left: 61px;
   padding-bottom: 1px;
 
   font-size: 16px;
@@ -94,6 +95,7 @@
   .route__text {
     width: 84.95%;
     padding: 21px 0 18px 15.05%;
+    margin-bottom: 43px;
 
     font-size: 28px;
     line-height: 28px;

@@ -30,11 +30,11 @@
 .about__wrapper {
   @include container;
   position: relative;
-  padding: 300px 60px 80px 50px;
+  padding: 310px 60px 80px 50px;
 
   background-image: url("../img/about-mobile-back@1x.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom right 40%;
   background-size: 292px auto;
 
   @media (min-resolution: $retina-dppx) {
@@ -44,14 +44,14 @@
   &::after {
     position: absolute;
     left: 0;
-    top: 282px;
+    top: 278px;
     content: "";
 
     width: 113px;
     height: 132px;
 
     background-color: #141b3b;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
 
     z-index: -1;
   }
@@ -59,12 +59,12 @@
 
 @media (min-width: $tablet-width) {
   .about__wrapper {
-    padding-top: 280px;
+    padding-top: 274px;
     padding-bottom: 88px;
     padding-right: 391px;
 
     background-image: url("../img/about-tablet-back@1x.png");
-    background-position: top 284px right 0;
+    background-position: top 284px right 7px;
     background-size: 376px auto;
 
     @media (min-resolution: $retina-dppx) {
@@ -76,13 +76,15 @@
       top: 236px;
       width: 688px;
       height: 213px;
+
+      border-radius: 20px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about__wrapper {
-    padding: 133px 690px 163px 131px;
+    padding: 131px 690px 160px 131px;
 
     background-image: url("../img/about-desktop-back@1x.png");
     background-position: bottom 0 right 59px;
@@ -117,36 +119,51 @@
 }
 
 .about__text {
-  margin-top: 23px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 22px;
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .about__text {
-    margin-top: 43px;
-    margin-bottom: 38px;
+    margin-top: 41px;
+    margin-bottom: 31px;
 
     font-size: 28px;
     line-height: 33px;
+
+    br {
+      display: inline;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about__text {
-    margin-top: 61px;
-    margin-bottom: 44px;
+    margin-top: 55px;
+    margin-bottom: 41px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .about__info {
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 700;
 }
 
 @media (min-width: $tablet-width) {
   .about__info {
+    display: block;
     font-size: 21px;
     line-height: 25px;
   }

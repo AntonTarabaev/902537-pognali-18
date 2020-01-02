@@ -10,6 +10,36 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/1pognali-catalog-mobile.png");
+      }
+      /* Планшет */
+      @media (min-width: 768px) {
+        html {
+          /* Планшетный макет */
+          background-image: url("img/1pognali-catalog-tablet.png");
+        }
+      }
+      /* Десктоп */
+      @media (min-width: 1440px) {
+        html {
+          /* Десктопный макет */
+          background-image: url("img/1pognali-catalog-desktop-expanded.png");
+        }
+      }
+
+      body {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="js/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
 
@@ -104,6 +134,7 @@
         <h1 class="page-main__title">
           <b class="page-main__title-text">Попутчики</b>
         </h1>
+        <a class="page-main__back-link" href="index.html">На главную</a>
       </div>
 
       <section class="filter filter--opened filter--no-js">
@@ -135,7 +166,13 @@
                 <button class="country-filter__alphabeth-btn country-filter__alphabeth-btn--active">А</button>
                 <ul class="country-filter__list-by-letter country-filter__list-by-letter--shown">
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="asia/afghanistan.html">Афганистан</a>
+                    <a class="country-filter__link" href="islands/australia.html">Австралия</a>
+                  </li>
+                  <li class="country-filter__letter-item">
+                    <a class="country-filter__link" href="europe/austria.html">Австрия</a>
+                  </li>
+                  <li class="country-filter__letter-item">
+                    <a class="country-filter__link" href="asia/aserbaidschan.html">Азербайджан</a>
                   </li>
                   <li class="country-filter__letter-item">
                     <a class="country-filter__link" href="europe/albania.html">Албания</a>
@@ -144,7 +181,13 @@
                     <a class="country-filter__link" href="islands/algeria.html">Алжир</a>
                   </li>
                   <li class="country-filter__letter-item">
+                    <a class="country-filter__link" href="islands/angola.html">Ангола</a>
+                  </li>
+                  <li class="country-filter__letter-item">
                     <a class="country-filter__link" href="europe/andorra.html">Андорра</a>
+                  </li>
+                  <li class="country-filter__letter-item">
+                    <a class="country-filter__link" href="islands/antigua-and-barbuda.html">Антигуа и Барбуда</a>
                   </li>
                   <li class="country-filter__letter-item">
                     <a class="country-filter__link" href="america/argentina.html">Аргентина</a>
@@ -153,13 +196,7 @@
                     <a class="country-filter__link" href="asia/armenia.html">Армения</a>
                   </li>
                   <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="islands/australia.html">Австралия</a>
-                  </li>
-                  <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="europe/austria.html">Австрия</a>
-                  </li>
-                  <li class="country-filter__letter-item">
-                    <a class="country-filter__link" href="asia/aserbaidschan.html">Азербайджан</a>
+                    <a class="country-filter__link" href="asia/afghanistan.html">Афганистан</a>
                   </li>
                 </ul>
               </li>
@@ -752,7 +789,7 @@
         <div class="companions-filter-form__wrapper">
           <h2 class="companions-filter-form__title">Подберите идеального попутчика</h2>
           <form class="companions-filter-form__form companions-form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="companions-form__field">
+            <fieldset class="companions-form__field companions-form__field--collapsed">
               <legend class="companions-form__title">
                 <button class="companions-form__btn companions-form__btn--closed" type="button" aria-label="Открыть/закрыть меню">Хобби</button>
               </legend>
@@ -790,7 +827,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="companions-form__field">
+            <fieldset class="companions-form__field companions-form__field--collapsed">
               <legend class="companions-form__title">
                 <button class="companions-form__btn companions-form__btn--closed" type="button" aria-label="Открыть/закрыть меню">Еда</button>
               </legend>
@@ -809,7 +846,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="companions-form__field">
+            <fieldset class="companions-form__field companions-form__field--transport">
               <legend class="companions-form__title">
                 <button class="companions-form__btn" type="button" aria-label="Открыть/закрыть меню">Транспорт</button>
               </legend>

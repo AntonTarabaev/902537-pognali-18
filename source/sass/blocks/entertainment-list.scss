@@ -4,19 +4,19 @@
 
 .entertainment-list__item {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 17px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   &::before {
     content: "";
     position: absolute;
     width: 2px;
-    height: 288px;
-    top: 9px;
-    left: -12px;
+    height: 283px;
+    top: 12px;
+    left: -13px;
 
     background-color: $light-blue;
   }
@@ -28,16 +28,21 @@
 
 @media (min-width: $tablet-width) {
   .entertainment-list__item {
-    margin-bottom: 46px;
+    margin-bottom: 31px;
 
     &::before {
-      display: none;
+      top: 30px;
+      left: 98.9%;
+      height: 260px;
+      width: 3px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .entertainment-list__item {
+    margin-bottom: 26px;
+
     &::before {
       display: block;
       left: 773px;
@@ -47,11 +52,17 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .entertainment-list__flag {
+    margin-top: 17px;
+  }
+}
+
 .entertainment-list__plan {
   width: 100%;
   height: 220px;
   margin-top: 14px;
-  padding: 7px 6.82%;
+  padding: 8px 6.5%;
 
   font-size: 16px;
   line-height: 22px;
@@ -68,9 +79,10 @@
 
 @media (min-width: $tablet-width) {
   .entertainment-list__plan {
+    width: 94.2%;
     height: 142px;
-    margin-top: 26px;
-    padding: 21px 3.57%;
+    margin-top: 29px;
+    padding: 16px 3.57% 21px 3.57%;
 
     font-size: 20px;
     line-height: 24px;
@@ -80,7 +92,6 @@
 @media (min-width: $desktop-width) {
   .entertainment-list__plan {
     width: 73%;
-    padding-right: 19px;
-    padding-left: 19px;
+    padding: 20px 19px 20px 24px;
   }
 }

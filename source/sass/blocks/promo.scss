@@ -8,7 +8,7 @@
 
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: bottom 230px center;
+  background-position: bottom 250px center;
   background-size: 100% auto;
 
   @media (min-resolution: $retina-dppx) {
@@ -19,7 +19,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 320px;
+    height: 290px;
     right: 0;
     bottom: 0;
 
@@ -34,7 +34,7 @@
     background-color: #182044;
     background-image: url("../img/globe-back-tablet@1x.jpg");
     background-position: bottom center;
-    background-size: auto 612px;
+    background-size: auto 617px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/globe-back-tablet@2x.jpg");
@@ -66,7 +66,7 @@
 
   background-image: url("../img/traveller-illustration-back-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: top 165px right 38.28%;
+  background-position: top 150px right 38.28%;
   background-size: 192px auto;
 
   @media (min-resolution: $retina-dppx) {
@@ -76,11 +76,11 @@
 
 @media (min-width: $tablet-width) {
   .promo__wrapper {
-    min-height: 864px;
+    min-height: 862px;
     padding: 0 5.21%;
 
     background-image: url("../img/traveller-illustration-back-tablet@1x.png");
-    background-position: bottom 140px right 25.25%;
+    background-position: bottom 140px right 28.25%;
     background-size: 372px auto;
 
     @media (min-resolution: $retina-dppx) {
@@ -91,8 +91,8 @@
 
 @media (min-width: $desktop-width) {
   .promo__wrapper {
-    min-height: 651px;
-    padding-right: 87px;
+    min-height: 660px;
+    padding-right: 60px;
     padding-left: 130px;
     display: flex;
     justify-content: space-between;
@@ -111,7 +111,7 @@
   width: 88.15%;
   min-height: 150px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 18px;
 
   text-align: center;
   font-size: 36px;
@@ -121,7 +121,7 @@
 @media (min-width: $tablet-width) {
   .promo__title {
     width: 57.41%;
-    padding-top: 40px;
+    padding-top: 25px;
 
     font-size: 60px;
     line-height: 70px;
@@ -133,7 +133,7 @@
     width: 395px;
     text-align: left;
     margin: 0;
-    padding-top: 118px;
+    padding-top: 116px;
   }
 }
 
@@ -141,7 +141,7 @@
   position: absolute;
   display: flex;
   width: 84.37%;
-  top: 400px;
+  top: 385px;
   right: 50%;
   transform: translateX(50%);
 }
@@ -158,11 +158,11 @@
 
 .promo__review {
   margin: 0;
-  margin-top: 350px;
+  margin-top: 300px;
   padding-left: 25px;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   width: 68.5%;
-  min-height: 245px;
+  min-height: 240px;
 }
 
 @media (min-width: $tablet-width) {
@@ -172,8 +172,8 @@
     padding: 0;
     padding-bottom: 140px;
     margin: 0;
-    left: 75px;
-    top: 350px;
+    left: 9.76%;
+    top: 324px;
   }
 }
 
@@ -190,7 +190,7 @@
 .promo__quote-author {
   display: block;
 
-  padding-top: 25px;
+  padding-top: 20px;
   padding-bottom: 10px;
   font-weight: 700;
   font-style: normal;
@@ -198,7 +198,7 @@
 
 @media (min-width: $tablet-width) {
   .promo__quote-author {
-    padding-top: 50px;
+    padding-top: 44px;
     padding-bottom: 0;
 
     font-size: 21px;
@@ -208,7 +208,7 @@
 
 .promo__guide {
   position: absolute;
-  bottom: -260px;
+  bottom: -240px;
   right: 7.81%;
 }
 
