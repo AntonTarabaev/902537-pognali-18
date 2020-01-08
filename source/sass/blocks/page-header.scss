@@ -13,6 +13,10 @@
   .page-header {
     padding-bottom: 90px;
 
-    background-color: #161c34;
+    background-color: #edeff6;
+
+    &--main-page {
+      background-color: #161c34;
+    }
   }
 }

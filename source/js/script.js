@@ -49,6 +49,40 @@ if (modal) {
   });
 }
 
+var map = document.querySelector(".map");
+if (map) {
+  var myMap;
+  var markerSize = [41, 41];
+
+  if (document.body.clientWidth > 767) {
+    markerSize = [54, 54];
+  }
+
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map(map, {
+        center: [59.936220, 30.321155],
+        zoom: 16,
+        controls: []
+    }, {
+        searchControlProvider: "yandex#search"
+    });
+
+    myPlacemark = new ymaps.Placemark([59.936220, 30.321155], {
+          hintContent: "Сервис по поиску попутчиков «Погнали», ул. Большая Конюшенная, 19/8"
+        }, {
+            iconLayout: "default#image",
+            iconImageHref: "img/map-marker.svg",
+            iconImageSize: markerSize,
+            iconImageOffset: [-20, -30]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+  }
+}
+
 var filter = document.querySelector(".filter");
 if (filter) {
   var filterShowBtn = filter.querySelector(".filter__show-btn");
@@ -129,6 +163,15 @@ if (filter) {
 
   for (var i=0; i<formBtns.length; i++) {
     formBtnsClickHandler(formBtns[i], formFields[i]);
+  }
+
+  var likeBtns = document.querySelectorAll(".companion__like-btn")
+
+  for (var i=0; i<likeBtns.length; i++) {
+    likeBtns[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      this.classList.toggle("companion__like-btn--liked");
+    });
   }
 }
 

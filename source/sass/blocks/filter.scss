@@ -77,6 +77,8 @@
 
 @media (min-width: $desktop-width) {
   .filter {
+    @include container;
+
     &--opened {
       background-color: #edeff6;
     }

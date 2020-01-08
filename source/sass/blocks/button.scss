@@ -193,6 +193,15 @@
   }
 }
 
+@media (max-width: $tablet-width - 1px) {
+  .button {
+    &--main-login {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .button {
     padding: 10px 30px 10px 29px;
