@@ -95,7 +95,6 @@
     padding-right: 60px;
     padding-left: 130px;
     display: flex;
-    justify-content: space-between;
 
     background-image: url("../img/traveller-illustration-back-desktop@1x.png");
     background-position: bottom 0 right 404px;
@@ -116,11 +115,12 @@
   text-align: center;
   font-size: 36px;
   line-height: 40px;
+  font-weight: 700;
 }
 
 @media (min-width: $tablet-width) {
   .promo__title {
-    width: 57.41%;
+    width: 58.81%;
     padding-top: 25px;
 
     font-size: 60px;
@@ -182,6 +182,7 @@
     position: static;
     width: 285px;
     margin: 0;
+    margin-left: auto;
     padding-top: 125px;
     padding-bottom: 250px;
   }

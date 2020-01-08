@@ -168,7 +168,7 @@
     }
 
     &::after {
-      max-width: unset;
+      max-width: 100%;
       width: 444px;
       height: 300px;
     }
@@ -449,6 +449,6 @@
     padding: 40px 42px 44px 42px;
 
     font-size: 24px;
-    text-transform: unset;
+    text-transform: none;
   }
 }

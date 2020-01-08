@@ -12,8 +12,10 @@
 
 @media (min-width: $desktop-width) {
   .companions-filter-form {
-    @include container;
     position: relative;
+    width: $desktop-width;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
@@ -47,6 +49,7 @@
 
   font-size: 22.5px;
   line-height: 22.5px;
+  font-weight: 700;
   color: $light-blue;
 
   background-color: $yellow;

@@ -96,7 +96,6 @@
 
 @media (min-width: $tablet-width) {
   .routes__item {
-    justify-content: space-between;
     align-items: center;
     padding-bottom: 0;
     margin-bottom: 15px;
@@ -173,6 +172,7 @@
   border: solid 1px #cbced9;
 
   cursor: pointer;
+  overflow: visible;
 
   z-index: 2;
 
@@ -209,6 +209,8 @@
     background-position: center;
     background-image: url("../img/dropdown-form.svg");
     opacity: 0.3;
+
+    z-index: 2;
   }
 
   &--selected {
@@ -230,10 +232,10 @@
     margin-bottom: 25px;
 
     background-color: #edeff6;
-  }
 
-  &--add::after {
-    background-image: url("../img/qty-plus-mobile.svg");
+    &::after {
+      background-image: url("../img/qty-plus-mobile.svg");
+    }
   }
 
   &:hover::after,
@@ -261,13 +263,13 @@
 
     &--add {
       margin: 0;
-    }
 
-    &--add::after {
-      width: 20px;
-      height: 20px;
+      &::after {
+        width: 20px;
+        height: 20px;
 
-      background-image: url("../img/qty-plus.svg");
+        background-image: url("../img/qty-plus.svg");
+      }
     }
 
     &::before {
@@ -317,8 +319,10 @@
   .routes__flag {
     width: 22%;
     height: 47px;
-    border: none;
+    margin-left: auto;
     padding-right: 5%;
+
+    border: none;
   }
 }
 
