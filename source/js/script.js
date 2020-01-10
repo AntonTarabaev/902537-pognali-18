@@ -198,7 +198,6 @@ if (addPlan) {
       evt.preventDefault();
       step.classList.add("visually-hidden");
       nextStep.classList.remove("visually-hidden");
-      //nextStep.scrollIntoView({behavior: "smooth"});
       window.scroll({
         left: 0,
         top: addPlan.offsetTop - 25,
@@ -210,7 +209,6 @@ if (addPlan) {
       evt.preventDefault();
       nextStep.classList.add("visually-hidden");
       step.classList.remove("visually-hidden");
-      //step.scrollIntoView({behavior: "smooth"});
       window.scroll({
         left: 0,
         top: addPlan.offsetTop - 25,
@@ -282,4 +280,3 @@ if (addPlan) {
     alphabethBtnsClickHandler(alphabethBtns[i], countryLists[i]);
   }
 }
-
