@@ -198,10 +198,10 @@ if (addPlan) {
       evt.preventDefault();
       step.classList.add("visually-hidden");
       nextStep.classList.remove("visually-hidden");
-      nextStep.scrollIntoView({behavior: "smooth"});
+      //nextStep.scrollIntoView({behavior: "smooth"});
       window.scroll({
         left: 0,
-        top: addPlan.offsetTop - 50,
+        top: addPlan.offsetTop - 25,
         behavior: "smooth"
       });
     });
@@ -210,10 +210,10 @@ if (addPlan) {
       evt.preventDefault();
       nextStep.classList.add("visually-hidden");
       step.classList.remove("visually-hidden");
-      step.scrollIntoView({behavior: "smooth"});
+      //step.scrollIntoView({behavior: "smooth"});
       window.scroll({
         left: 0,
-        top: addPlan.offsetTop - 50,
+        top: addPlan.offsetTop - 25,
         behavior: "smooth"
       });
     });
@@ -262,9 +262,7 @@ if (addPlan) {
       daysN.value = daysValue;
     }
   });
-}
-/*
-if (addPlan || filter) {
+
   var alphabethBtns = document.querySelectorAll(".country-filter__alphabeth-btn");
   var countryLists = document.querySelectorAll(".country-filter__list-by-letter");
 
@@ -284,4 +282,4 @@ if (addPlan || filter) {
     alphabethBtnsClickHandler(alphabethBtns[i], countryLists[i]);
   }
 }
-*/
+
