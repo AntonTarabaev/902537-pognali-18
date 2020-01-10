@@ -1,3 +1,11 @@
+.country-filter {
+  &--form {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .country-filter {
     &--form {
@@ -12,7 +20,7 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 63.6%;
+        left: 64%;
         width: 1px;
         height: 100%;
 
@@ -375,5 +383,9 @@
     display: block;
 
     line-height: 30px;
+
+    &--hidden {
+      display: none;
+    }
   }
 }

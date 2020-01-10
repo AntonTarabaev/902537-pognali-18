@@ -386,6 +386,8 @@
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   overflow: hidden;
 
+  animation: bounce 0.6s;
+
   &--shown {
     display: block;
   }
@@ -404,6 +406,24 @@
   .tariffs__modal {
     top: 163px;
     width: 750px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  70% {
+    transform: translate(-50%, 30px);
+  }
+
+  90% {
+    transform: translate(-50%, -10px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
   }
 }
 
