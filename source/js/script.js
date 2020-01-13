@@ -49,6 +49,40 @@ if (modal) {
   });
 }
 
+var map = document.querySelector(".map");
+if (map) {
+  var myMap;
+  var markerSize = [41, 41];
+
+  if (document.body.clientWidth > 767) {
+    markerSize = [54, 54];
+  }
+
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map(map, {
+        center: [59.936220, 30.321155],
+        zoom: 16,
+        controls: []
+    }, {
+        searchControlProvider: "yandex#search"
+    });
+
+    myPlacemark = new ymaps.Placemark([59.936220, 30.321155], {
+          hintContent: "Сервис по поиску попутчиков «Погнали», ул. Большая Конюшенная, 19/8"
+        }, {
+            iconLayout: "default#image",
+            iconImageHref: "img/map-marker.svg",
+            iconImageSize: markerSize,
+            iconImageOffset: [-20, -30]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+  }
+}
+
 var filter = document.querySelector(".filter");
 if (filter) {
   var filterShowBtn = filter.querySelector(".filter__show-btn");
@@ -130,14 +164,25 @@ if (filter) {
   for (var i=0; i<formBtns.length; i++) {
     formBtnsClickHandler(formBtns[i], formFields[i]);
   }
+
+  var likeBtns = document.querySelectorAll(".companion__like-btn")
+
+  for (var i=0; i<likeBtns.length; i++) {
+    likeBtns[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      this.classList.toggle("companion__like-btn--liked");
+    });
+  }
 }
 
-var stepsList = document.querySelector(".steps__list");
-if (stepsList) {
+var addPlan = document.querySelector(".add-plan");
+if (addPlan) {
+  var stepsList = addPlan.querySelector(".steps__list");
   var steps = stepsList.querySelectorAll(".steps__item");
   var stepsNextBtns = stepsList.querySelectorAll(".steps__next-btn");
   var stepsPrevBtns = stepsList.querySelectorAll(".steps__prev-btn");
   var countrySelect = stepsList.querySelector(".routes__item--country-select");
+  var openCountrySelect = countrySelect.querySelector(".routes__select");
   var adultsN = stepsList.querySelector("[name=adults]");
   var daysN = stepsList.querySelector("[name=days]");
   var plusBtns = stepsList.querySelectorAll(".number-controls__btn--more");
@@ -153,14 +198,22 @@ if (stepsList) {
       evt.preventDefault();
       step.classList.add("visually-hidden");
       nextStep.classList.remove("visually-hidden");
-      nextStep.scrollIntoView();
+      window.scroll({
+        left: 0,
+        top: addPlan.offsetTop - 25,
+        behavior: "smooth"
+      });
     });
 
     stepPrevBtn.addEventListener("click", function (evt) {
       evt.preventDefault();
       nextStep.classList.add("visually-hidden");
       step.classList.remove("visually-hidden");
-      step.scrollIntoView();
+      window.scroll({
+        left: 0,
+        top: addPlan.offsetTop - 25,
+        behavior: "smooth"
+      });
     });
   }
 
@@ -168,7 +221,7 @@ if (stepsList) {
     changeStep (steps[i], steps[i+1], stepsNextBtns[i], stepsPrevBtns[i]);
   }
 
-  countrySelect.addEventListener("click", function(evt) {
+  openCountrySelect.addEventListener("click", function(evt) {
     evt.preventDefault();
     countrySelect.classList.toggle("routes__item--active");
   });
@@ -207,4 +260,23 @@ if (stepsList) {
       daysN.value = daysValue;
     }
   });
+
+  var alphabethBtns = document.querySelectorAll(".country-filter__alphabeth-btn");
+  var countryLists = document.querySelectorAll(".country-filter__list-by-letter");
+
+  var alphabethBtnsClickHandler = function (alphabethBtn, countryList) {
+    alphabethBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      for (var j=0; j<countryLists.length; j++) {
+        alphabethBtns[j].classList.remove("country-filter__alphabeth-btn--active");
+        countryLists[j].classList.remove("country-filter__list-by-letter--shown");
+      }
+      alphabethBtn.classList.add("country-filter__alphabeth-btn--active");
+      countryList.classList.add("country-filter__list-by-letter--shown");
+    });
+  }
+
+  for (var i=0; i<alphabethBtns.length; i++) {
+    alphabethBtnsClickHandler(alphabethBtns[i], countryLists[i]);
+  }
 }

@@ -104,7 +104,7 @@
 
     &::after {
       top: 85px;
-      right: unset;
+      right: auto;
       left: 9.68%;
 
       font-size: 30px;
@@ -152,7 +152,7 @@
 
     &::after {
       top: 22px;
-      left: unset;
+      left: auto;
       right: 33px;
     }
   }
@@ -165,6 +165,7 @@
   color: $dark-blue;
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
 }
 
 @media (min-width: $tablet-width) {

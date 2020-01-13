@@ -91,6 +91,8 @@
   border: none;
   background-color: #edeff6;
 
+  overflow: visible;
+
   &:not(:disabled) {
     cursor: pointer;
   }
@@ -160,7 +162,7 @@
     text-align: left;
 
     &::before {
-      width: 100%;
+      width: 138px;
     }
 
     &--start-date::after,
